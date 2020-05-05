@@ -1,0 +1,6 @@
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Presentacion\obj\Debug\Login.Form1.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Presentacion\obj\Debug\GUI_Principal.Contenedor.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache

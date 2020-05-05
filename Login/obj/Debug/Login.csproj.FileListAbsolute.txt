@@ -1,0 +1,12 @@
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\bin\Debug\Login.exe.config
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\bin\Debug\Login.exe
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\bin\Debug\Login.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.csprojAssemblyReference.cache
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.exe
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Login\obj\Debug\Login.Login.resources
