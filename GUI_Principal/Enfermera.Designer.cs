@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Enfermera";
             this.Text = "Enfermera";
+            this.Load += new System.EventHandler(this.Enfermera_Load);
             this.ResumeLayout(false);
 
         }

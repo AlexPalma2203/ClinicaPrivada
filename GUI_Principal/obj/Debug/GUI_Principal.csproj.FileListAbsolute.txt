@@ -24,3 +24,5 @@ C:\Users\Alex Palma\Desktop\Ciclo 01-20\Cristian\Programacion I\ProyectoClinica\
 C:\Users\Alex Palma\Desktop\Ciclo 01-20\Cristian\Programacion I\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.pdb
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Medico.resources
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Enfermera.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Administrador.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Expediente.resources

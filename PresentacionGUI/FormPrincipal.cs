@@ -169,6 +169,9 @@ namespace PresentacionGUI
             
         }
 
-        
+        private void TituloFormularioHijo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,9 +12,32 @@ namespace GUI_Principal
 {
     public partial class Administrador : Form
     {
+        private Form currentChildForm;
         public Administrador()
         {
             InitializeComponent();
         }
+        private void AbrirFormularioHijo(Form FormularioHijo)
+        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = FormularioHijo;
+            //End
+            FormularioHijo.TopLevel = false;
+            FormularioHijo.FormBorderStyle = FormBorderStyle.None;
+            FormularioHijo.Dock = DockStyle.Fill;
+            FormularioHijo.BringToFront();
+            FormularioHijo.Show();
+        }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Expediente());
+        }
+
+        
     }
 }

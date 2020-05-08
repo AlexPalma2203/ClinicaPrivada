@@ -113,6 +113,7 @@ namespace PresentacionGUI
                         menu.Show();
                         menu.FormClosed += cerrarSesion;
                         
+                        
 
                     }
                     else {
@@ -129,7 +130,7 @@ namespace PresentacionGUI
             }
             else
             {
-                msjError("Ingrese Su Nombre De Usuario.");
+                msjError("Ingrese Su Usuario De Usuario.");
             }
         }
 
@@ -156,5 +157,19 @@ namespace PresentacionGUI
             this.Show();
         }
 
+        private void Contraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Error_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

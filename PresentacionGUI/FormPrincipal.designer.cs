@@ -261,6 +261,7 @@
             this.TituloFormularioHijo.Size = new System.Drawing.Size(60, 23);
             this.TituloFormularioHijo.TabIndex = 4;
             this.TituloFormularioHijo.Text = "Inicio";
+            this.TituloFormularioHijo.Click += new System.EventHandler(this.TituloFormularioHijo_Click);
             // 
             // iconFormularioActual
             // 

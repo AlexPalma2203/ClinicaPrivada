@@ -94,7 +94,7 @@
             this.Usuario.Size = new System.Drawing.Size(468, 20);
             this.Usuario.TabIndex = 1;
             this.Usuario.Text = ".:.USUARIO.:.";
-            
+            this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
             this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
             this.Usuario.Leave += new System.EventHandler(this.Usuario_Leave);
             // 
@@ -118,7 +118,7 @@
             this.Contraseña.Size = new System.Drawing.Size(468, 20);
             this.Contraseña.TabIndex = 2;
             this.Contraseña.Text = ".:.CONTRASEÑA.:.";
-            this.Contraseña.Visible = false;
+            this.Contraseña.TextChanged += new System.EventHandler(this.Contraseña_TextChanged);
             this.Contraseña.Enter += new System.EventHandler(this.Contraseña_Enter);
             this.Contraseña.Leave += new System.EventHandler(this.Contraseña_Leave);
             // 
@@ -130,7 +130,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(465, 2);
             this.panel3.TabIndex = 4;
-            this.panel3.Visible = false;
             // 
             // Acceder
             // 
@@ -191,6 +190,7 @@
             this.Error.TabIndex = 11;
             this.Error.Text = "Error";
             this.Error.Visible = false;
+            this.Error.Click += new System.EventHandler(this.Error_Click_1);
             // 
             // ErrorIcon
             // 
