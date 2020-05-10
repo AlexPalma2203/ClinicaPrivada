@@ -52,6 +52,10 @@
       <Project>{910d1f37-5185-4e61-8357-f1483b2b31ba}</Project>
       <Name>AccesoDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{31fbb819-0f6b-4894-bb23-12466ec1da65}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

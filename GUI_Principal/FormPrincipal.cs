@@ -99,13 +99,13 @@ namespace GUI_Principal
         private void Medico_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(63, 239, 241));
-            AbrirFormularioHijo(new Medico());
+            AbrirFormularioHijo(new Paciente());
         }
 
         private void Enfermera_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(63, 239, 241));
-            AbrirFormularioHijo(new Enfermera());
+            AbrirFormularioHijo(new Registros());
         }
 
         private void Administrador_Click(object sender, EventArgs e)

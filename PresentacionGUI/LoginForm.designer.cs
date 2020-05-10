@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Logo = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Usuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,7 +41,7 @@
             this.Error = new System.Windows.Forms.Label();
             this.ErrorIcon = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcon)).BeginInit();
@@ -50,9 +49,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.panel1.Controls.Add(this.Logo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -61,22 +59,24 @@
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // pictureBox1
+            // Logo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-9, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 243);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Logo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
+            this.Logo.IconChar = FontAwesome.Sharp.IconChar.FileMedical;
+            this.Logo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
+            this.Logo.IconSize = 235;
+            this.Logo.Location = new System.Drawing.Point(12, 55);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(235, 263);
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.label1.Location = new System.Drawing.Point(447, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 32);
@@ -85,10 +85,10 @@
             // 
             // Usuario
             // 
-            this.Usuario.BackColor = System.Drawing.Color.Gainsboro;
+            this.Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.Usuario.Location = new System.Drawing.Point(281, 62);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(468, 20);
@@ -100,7 +100,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(281, 88);
             this.panel2.Name = "panel2";
@@ -109,10 +109,10 @@
             // 
             // Contraseña
             // 
-            this.Contraseña.BackColor = System.Drawing.Color.Gainsboro;
+            this.Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Contraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Contraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.Contraseña.Location = new System.Drawing.Point(281, 152);
             this.Contraseña.Name = "Contraseña";
             this.Contraseña.Size = new System.Drawing.Size(468, 20);
@@ -124,7 +124,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(281, 178);
             this.panel3.Name = "panel3";
@@ -134,13 +134,13 @@
             // Acceder
             // 
             this.Acceder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Acceder.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.Acceder.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
             this.Acceder.FlatAppearance.BorderSize = 0;
-            this.Acceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.Acceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.Acceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Acceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Acceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Acceder.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Acceder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Acceder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.Acceder.Location = new System.Drawing.Point(458, 249);
             this.Acceder.Name = "Acceder";
             this.Acceder.Size = new System.Drawing.Size(90, 40);
@@ -151,11 +151,11 @@
             // 
             // Close
             // 
-            this.Close.BackColor = System.Drawing.Color.Gainsboro;
+            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.Close.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.Close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.Close.Location = new System.Drawing.Point(745, 3);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(32, 32);
@@ -166,11 +166,11 @@
             // 
             // Minimizar
             // 
-            this.Minimizar.BackColor = System.Drawing.Color.Gainsboro;
+            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.GripLines;
-            this.Minimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Minimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.Minimizar.Location = new System.Drawing.Point(707, 3);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(32, 32);
@@ -183,7 +183,7 @@
             // 
             this.Error.AutoSize = true;
             this.Error.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.Error.Location = new System.Drawing.Point(316, 197);
             this.Error.Name = "Error";
             this.Error.Size = new System.Drawing.Size(41, 18);
@@ -194,10 +194,10 @@
             // 
             // ErrorIcon
             // 
-            this.ErrorIcon.BackColor = System.Drawing.Color.Gainsboro;
-            this.ErrorIcon.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrorIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.ErrorIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.ErrorIcon.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
-            this.ErrorIcon.IconColor = System.Drawing.Color.Crimson;
+            this.ErrorIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.ErrorIcon.IconSize = 23;
             this.ErrorIcon.Location = new System.Drawing.Point(290, 195);
             this.ErrorIcon.Name = "ErrorIcon";
@@ -210,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.ErrorIcon);
             this.Controls.Add(this.Error);
@@ -231,7 +231,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcon)).EndInit();
@@ -253,7 +253,7 @@
         private FontAwesome.Sharp.IconPictureBox Minimizar;
         private System.Windows.Forms.Label Error;
         private FontAwesome.Sharp.IconPictureBox ErrorIcon;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconPictureBox Logo;
     }
 }
 

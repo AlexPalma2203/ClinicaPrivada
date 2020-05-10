@@ -22,7 +22,14 @@ C:\Users\Alex Palma\Desktop\Ciclo 01-20\Cristian\Programacion I\ProyectoClinica\
 C:\Users\Alex Palma\Desktop\Ciclo 01-20\Cristian\Programacion I\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.csproj.CopyComplete
 C:\Users\Alex Palma\Desktop\Ciclo 01-20\Cristian\Programacion I\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.exe
 C:\Users\Alex Palma\Desktop\Ciclo 01-20\Cristian\Programacion I\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.pdb
-C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Medico.resources
-C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Enfermera.resources
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Administrador.resources
-C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Expediente.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Paciente.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Registros.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.FrmExpediente.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.ActualizarExp.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\CapaComun.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\Dominio.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\AccesoDatos.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\CapaComun.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\Dominio.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\AccesoDatos.pdb

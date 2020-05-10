@@ -45,11 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionSQL.cs" />
+    <Compile Include="PacienteD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioD.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{31fbb819-0f6b-4894-bb23-12466ec1da65}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

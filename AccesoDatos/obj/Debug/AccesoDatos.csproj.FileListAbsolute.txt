@@ -6,3 +6,5 @@ C:\Users\Alex Palma\Desktop\ProyectoClinica\AccesoDatos\obj\Debug\AccesoDatos.pd
 C:\Users\Alex Palma\Desktop\ProyectoClinica\AccesoDatos\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\AccesoDatos\obj\Debug\AccesoDatos.csprojAssemblyReference.cache
 C:\Users\Alex Palma\Desktop\ProyectoClinica\AccesoDatos\obj\Debug\AccesoDatos.csproj.CopyComplete
+C:\Users\Alex Palma\Desktop\ProyectoClinica\AccesoDatos\bin\Debug\CapaComun.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\AccesoDatos\bin\Debug\CapaComun.pdb

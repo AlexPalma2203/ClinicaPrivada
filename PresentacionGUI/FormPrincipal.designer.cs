@@ -33,11 +33,14 @@
             this.Salir = new FontAwesome.Sharp.IconButton();
             this.Programadores = new FontAwesome.Sharp.IconButton();
             this.Administrador = new FontAwesome.Sharp.IconButton();
-            this.Enfermera = new FontAwesome.Sharp.IconButton();
-            this.Medico = new FontAwesome.Sharp.IconButton();
+            this.Registros = new FontAwesome.Sharp.IconButton();
+            this.Paciente = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Inicio = new System.Windows.Forms.PictureBox();
+            this.Cargo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.iconUsers = new FontAwesome.Sharp.IconPictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.TituloFormularioHijo = new System.Windows.Forms.Label();
             this.iconFormularioActual = new FontAwesome.Sharp.IconPictureBox();
             this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
@@ -45,8 +48,9 @@
             this.Formularios = new System.Windows.Forms.Panel();
             this.Menu.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Inicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconUsers)).BeginInit();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconFormularioActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
@@ -54,19 +58,19 @@
             // 
             // Menu
             // 
-            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(113)))), ((int)(((byte)(181)))));
-            this.Menu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Menu.BackgroundImage")));
+            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(16)))), ((int)(((byte)(31)))));
             this.Menu.Controls.Add(this.Salir);
             this.Menu.Controls.Add(this.Programadores);
             this.Menu.Controls.Add(this.Administrador);
-            this.Menu.Controls.Add(this.Enfermera);
-            this.Menu.Controls.Add(this.Medico);
+            this.Menu.Controls.Add(this.Registros);
+            this.Menu.Controls.Add(this.Paciente);
             this.Menu.Controls.Add(this.panel3);
             this.Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(200, 500);
+            this.Menu.Size = new System.Drawing.Size(200, 529);
             this.Menu.TabIndex = 0;
+            this.Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Menu_Paint);
             // 
             // Salir
             // 
@@ -74,17 +78,17 @@
             this.Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Salir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Salir.FlatAppearance.BorderSize = 0;
-            this.Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
-            this.Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
+            this.Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
             this.Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Salir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.Salir.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salir.ForeColor = System.Drawing.Color.Gainsboro;
             this.Salir.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.Salir.IconColor = System.Drawing.Color.Gainsboro;
+            this.Salir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.Salir.IconSize = 50;
             this.Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Salir.Location = new System.Drawing.Point(0, 440);
+            this.Salir.Location = new System.Drawing.Point(0, 469);
             this.Salir.Name = "Salir";
             this.Salir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Salir.Rotation = 180D;
@@ -103,14 +107,14 @@
             this.Programadores.Dock = System.Windows.Forms.DockStyle.Top;
             this.Programadores.FlatAppearance.BorderSize = 0;
             this.Programadores.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Programadores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
-            this.Programadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
+            this.Programadores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Programadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
             this.Programadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Programadores.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.Programadores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Programadores.ForeColor = System.Drawing.Color.Gainsboro;
             this.Programadores.IconChar = FontAwesome.Sharp.IconChar.UserAstronaut;
-            this.Programadores.IconColor = System.Drawing.Color.Gainsboro;
+            this.Programadores.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.Programadores.IconSize = 50;
             this.Programadores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Programadores.Location = new System.Drawing.Point(0, 342);
@@ -132,14 +136,14 @@
             this.Administrador.Dock = System.Windows.Forms.DockStyle.Top;
             this.Administrador.FlatAppearance.BorderSize = 0;
             this.Administrador.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Administrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
-            this.Administrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
+            this.Administrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Administrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
             this.Administrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Administrador.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.Administrador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Administrador.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Administrador.IconChar = FontAwesome.Sharp.IconChar.UserCog;
-            this.Administrador.IconColor = System.Drawing.Color.Gainsboro;
+            this.Administrador.IconChar = FontAwesome.Sharp.IconChar.UserShield;
+            this.Administrador.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.Administrador.IconSize = 50;
             this.Administrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Administrador.Location = new System.Drawing.Point(0, 282);
@@ -154,68 +158,69 @@
             this.Administrador.UseVisualStyleBackColor = false;
             this.Administrador.Click += new System.EventHandler(this.Administrador_Click);
             // 
-            // Enfermera
+            // Registros
             // 
-            this.Enfermera.BackColor = System.Drawing.Color.Transparent;
-            this.Enfermera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Enfermera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Enfermera.FlatAppearance.BorderSize = 0;
-            this.Enfermera.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Enfermera.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
-            this.Enfermera.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
-            this.Enfermera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Enfermera.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Enfermera.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Enfermera.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Enfermera.IconChar = FontAwesome.Sharp.IconChar.UserNurse;
-            this.Enfermera.IconColor = System.Drawing.Color.Gainsboro;
-            this.Enfermera.IconSize = 50;
-            this.Enfermera.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Enfermera.Location = new System.Drawing.Point(0, 222);
-            this.Enfermera.Name = "Enfermera";
-            this.Enfermera.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Enfermera.Rotation = 0D;
-            this.Enfermera.Size = new System.Drawing.Size(200, 60);
-            this.Enfermera.TabIndex = 2;
-            this.Enfermera.Text = "Enfermera";
-            this.Enfermera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Enfermera.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Enfermera.UseVisualStyleBackColor = false;
-            this.Enfermera.Click += new System.EventHandler(this.Enfermera_Click);
+            this.Registros.BackColor = System.Drawing.Color.Transparent;
+            this.Registros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Registros.FlatAppearance.BorderSize = 0;
+            this.Registros.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.Registros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Registros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Registros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Registros.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.Registros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registros.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Registros.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
+            this.Registros.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Registros.IconSize = 50;
+            this.Registros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Registros.Location = new System.Drawing.Point(0, 222);
+            this.Registros.Name = "Registros";
+            this.Registros.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Registros.Rotation = 0D;
+            this.Registros.Size = new System.Drawing.Size(200, 60);
+            this.Registros.TabIndex = 2;
+            this.Registros.Text = "Registros";
+            this.Registros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Registros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Registros.UseVisualStyleBackColor = false;
+            this.Registros.Click += new System.EventHandler(this.Registros_Click);
             // 
-            // Medico
+            // Paciente
             // 
-            this.Medico.BackColor = System.Drawing.Color.Transparent;
-            this.Medico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Medico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Medico.FlatAppearance.BorderSize = 0;
-            this.Medico.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Medico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
-            this.Medico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(68)))), ((int)(((byte)(112)))));
-            this.Medico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Medico.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Medico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Medico.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Medico.IconChar = FontAwesome.Sharp.IconChar.UserMd;
-            this.Medico.IconColor = System.Drawing.Color.Gainsboro;
-            this.Medico.IconSize = 50;
-            this.Medico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Medico.Location = new System.Drawing.Point(0, 162);
-            this.Medico.Name = "Medico";
-            this.Medico.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Medico.Rotation = 0D;
-            this.Medico.Size = new System.Drawing.Size(200, 60);
-            this.Medico.TabIndex = 1;
-            this.Medico.Text = "Medico";
-            this.Medico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Medico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Medico.UseVisualStyleBackColor = false;
-            this.Medico.Click += new System.EventHandler(this.Medico_Click);
+            this.Paciente.BackColor = System.Drawing.Color.Transparent;
+            this.Paciente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Paciente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Paciente.FlatAppearance.BorderSize = 0;
+            this.Paciente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.Paciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Paciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Paciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Paciente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.Paciente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Paciente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Paciente.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
+            this.Paciente.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Paciente.IconSize = 50;
+            this.Paciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Paciente.Location = new System.Drawing.Point(0, 162);
+            this.Paciente.Name = "Paciente";
+            this.Paciente.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Paciente.Rotation = 0D;
+            this.Paciente.Size = new System.Drawing.Size(200, 60);
+            this.Paciente.TabIndex = 1;
+            this.Paciente.Text = "Paciente";
+            this.Paciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Paciente.UseVisualStyleBackColor = false;
+            this.Paciente.Click += new System.EventHandler(this.Paciente_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.Inicio);
+            this.panel3.Controls.Add(this.Cargo);
+            this.panel3.Controls.Add(this.lblNombre);
+            this.panel3.Controls.Add(this.iconUsers);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -223,22 +228,47 @@
             this.panel3.Size = new System.Drawing.Size(200, 162);
             this.panel3.TabIndex = 0;
             // 
-            // Inicio
+            // Cargo
             // 
-            this.Inicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Inicio.Image = ((System.Drawing.Image)(resources.GetObject("Inicio.Image")));
-            this.Inicio.Location = new System.Drawing.Point(-27, -12);
-            this.Inicio.Name = "Inicio";
-            this.Inicio.Size = new System.Drawing.Size(244, 219);
-            this.Inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Inicio.TabIndex = 0;
-            this.Inicio.TabStop = false;
-            this.Inicio.Click += new System.EventHandler(this.Inicio_Click_1);
+            this.Cargo.AutoSize = true;
+            this.Cargo.BackColor = System.Drawing.Color.Transparent;
+            this.Cargo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cargo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Cargo.Location = new System.Drawing.Point(37, 107);
+            this.Cargo.Name = "Cargo";
+            this.Cargo.Size = new System.Drawing.Size(77, 21);
+            this.Cargo.TabIndex = 6;
+            this.Cargo.Text = "lblCargo";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblNombre.Location = new System.Drawing.Point(37, 131);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(90, 21);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "lblNombre";
+            // 
+            // iconUsers
+            // 
+            this.iconUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(16)))), ((int)(((byte)(31)))));
+            this.iconUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.iconUsers.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconUsers.IconSize = 109;
+            this.iconUsers.Location = new System.Drawing.Point(41, 10);
+            this.iconUsers.Name = "iconUsers";
+            this.iconUsers.Size = new System.Drawing.Size(127, 109);
+            this.iconUsers.TabIndex = 5;
+            this.iconUsers.TabStop = false;
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(113)))), ((int)(((byte)(181)))));
-            this.BarraTitulo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BarraTitulo.BackgroundImage")));
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.BarraTitulo.Controls.Add(this.iconPictureBox1);
             this.BarraTitulo.Controls.Add(this.TituloFormularioHijo);
             this.BarraTitulo.Controls.Add(this.iconFormularioActual);
             this.BarraTitulo.Controls.Add(this.Minimizar);
@@ -246,9 +276,24 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(200, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(800, 57);
+            this.BarraTitulo.Size = new System.Drawing.Size(929, 57);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconPictureBox1.IconSize = 33;
+            this.iconPictureBox1.Location = new System.Drawing.Point(809, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(36, 33);
+            this.iconPictureBox1.TabIndex = 5;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // TituloFormularioHijo
             // 
@@ -266,9 +311,9 @@
             // iconFormularioActual
             // 
             this.iconFormularioActual.BackColor = System.Drawing.Color.Transparent;
-            this.iconFormularioActual.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconFormularioActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.iconFormularioActual.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconFormularioActual.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconFormularioActual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.iconFormularioActual.IconSize = 50;
             this.iconFormularioActual.Location = new System.Drawing.Point(7, 6);
             this.iconFormularioActual.Name = "iconFormularioActual";
@@ -279,12 +324,12 @@
             // 
             // Minimizar
             // 
-            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(113)))), ((int)(((byte)(181)))));
+            this.Minimizar.BackColor = System.Drawing.Color.Transparent;
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimizar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.GripLines;
-            this.Minimizar.IconColor = System.Drawing.Color.Gainsboro;
-            this.Minimizar.Location = new System.Drawing.Point(710, 0);
+            this.Minimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Minimizar.Location = new System.Drawing.Point(851, 13);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(32, 32);
             this.Minimizar.TabIndex = 2;
@@ -293,12 +338,12 @@
             // 
             // Close
             // 
-            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(113)))), ((int)(((byte)(181)))));
+            this.Close.BackColor = System.Drawing.Color.Transparent;
             this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.Close.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.Close.IconColor = System.Drawing.Color.Gainsboro;
-            this.Close.Location = new System.Drawing.Point(748, 0);
+            this.Close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Close.Location = new System.Drawing.Point(889, 12);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(32, 32);
             this.Close.TabIndex = 1;
@@ -307,18 +352,19 @@
             // 
             // Formularios
             // 
-            this.Formularios.BackColor = System.Drawing.Color.Gainsboro;
-            this.Formularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Formularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.Formularios.Dock = System.Windows.Forms.DockStyle.Top;
             this.Formularios.Location = new System.Drawing.Point(200, 57);
             this.Formularios.Name = "Formularios";
-            this.Formularios.Size = new System.Drawing.Size(800, 443);
+            this.Formularios.Size = new System.Drawing.Size(929, 472);
             this.Formularios.TabIndex = 2;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1129, 529);
             this.Controls.Add(this.Formularios);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.Menu);
@@ -330,9 +376,11 @@
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.Menu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Inicio)).EndInit();
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconUsers)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconFormularioActual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
@@ -347,15 +395,18 @@
         private System.Windows.Forms.Panel panel3;
         private new FontAwesome.Sharp.IconPictureBox Close;
         private FontAwesome.Sharp.IconPictureBox Minimizar;
-        private FontAwesome.Sharp.IconButton Medico;
+        private FontAwesome.Sharp.IconButton Paciente;
         private FontAwesome.Sharp.IconButton Programadores;
         private FontAwesome.Sharp.IconButton Administrador;
-        private FontAwesome.Sharp.IconButton Enfermera;
+        private FontAwesome.Sharp.IconButton Registros;
         private FontAwesome.Sharp.IconPictureBox iconFormularioActual;
         private System.Windows.Forms.Label TituloFormularioHijo;
         private System.Windows.Forms.Panel Formularios;
-        private System.Windows.Forms.PictureBox Inicio;
         private FontAwesome.Sharp.IconButton Salir;
+        private System.Windows.Forms.Label lblNombre;
+        private FontAwesome.Sharp.IconPictureBox iconUsers;
+        private System.Windows.Forms.Label Cargo;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
 

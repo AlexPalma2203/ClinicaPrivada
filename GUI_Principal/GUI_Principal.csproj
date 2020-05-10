@@ -50,23 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarExp.Designer.cs">
+      <DependentUpon>ActualizarExp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Enfermera.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Enfermera.Designer.cs">
-      <DependentUpon>Enfermera.cs</DependentUpon>
-    </Compile>
     <Compile Include="Expediente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Expediente.Designer.cs">
+    <Compile Include="Expediente.designer.cs">
       <DependentUpon>Expediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros.Designer.cs">
+      <DependentUpon>Registros.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -74,11 +80,11 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medico.cs">
+    <Compile Include="Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Medico.Designer.cs">
-      <DependentUpon>Medico.cs</DependentUpon>
+    <Compile Include="Paciente.Designer.cs">
+      <DependentUpon>Paciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Programadores.cs">
@@ -88,20 +94,23 @@
       <DependentUpon>Programadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizarExp.resx">
+      <DependentUpon>ActualizarExp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Enfermera.resx">
-      <DependentUpon>Enfermera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Expediente.resx">
       <DependentUpon>Expediente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros.resx">
+      <DependentUpon>Registros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Medico.resx">
-      <DependentUpon>Medico.cs</DependentUpon>
+    <EmbeddedResource Include="Paciente.resx">
+      <DependentUpon>Paciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +144,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\U Tech Medic Logo Para Fondo De Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{31fbb819-0f6b-4894-bb23-12466ec1da65}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{967401d2-9930-4b9a-b593-93a1700178cf}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

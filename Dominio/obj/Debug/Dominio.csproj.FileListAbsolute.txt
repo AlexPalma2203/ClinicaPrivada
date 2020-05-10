@@ -8,3 +8,5 @@ C:\Users\Alex Palma\Desktop\ProyectoClinica\Dominio\obj\Debug\Dominio.csproj.Cop
 C:\Users\Alex Palma\Desktop\ProyectoClinica\Dominio\obj\Debug\Dominio.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\Dominio\obj\Debug\Dominio.pdb
 C:\Users\Alex Palma\Desktop\ProyectoClinica\Dominio\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Dominio\bin\Debug\CapaComun.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\Dominio\bin\Debug\CapaComun.pdb

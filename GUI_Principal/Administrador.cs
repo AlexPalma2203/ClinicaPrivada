@@ -35,7 +35,7 @@ namespace GUI_Principal
 
         private void Administrador_Load(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Expediente());
+            
         }
 
         

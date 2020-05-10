@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaComun.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,11 +51,22 @@ namespace PresentacionGUI
 
         private void FormBienvenida_Load(object sender, EventArgs e)
         {
+
+            if (CacheDeUsuario.CargoUsuario == Cargos.Doctor) { iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.UserMd; }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Enfermera) { iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.UserNurse; label2.Text = "BIENVENIDA"; }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Admistrador) { iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.UserShield; }
+            UsuarioBienvenida.Text = CacheDeUsuario.NonbreUsuario +" "+CacheDeUsuario.ApellidoUsuario;
+            CargoBienvenida.Text = CacheDeUsuario.CargoUsuario;
             this.Opacity = 0.0;
             circularProgressBar1.Value = 0;
             circularProgressBar1.Minimum = 0;
             circularProgressBar1.Maximum = 100;
             timer1.Start();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,7 +33,7 @@ namespace PresentacionGUI
             if (Usuario.Text == ".:.USUARIO.:.")
             {
                 Usuario.Text = "";
-                Usuario.ForeColor = Color.FromArgb(1, 1, 2);
+                Usuario.ForeColor = Color.FromArgb(244, 48, 85);
             }
         }
 
@@ -42,7 +42,7 @@ namespace PresentacionGUI
             if (Usuario.Text == "")
             {
                 Usuario.Text = ".:.USUARIO.:.";
-                Usuario.ForeColor = Color.FromArgb(40, 40, 40);
+                Usuario.ForeColor = Color.FromArgb(120, 116, 127);
             }
         }
 
@@ -51,7 +51,7 @@ namespace PresentacionGUI
             if (Contraseña.Text == ".:.CONTRASEÑA.:.")
             {
                 Contraseña.Text = "";
-                Contraseña.ForeColor = Color.FromArgb(1, 1, 2);
+                Contraseña.ForeColor = Color.FromArgb(244, 48, 85);
                 Contraseña.UseSystemPasswordChar = true;
             }
         }
@@ -61,7 +61,7 @@ namespace PresentacionGUI
             if (Contraseña.Text == "")
             {
                 Contraseña.Text = ".:.CONTRASEÑA.:.";
-                Contraseña.ForeColor = Color.FromArgb(40, 40, 40);
+                Contraseña.ForeColor = Color.FromArgb(120, 116, 127);
                 Contraseña.UseSystemPasswordChar = false;
             }
         }
@@ -120,6 +120,7 @@ namespace PresentacionGUI
 
                         msjError("Usuario o Contraseña Incorrecta \nPorfavor Intente de Nuevo.");
                         Contraseña.Text= ".:.CONTRASEÑA.:.";
+                        Contraseña.UseSystemPasswordChar = false;
                         Usuario.Focus();
                     }
                 }

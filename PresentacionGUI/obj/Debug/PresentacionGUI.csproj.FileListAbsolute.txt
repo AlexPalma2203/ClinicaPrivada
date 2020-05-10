@@ -45,3 +45,16 @@ C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\obj\Debug\Presentaci
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\CircularProgressBar.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\WinFormAnimation.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\CircularProgressBar.xml
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\CapaComun.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\CapaComun.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Clock.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Tavant.XToolkit.MultiTabPage.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Tavant.XToolkit.RoundedCornerView.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Xamarin.Forms.Xaml.xml

@@ -13,7 +13,7 @@ namespace AccesoDatos
         private readonly string CadenaConexion;
         public ConexionSQL()
         {
-            CadenaConexion = "Server=.;DataBase=SistemaClinica; integrated security = true";
+            CadenaConexion = "Server=.;DataBase=SistemaClinico; integrated security = true";
         }
         protected SqlConnection GetConnection()
         {

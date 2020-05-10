@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using GUI_Principal;
 using Login;
+using CapaComun;
+using CapaComun.Cache;
 
 namespace PresentacionGUI
 {
@@ -34,9 +36,40 @@ namespace PresentacionGUI
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            CargaDatosUsuario();
+            //Permisos
+            if (CacheDeUsuario.CargoUsuario == Cargos.Admistrador)
+            {
+                iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserShield;
+                // admin
+            }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Enfermera)
+            {
+                iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserNurse;
+                Administrador.Enabled = false;
+                Paciente.Enabled = false;
+                Programadores.Enabled = false;
+
+            }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Doctor)
+            {
+                iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserMd;
+                Administrador.Enabled = false;
+                Programadores.Enabled = false;
+            }
+
+            
+        }
+        private void CargaDatosUsuario()
+        {
+            lblNombre.Text = CacheDeUsuario.NonbreUsuario +" "+CacheDeUsuario.ApellidoUsuario+".";
+            Cargo.Text = CacheDeUsuario.CargoUsuario;
+
+
+
+
 
         }
-       
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -59,6 +92,11 @@ namespace PresentacionGUI
                 iconFormularioActual.IconChar = currentBtn.IconChar;
                 iconFormularioActual.IconColor = color;
                 TituloFormularioHijo.ForeColor = color;
+                //Botones
+                Close.ForeColor = color;
+                Minimizar.ForeColor = color;
+                iconPictureBox1.ForeColor = color;
+                iconUsers.ForeColor = color;
             }
         }
         private void DisableButton()
@@ -68,7 +106,7 @@ namespace PresentacionGUI
                 currentBtn.BackColor = Color.Transparent;
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.IconColor = Color.FromArgb(245, 50, 87);
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
                 
@@ -104,27 +142,29 @@ namespace PresentacionGUI
             Application.Exit();
         }
 
-        private void Medico_Click(object sender, EventArgs e)
+        private void Paciente_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(122, 220, 219));
-            AbrirFormularioHijo(new Medico());
+
+           
+            ActivateButton(sender, Color.FromArgb(253, 138, 114));
+            AbrirFormularioHijo(new Paciente());
         }
 
-        private void Enfermera_Click(object sender, EventArgs e)
+        private void Registros_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(122, 220, 219));
-            AbrirFormularioHijo(new Enfermera());
+            ActivateButton(sender, Color.FromArgb(84, 177, 248));
+            AbrirFormularioHijo(new Registros());
         }
 
         private void Administrador_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(122, 220, 219));
+            ActivateButton(sender, Color.FromArgb(172, 126, 241));
             AbrirFormularioHijo(new Administrador());
         }
 
         private void Programadores_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(245, 241, 6));
+            ActivateButton(sender, Color.FromArgb(95, 77, 221));
             AbrirFormularioHijo(new Programadores());
         }
 
@@ -135,9 +175,11 @@ namespace PresentacionGUI
             DisableButton();
             leftBorderBtn.Visible = false;
             iconFormularioActual.IconChar = IconChar.Home;
-            iconFormularioActual.IconColor = Color.Gainsboro;
+            iconFormularioActual.IconColor = Color.FromArgb(245, 50, 87);
             TituloFormularioHijo.Text = "Inicio";
             TituloFormularioHijo.ForeColor = Color.Gainsboro;
+            Close.ForeColor = Color.FromArgb(245, 50, 87);
+            Minimizar.ForeColor = Color.FromArgb(245, 50, 87);
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -156,11 +198,7 @@ namespace PresentacionGUI
         {
 
         }
-        private void Inicio_Click_1(object sender, EventArgs e)
-        {
-            currentChildForm.Close();
-            Reset();
-        }
+        
         private void Salir_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("¿Seguro que quieres cerrar sesion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
@@ -168,10 +206,27 @@ namespace PresentacionGUI
             }
             
         }
+        
 
         private void TituloFormularioHijo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            Reset();
+            iconPictureBox1.ForeColor = Color.FromArgb(245, 50, 87);
+            iconUsers.ForeColor = Color.FromArgb(245, 50, 87);
         }
     }
 }
