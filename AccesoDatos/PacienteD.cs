@@ -35,14 +35,14 @@ namespace AccesoDatos
                             CacheExpediente.AntecedentesClinicos = Lectura.GetString(2);
                             CacheExpediente.MedicamentosPreEscritos = Lectura.GetString(3);
                             CacheExpediente.TipoSangre = Lectura.GetString(4);
-                            CachePaciente.Dui = Lectura.GetInt32(7);
-                            CachePaciente.NombrePaciente = Lectura.GetString(8);
-                            CachePaciente.ApellidoPaciente = Lectura.GetString(9);
-                            CachePaciente.SexoPaciente = Lectura.GetString(10);
-                            CachePaciente.TelefonoPaciente = Lectura.GetInt32(11);
-                            CachePaciente.DirrecionPaciente = Lectura.GetString(12);
-                            CachePaciente.EstadoCivilPaciente = Lectura.GetString(13);
-                            CachePaciente.FechaNacimientoPaciente = Lectura.GetString(14);
+                            CachePaciente.Dui = Lectura.GetInt32(6);
+                            CachePaciente.NombrePaciente = Lectura.GetString(7);
+                            CachePaciente.ApellidoPaciente = Lectura.GetString(8);
+                            CachePaciente.SexoPaciente = Lectura.GetString(9);
+                            CachePaciente.TelefonoPaciente = Lectura.GetInt32(10);
+                            CachePaciente.DirrecionPaciente = Lectura.GetString(11);
+                            CachePaciente.EstadoCivilPaciente = Lectura.GetString(12);
+                            CachePaciente.FechaNacimientoPaciente = Lectura.GetString(13);
 
                         }
                         return true;

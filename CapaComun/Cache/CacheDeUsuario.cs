@@ -36,6 +36,7 @@ namespace CapaComun.Cache
         public static string AntecedentesClinicos { get; set; }
         public static string MedicamentosPreEscritos  { get; set; }
         public static string TipoSangre { get; set; }
+
     }
 
     

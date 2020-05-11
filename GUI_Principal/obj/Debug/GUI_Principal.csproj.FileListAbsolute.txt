@@ -33,3 +33,4 @@ C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\AccesoDatos.
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\CapaComun.pdb
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\Dominio.pdb
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\AccesoDatos.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.FrmCrearExpediente.resources

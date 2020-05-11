@@ -62,6 +62,12 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearExpediente.Designer.cs">
+      <DependentUpon>CrearExpediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Expediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearExpediente.resx">
+      <DependentUpon>CrearExpediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Expediente.resx">
       <DependentUpon>Expediente.cs</DependentUpon>
