@@ -171,9 +171,8 @@
             // 
             this.CboSexo.FormattingEnabled = true;
             this.CboSexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino",
-            "Otros"});
+            "F",
+            "M"});
             this.CboSexo.Location = new System.Drawing.Point(184, 124);
             this.CboSexo.Name = "CboSexo";
             this.CboSexo.Size = new System.Drawing.Size(121, 21);

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.GobCaptura = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtDui = new System.Windows.Forms.TextBox();
+            this.rtbMedicamentos = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbAntecedentes = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -43,30 +43,28 @@
             this.CboEstadoCivil = new System.Windows.Forms.ComboBox();
             this.TxtFechaNaciemiemto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.TxtNombreEmergicia = new System.Windows.Forms.TextBox();
-            this.TxtContantoEmergencia = new System.Windows.Forms.TextBox();
             this.RtbDireccion = new System.Windows.Forms.RichTextBox();
             this.TxtNumero = new System.Windows.Forms.TextBox();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnCrear = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.Resetbtn = new System.Windows.Forms.Button();
             this.GobCaptura.SuspendLayout();
             this.SuspendLayout();
             // 
             // GobCaptura
             // 
-            this.GobCaptura.Controls.Add(this.textBox1);
-            this.GobCaptura.Controls.Add(this.richTextBox2);
+            this.GobCaptura.Controls.Add(this.Resetbtn);
+            this.GobCaptura.Controls.Add(this.txtDui);
+            this.GobCaptura.Controls.Add(this.rtbMedicamentos);
             this.GobCaptura.Controls.Add(this.label14);
-            this.GobCaptura.Controls.Add(this.richTextBox1);
+            this.GobCaptura.Controls.Add(this.rtbAntecedentes);
             this.GobCaptura.Controls.Add(this.label13);
             this.GobCaptura.Controls.Add(this.label12);
             this.GobCaptura.Controls.Add(this.label11);
@@ -77,15 +75,11 @@
             this.GobCaptura.Controls.Add(this.CboEstadoCivil);
             this.GobCaptura.Controls.Add(this.TxtFechaNaciemiemto);
             this.GobCaptura.Controls.Add(this.label8);
-            this.GobCaptura.Controls.Add(this.TxtNombreEmergicia);
-            this.GobCaptura.Controls.Add(this.TxtContantoEmergencia);
             this.GobCaptura.Controls.Add(this.RtbDireccion);
             this.GobCaptura.Controls.Add(this.TxtNumero);
             this.GobCaptura.Controls.Add(this.TxtApellido);
             this.GobCaptura.Controls.Add(this.label7);
             this.GobCaptura.Controls.Add(this.label6);
-            this.GobCaptura.Controls.Add(this.label5);
-            this.GobCaptura.Controls.Add(this.label4);
             this.GobCaptura.Controls.Add(this.label3);
             this.GobCaptura.Controls.Add(this.label2);
             this.GobCaptura.Controls.Add(this.label1);
@@ -99,56 +93,57 @@
             this.GobCaptura.TabStop = false;
             this.GobCaptura.Text = "Actualizar Expediente";
             // 
-            // textBox1
+            // txtDui
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
-            this.textBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(141, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 16);
-            this.textBox1.TabIndex = 2;
+            this.txtDui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtDui.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDui.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
+            this.txtDui.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtDui.Location = new System.Drawing.Point(141, 119);
+            this.txtDui.Name = "txtDui";
+            this.txtDui.Size = new System.Drawing.Size(100, 16);
+            this.txtDui.TabIndex = 2;
+            this.txtDui.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDui_KeyPress);
             // 
-            // richTextBox2
+            // rtbMedicamentos
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
-            this.richTextBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox2.Location = new System.Drawing.Point(502, 244);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(361, 36);
-            this.richTextBox2.TabIndex = 12;
-            this.richTextBox2.Text = "";
+            this.rtbMedicamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.rtbMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbMedicamentos.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
+            this.rtbMedicamentos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.rtbMedicamentos.Location = new System.Drawing.Point(512, 178);
+            this.rtbMedicamentos.Name = "rtbMedicamentos";
+            this.rtbMedicamentos.Size = new System.Drawing.Size(361, 36);
+            this.rtbMedicamentos.TabIndex = 12;
+            this.rtbMedicamentos.Text = "";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(300, 244);
+            this.label14.Location = new System.Drawing.Point(310, 178);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(185, 16);
             this.label14.TabIndex = 32;
             this.label14.Text = "Medicamentos Pre-Escritos:";
             // 
-            // richTextBox1
+            // rtbAntecedentes
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox1.Location = new System.Drawing.Point(502, 197);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(361, 36);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.rtbAntecedentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.rtbAntecedentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbAntecedentes.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
+            this.rtbAntecedentes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.rtbAntecedentes.Location = new System.Drawing.Point(512, 118);
+            this.rtbAntecedentes.Name = "rtbAntecedentes";
+            this.rtbAntecedentes.Size = new System.Drawing.Size(361, 36);
+            this.rtbAntecedentes.TabIndex = 11;
+            this.rtbAntecedentes.Text = "";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(321, 197);
+            this.label13.Location = new System.Drawing.Point(331, 118);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(161, 16);
             this.label13.TabIndex = 30;
@@ -158,7 +153,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(408, 300);
+            this.label12.Location = new System.Drawing.Point(441, 257);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 16);
             this.label12.TabIndex = 28;
@@ -182,14 +177,14 @@
             this.CboTipoSangre.ForeColor = System.Drawing.Color.Gainsboro;
             this.CboTipoSangre.FormattingEnabled = true;
             this.CboTipoSangre.Items.AddRange(new object[] {
-            "O negativo",
-            "O positivo",
-            "A negativo",
-            "A positivo",
-            "B negativo",
-            "B positivo",
-            "AB negativo",
-            "AB positivo"});
+            "O -",
+            "O +",
+            "A -",
+            "A +",
+            "B -",
+            "B +",
+            "AB -",
+            "AB +"});
             this.CboTipoSangre.Location = new System.Drawing.Point(141, 315);
             this.CboTipoSangre.Name = "CboTipoSangre";
             this.CboTipoSangre.Size = new System.Drawing.Size(121, 23);
@@ -203,9 +198,8 @@
             this.CboSexo.ForeColor = System.Drawing.Color.Gainsboro;
             this.CboSexo.FormattingEnabled = true;
             this.CboSexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino",
-            "Otros"});
+            "F",
+            "M"});
             this.CboSexo.Location = new System.Drawing.Point(141, 236);
             this.CboSexo.Name = "CboSexo";
             this.CboSexo.Size = new System.Drawing.Size(121, 23);
@@ -269,35 +263,13 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Fecha Nacimiento: ";
             // 
-            // TxtNombreEmergicia
-            // 
-            this.TxtNombreEmergicia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.TxtNombreEmergicia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtNombreEmergicia.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
-            this.TxtNombreEmergicia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TxtNombreEmergicia.Location = new System.Drawing.Point(506, 32);
-            this.TxtNombreEmergicia.Name = "TxtNombreEmergicia";
-            this.TxtNombreEmergicia.Size = new System.Drawing.Size(147, 16);
-            this.TxtNombreEmergicia.TabIndex = 8;
-            // 
-            // TxtContantoEmergencia
-            // 
-            this.TxtContantoEmergencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.TxtContantoEmergencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtContantoEmergencia.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
-            this.TxtContantoEmergencia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TxtContantoEmergencia.Location = new System.Drawing.Point(506, 76);
-            this.TxtContantoEmergencia.Name = "TxtContantoEmergencia";
-            this.TxtContantoEmergencia.Size = new System.Drawing.Size(147, 16);
-            this.TxtContantoEmergencia.TabIndex = 9;
-            // 
             // RtbDireccion
             // 
             this.RtbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.RtbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RtbDireccion.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
             this.RtbDireccion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.RtbDireccion.Location = new System.Drawing.Point(502, 119);
+            this.RtbDireccion.Location = new System.Drawing.Point(512, 30);
             this.RtbDireccion.Name = "RtbDireccion";
             this.RtbDireccion.Size = new System.Drawing.Size(361, 60);
             this.RtbDireccion.TabIndex = 10;
@@ -329,7 +301,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(389, 119);
+            this.label7.Location = new System.Drawing.Point(418, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 16);
             this.label7.TabIndex = 7;
@@ -344,26 +316,6 @@
             this.label6.Size = new System.Drawing.Size(33, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Dui:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(257, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(243, 16);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Nombre de Contacto de Emergecia:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(313, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Contacto de Emergencia:";
             // 
             // label3
             // 
@@ -418,6 +370,7 @@
             this.BtnCrear.TabIndex = 17;
             this.BtnCrear.Text = "Guardar";
             this.BtnCrear.UseVisualStyleBackColor = true;
+            this.BtnCrear.Click += new System.EventHandler(this.BtnCrear_Click);
             // 
             // BtnLimpiar
             // 
@@ -429,9 +382,23 @@
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(85, 30);
             this.BtnLimpiar.TabIndex = 18;
-            this.BtnLimpiar.Text = "Cancelar";
+            this.BtnLimpiar.Text = "Salir";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
+            // 
+            // Resetbtn
+            // 
+            this.Resetbtn.FlatAppearance.BorderSize = 0;
+            this.Resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Resetbtn.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
+            this.Resetbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.Resetbtn.Location = new System.Drawing.Point(793, 337);
+            this.Resetbtn.Name = "Resetbtn";
+            this.Resetbtn.Size = new System.Drawing.Size(80, 30);
+            this.Resetbtn.TabIndex = 20;
+            this.Resetbtn.Text = "Limpiar";
+            this.Resetbtn.UseVisualStyleBackColor = true;
+            this.Resetbtn.Click += new System.EventHandler(this.Resetbtn_Click);
             // 
             // ActualizarExp
             // 
@@ -445,6 +412,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ActualizarExp";
             this.Text = "ActualizarExp";
+            this.Load += new System.EventHandler(this.ActualizarExp_Load);
             this.GobCaptura.ResumeLayout(false);
             this.GobCaptura.PerformLayout();
             this.ResumeLayout(false);
@@ -454,10 +422,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GobCaptura;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.TextBox txtDui;
+        private System.Windows.Forms.RichTextBox rtbMedicamentos;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbAntecedentes;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -468,20 +436,17 @@
         private System.Windows.Forms.ComboBox CboEstadoCivil;
         private System.Windows.Forms.TextBox TxtFechaNaciemiemto;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtNombreEmergicia;
-        private System.Windows.Forms.TextBox TxtContantoEmergencia;
         private System.Windows.Forms.RichTextBox RtbDireccion;
         private System.Windows.Forms.TextBox TxtNumero;
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button BtnCrear;
         private System.Windows.Forms.Button BtnLimpiar;
+        private System.Windows.Forms.Button Resetbtn;
     }
 }

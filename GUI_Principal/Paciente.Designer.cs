@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelPaciente = new System.Windows.Forms.Panel();
+            this.Errorlbl = new System.Windows.Forms.Label();
             this.ErrorBusquedad = new FontAwesome.Sharp.IconPictureBox();
             this.Search = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.btnPrueba = new FontAwesome.Sharp.IconButton();
             this.SerachExpediente = new FontAwesome.Sharp.IconButton();
             this.addPaciente = new FontAwesome.Sharp.IconButton();
-            this.Errorlbl = new System.Windows.Forms.Label();
             this.PanelPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorBusquedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
@@ -73,6 +73,19 @@
             this.PanelPaciente.Name = "PanelPaciente";
             this.PanelPaciente.Size = new System.Drawing.Size(905, 426);
             this.PanelPaciente.TabIndex = 0;
+            
+            // 
+            // Errorlbl
+            // 
+            this.Errorlbl.AutoSize = true;
+            this.Errorlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Errorlbl.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Errorlbl.Location = new System.Drawing.Point(428, 35);
+            this.Errorlbl.Name = "Errorlbl";
+            this.Errorlbl.Size = new System.Drawing.Size(50, 16);
+            this.Errorlbl.TabIndex = 17;
+            this.Errorlbl.Text = "ERROR";
+            this.Errorlbl.Visible = false;
             // 
             // ErrorBusquedad
             // 
@@ -466,18 +479,6 @@
             this.addPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addPaciente.UseVisualStyleBackColor = false;
             this.addPaciente.Click += new System.EventHandler(this.addPaciente_Click);
-            // 
-            // Errorlbl
-            // 
-            this.Errorlbl.AutoSize = true;
-            this.Errorlbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Errorlbl.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Errorlbl.Location = new System.Drawing.Point(428, 35);
-            this.Errorlbl.Name = "Errorlbl";
-            this.Errorlbl.Size = new System.Drawing.Size(50, 16);
-            this.Errorlbl.TabIndex = 17;
-            this.Errorlbl.Text = "ERROR";
-            this.Errorlbl.Visible = false;
             // 
             // Paciente
             // 

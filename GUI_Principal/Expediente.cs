@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaComun.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,8 @@ namespace GUI_Principal
 
         private void FrmExpediente_Load(object sender, EventArgs e)
         {
-
+            Nombre_newcita.Text = CachePaciente.NombrePaciente;
+            numExpe_newcita.Text = Convert.ToString( CacheExpediente.NumExpediente);
         }
 
         private void button1_Click(object sender, EventArgs e)

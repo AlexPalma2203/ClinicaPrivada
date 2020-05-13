@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using Dominio;
 namespace GUI_Principal
 {
     public partial class FrmCrearExpediente : Form
@@ -20,8 +20,18 @@ namespace GUI_Principal
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
+            ModeloPaciente createPaciente = new ModeloPaciente(dui: Convert.ToInt32( TxtDui.Text),
+               nombreP: TxtNombre.Text,
+               apellidosP: TxtApellido.Text,
+               sexoP: Convert.ToString(CboSexo.SelectedItem),
+               numeroTeleP: Convert.ToInt32(TxtNumero.Text),
+               direccionP: RtbDireccion.Text,
+               estadoCivilP: Convert.ToString(CboEstadoCivil.SelectedItem),
+               fechaNaciemientoP: TxtFechaNaciemiemto.Text);
+            var resultado = createPaciente.CrearExpediente();
+            MessageBox.Show(resultado);
+            this.Hide();
 
-          
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)

@@ -53,8 +53,8 @@
             this.TxtPresion = new System.Windows.Forms.TextBox();
             this.TxtTemperatura = new System.Windows.Forms.TextBox();
             this.TxtEstatura = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Nombre_newcita = new System.Windows.Forms.Label();
+            this.numExpe_newcita = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -345,27 +345,27 @@
             this.TxtEstatura.Size = new System.Drawing.Size(100, 16);
             this.TxtEstatura.TabIndex = 4;
             // 
-            // label4
+            // Nombre_newcita
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(134, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 16);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Nombre";
+            this.Nombre_newcita.AutoSize = true;
+            this.Nombre_newcita.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Nombre_newcita.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Nombre_newcita.Location = new System.Drawing.Point(134, 18);
+            this.Nombre_newcita.Name = "Nombre_newcita";
+            this.Nombre_newcita.Size = new System.Drawing.Size(60, 16);
+            this.Nombre_newcita.TabIndex = 18;
+            this.Nombre_newcita.Text = "Nombre";
             // 
-            // label10
+            // numExpe_newcita
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(764, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 16);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Nº";
+            this.numExpe_newcita.AutoSize = true;
+            this.numExpe_newcita.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.numExpe_newcita.ForeColor = System.Drawing.Color.Gainsboro;
+            this.numExpe_newcita.Location = new System.Drawing.Point(764, 21);
+            this.numExpe_newcita.Name = "numExpe_newcita";
+            this.numExpe_newcita.Size = new System.Drawing.Size(23, 16);
+            this.numExpe_newcita.TabIndex = 19;
+            this.numExpe_newcita.Text = "Nº";
             // 
             // button1
             // 
@@ -387,8 +387,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(905, 426);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.numExpe_newcita);
+            this.Controls.Add(this.Nombre_newcita);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -421,8 +421,8 @@
         private System.Windows.Forms.TextBox TxtPresion;
         private System.Windows.Forms.TextBox TxtTemperatura;
         private System.Windows.Forms.TextBox TxtEstatura;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Nombre_newcita;
+        private System.Windows.Forms.Label numExpe_newcita;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label13;

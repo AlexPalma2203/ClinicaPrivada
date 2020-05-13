@@ -128,14 +128,17 @@ namespace GUI_Principal
         private void addPaciente_Click(object sender, EventArgs e)
         {
             btnPrueba.Visible = false;
+            AbrirFormularioHijoPaciente(new FrmCrearExpediente());
             ActivateButton(sender, Color.FromArgb(253, 138, 114));
             
         }
 
         private void Paciente_Load(object sender, EventArgs e)
         {
+            
             SearchExp.Focus();
         }
+       
 
         private void SerachExpediente_Leave(object sender, EventArgs e)
         {
@@ -145,6 +148,7 @@ namespace GUI_Principal
         private void Actualizar_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijoPaciente(new ActualizarExp());
+
         }
 
         private void btnPrueba_Click(object sender, EventArgs e)
@@ -163,11 +167,11 @@ namespace GUI_Principal
             Errorlbl.Visible = true;
             ErrorBusquedad.Visible = true;
         }
-        private void Search_Click(object sender, EventArgs e)
+        public void Search_Click(object sender, EventArgs e)
         {
             if (SearchExp.Text != "Buscar Expediente")
             {
-                ModeloUsuario usuario = new ModeloUsuario();
+                ModeloPaciente usuario = new ModeloPaciente();
                 try
                 {
                     var BusquedadValida = usuario.BusquedadPaciente(Convert.ToInt32(SearchExp.Text));
@@ -199,5 +203,7 @@ namespace GUI_Principal
                 msjError("Ingrese Un Usuario");
             }
         }
+
+      
     }
 }

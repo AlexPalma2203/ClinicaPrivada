@@ -52,12 +52,119 @@ namespace AccesoDatos
                         return false;
 
                     }
+
+
                 }
 
             }
 
 
         }
+        public void actualizarExpedinte(string Antecedentes, string medicamentos, string tipoSangre, int dui)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "update Expediente set Antecedentes_Clinicos = @antecendetes, Medicamentos_Escritos= @medicamentos, tipo_sangre= @sangre where dui = @dui ";
+                    Comando.Parameters.AddWithValue("@antecendetes",Antecedentes);
+                    Comando.Parameters.AddWithValue("@medicamentos", medicamentos);
+                    Comando.Parameters.AddWithValue("@sangre", tipoSangre);
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.CommandType = CommandType.Text;
+                     Comando.ExecuteNonQuery();
+                    
+                }
+            }
+
+
+
+        }
+        public void actualizarPaciente(string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, string FechaNaciemientoP)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "update Paciente set Nombre_Paciente= @nombre , Apellidos_Paciente = @apellido , Sexo_Paciente = @sexo, Telefono_Paciente = @telefono, Direccion_Paciente = @direccion ,EstadoCivil = @estadocivil , FechaNacimiento =@fechanac";
+                    Comando.Parameters.AddWithValue("@nombre", nombreP);
+                    Comando.Parameters.AddWithValue("@apellido", apellidosP);
+                    Comando.Parameters.AddWithValue("@sexo", SexoP);
+                    Comando.Parameters.AddWithValue("@telefono", numeroTeleP);
+                    Comando.Parameters.AddWithValue("@direccion", DireccionP);
+                    Comando.Parameters.AddWithValue("@estadocivil", EstadoCivilP);
+                    Comando.Parameters.AddWithValue("@fechanac", FechaNaciemientoP);
+                    Comando.CommandType = CommandType.Text;
+                    Comando.ExecuteNonQuery();
+
+                }
+            }
+
+
+
+        }
+        public void crearPaciente(int DuiP, string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, string FechaNaciemientoP)
+        {
+            using (var Conexion = GetConnection())
+            {
+                Conexion.Open();
+                using (var comando= new SqlCommand()){
+
+                    
+                    comando.Connection = Conexion;
+                     
+                    comando.CommandText = "Insert into Paciente values(@dui,@nombre,@apellido,@sexo,@telefono,@direccion,@estadocivil,@fechanac)";
+                    comando.Parameters.AddWithValue("@dui", DuiP);
+                    comando.Parameters.AddWithValue("@nombre", nombreP);
+                    comando.Parameters.AddWithValue("@apellido", apellidosP);
+                    comando.Parameters.AddWithValue("@sexo", SexoP);
+                    comando.Parameters.AddWithValue("@telefono", numeroTeleP);
+                    comando.Parameters.AddWithValue("@direccion", DireccionP);
+                    comando.Parameters.AddWithValue("@estadocivil", EstadoCivilP);
+                    comando.Parameters.AddWithValue("@fechanac", FechaNaciemientoP);
+                    comando.CommandType = CommandType.Text;
+                    comando.ExecuteNonQuery();
+
+                }
+
+            }
+
+        }
+        public void crearExpedinte(string Antecedentes, string medicamentos, string tipoSangre, int dui)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "insert into Expediente values (SYSDATETIME(),@,'','O RH+',1)";
+                    Comando.Parameters.AddWithValue("@antecendetes", Antecedentes);
+                    Comando.Parameters.AddWithValue("@medicamentos", medicamentos);
+                    Comando.Parameters.AddWithValue("@sangre", tipoSangre);
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.CommandType = CommandType.Text;
+                    Comando.ExecuteNonQuery();
+
+                }
+            }
+
+
+
+        }
+
+
+
 
     }
 }
