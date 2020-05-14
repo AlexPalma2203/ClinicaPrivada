@@ -57,10 +57,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelvisual1 = new System.Windows.Forms.Panel();
             this.panelvisual2 = new System.Windows.Forms.Panel();
+            this.Citas = new FontAwesome.Sharp.IconPictureBox();
             this.PanelPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorBusquedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Citas)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPaciente
@@ -145,6 +147,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.panel2.Controls.Add(this.Citas);
             this.panel2.Controls.Add(this.NewSearch);
             this.panel2.Controls.Add(this.numExpedientePaciente);
             this.panel2.Controls.Add(this.lblFechaExpedientePaciente);
@@ -166,7 +169,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(866, 332);
             this.panel2.TabIndex = 12;
-        
             this.panel2.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
             // 
             // NewSearch
@@ -301,7 +303,7 @@
             this.Actualizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.Actualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Actualizar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Actualizar.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.Actualizar.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
             this.Actualizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.Actualizar.IconSize = 70;
             this.Actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +313,7 @@
             this.Actualizar.Rotation = 0D;
             this.Actualizar.Size = new System.Drawing.Size(205, 74);
             this.Actualizar.TabIndex = 8;
-            this.Actualizar.Text = "Actualizar Expediente";
+            this.Actualizar.Text = "Editar Expediente";
             this.Actualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Actualizar.UseVisualStyleBackColor = false;
             this.Actualizar.Click += new System.EventHandler(this.Actualizar_Click);
@@ -513,6 +515,18 @@
             this.panelvisual2.TabIndex = 18;
             this.panelvisual2.Visible = false;
             // 
+            // Citas
+            // 
+            this.Citas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.Citas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.Citas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Citas.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.Citas.Location = new System.Drawing.Point(518, 14);
+            this.Citas.Name = "Citas";
+            this.Citas.Size = new System.Drawing.Size(32, 32);
+            this.Citas.TabIndex = 17;
+            this.Citas.TabStop = false;
+            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,6 +550,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Search)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Citas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -571,5 +586,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelvisual1;
         private System.Windows.Forms.Panel panelvisual2;
+        private FontAwesome.Sharp.IconPictureBox Citas;
     }
 }

@@ -171,7 +171,7 @@
             this.Registros.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.Registros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registros.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Registros.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
+            this.Registros.IconChar = FontAwesome.Sharp.IconChar.Bitcoin;
             this.Registros.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
             this.Registros.IconSize = 50;
             this.Registros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,7 +181,7 @@
             this.Registros.Rotation = 0D;
             this.Registros.Size = new System.Drawing.Size(200, 60);
             this.Registros.TabIndex = 2;
-            this.Registros.Text = "Registros";
+            this.Registros.Text = ".";
             this.Registros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Registros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Registros.UseVisualStyleBackColor = false;

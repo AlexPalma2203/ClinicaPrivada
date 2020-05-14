@@ -20,6 +20,7 @@ namespace GUI_Principal
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
+            
             try {
                 ModeloPaciente createPaciente = new ModeloPaciente(dui: Convert.ToInt32(TxtDui.Text),
               nombreP: TxtNombre.Text,
@@ -37,21 +38,11 @@ namespace GUI_Principal
               );
                 var resultado = createPaciente.CrearExpediente();
                 MessageBox.Show(resultado);
-                rtbMedicamentos.Clear();
-                rtbAntecedentes.Clear();
-                TxtNombre.Clear();
-                TxtApellido.Clear();
-                TxtDui.Clear();
-                TxtFechaNaciemiemto.Clear();
-                RtbDireccion.Clear();
-                TxtNumero.Clear();
-                CboSexo.Text = "";
-                CboEstadoCivil.Text= "";
-                CboTipoSangre.Text = "";
+                
+                if (resultado != "El numero de Dui ya esta registrado") { Reset(); }
             }
-            catch (Exception) {
-
-                MessageBox.Show("Error Al Crear Expediente");
+            catch (FormatException) {
+                MessageBox.Show("Rellene Los Campos");
             }
             
 

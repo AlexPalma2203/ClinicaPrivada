@@ -87,6 +87,7 @@
             this.BtnGuardar.TabIndex = 9;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // label2
             // 

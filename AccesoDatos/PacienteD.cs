@@ -180,8 +180,35 @@ namespace AccesoDatos
         }
 
 
+        public void CrearDianostico(int NumExped, string EnfermedadP, string EstadoP, float pesoP, float estaturaP, float presionP, float temperaturaP, string detallesP, string recomendacionesP)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "insert into Diagnostico values (@Enfermedad,@Estado,@peso,@estatura,@presion,SYSDATETIME(),@temperatura,@detalles,@recomendaciones,@Expe) ";
+                    Comando.Parameters.AddWithValue("@Expe", NumExped);
+                    Comando.Parameters.AddWithValue("@Enfermedad", EnfermedadP);
+                    Comando.Parameters.AddWithValue("@Estado", EstadoP);
+                    Comando.Parameters.AddWithValue("@peso", pesoP);
+                    Comando.Parameters.AddWithValue("@estatura", estaturaP);
+                    Comando.Parameters.AddWithValue("@presion", presionP);
+                    Comando.Parameters.AddWithValue("@temperatura", temperaturaP);
+                    Comando.Parameters.AddWithValue("@detalles", detallesP);
+                    Comando.Parameters.AddWithValue("@recomendaciones", recomendacionesP);
+                    Comando.CommandType = CommandType.Text;
+                    Comando.ExecuteNonQuery();
+
+                }
+            }
 
 
+        }
 
     }
 }
