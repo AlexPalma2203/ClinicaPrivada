@@ -26,39 +26,31 @@ namespace GUI_Principal
         }
         private IconButton currentBtn;
    
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
                 DisableButton();
                 currentBtn = (IconButton)senderBtn;
-
+                currentBtn.FlatAppearance.BorderSize = 1;
                 currentBtn.ForeColor = color;
                 currentBtn.IconColor = color;
+                
+
             }
         }
         private void DisableButton()
         {
             if (currentBtn != null)
             {
-              
+                currentBtn.FlatAppearance.BorderSize = 0;
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.IconColor = Color.Gainsboro;
 
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            
 
-
-        }
 
         private void AbrirFormularioHijoPaciente(Form FormularioHijo)
         {
@@ -82,21 +74,25 @@ namespace GUI_Principal
 
         private void NewConsulta_Click(object sender, EventArgs e)
         {
-         
-            AbrirFormularioHijoPaciente(new FrmExpediente());
+            if (SearchExp.Text == "Buscar" || acceso ==  false) 
+            {
+                msjError("Ingrese un Dui Valido");
+                SearchExp.Focus();
+
+
+
+            }
+            else { AbrirFormularioHijoPaciente(new FrmExpediente()); }
+            
         }
 
-        private void lblFechaExpedientePaciente_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (SearchExp.Text == "Buscar Expediente")
+            if (SearchExp.Text == "Buscar")
             {
                 SearchExp.Text = "";
-                //SearchExp.ForeColor = Color.FromArgb(253, 138, 114);
+                
                 SearchExp.ForeColor = Color.Gainsboro;
             }
         }
@@ -105,7 +101,7 @@ namespace GUI_Principal
         {
             if (SearchExp.Text == "")
             {
-                SearchExp.Text = "Buscar Expediente";
+                SearchExp.Text = "Buscar";
                 SearchExp.ForeColor = Color.FromArgb(120, 116, 127);
             }
         }
@@ -113,6 +109,8 @@ namespace GUI_Principal
         private void NewSearch_Click(object sender, EventArgs e)
         {
             SearchExp.Focus();
+            SearchExp.Clear();
+            reset();
         }
 
         private void SerachExpediente_Click(object sender, EventArgs e)
@@ -123,6 +121,8 @@ namespace GUI_Principal
                 currentChildForm.Close();
             }
             this.BringToFront();
+            panelvisual1.Visible = true;
+            panelvisual2.Visible = false;
         }
 
         private void addPaciente_Click(object sender, EventArgs e)
@@ -130,6 +130,8 @@ namespace GUI_Principal
             btnPrueba.Visible = false;
             AbrirFormularioHijoPaciente(new FrmCrearExpediente());
             ActivateButton(sender, Color.FromArgb(253, 138, 114));
+            panelvisual2.Visible = true;
+            panelvisual1.Visible = false;
             
         }
 
@@ -140,14 +142,27 @@ namespace GUI_Principal
         }
        
 
-        private void SerachExpediente_Leave(object sender, EventArgs e)
-        {
-       
-        }
-
+        bool act=false;
         private void Actualizar_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijoPaciente(new ActualizarExp());
+            
+            
+            if (SearchExp.Text == "Buscar" || acceso == false)
+            {
+                msjError("Ingrese un Dui Valido");
+                SearchExp.Focus();
+
+            }
+            else {
+                AbrirFormularioHijoPaciente(new ActualizarExp());
+                act = true;
+            }
+
+        }
+        private void PanelPaciente_MouseEnter(object sender, EventArgs e)
+        {
+
+            if (act == true) { BuscarExpe(); act = false; }
 
         }
 
@@ -158,6 +173,9 @@ namespace GUI_Principal
                 currentChildForm.Close();
             }
             this.BringToFront();
+            panelvisual1.Visible = true;
+            panelvisual2.Visible = false;
+
         }
 
 
@@ -169,41 +187,112 @@ namespace GUI_Principal
         }
         public void Search_Click(object sender, EventArgs e)
         {
-            if (SearchExp.Text != "Buscar Expediente")
+            BuscarExpe();
+        }
+        bool acceso = false;
+        public void BuscarExpe() {
+            
+            if (SearchExp.Text != "Buscar")
             {
                 ModeloPaciente usuario = new ModeloPaciente();
                 try
                 {
-                    var BusquedadValida = usuario.BusquedadPaciente(Convert.ToInt32(SearchExp.Text));
+                    var BusquedadValida = usuario.BusquedadPaciente(Convert.ToInt32( SearchExp.Text));
                     if (BusquedadValida == true)
                     {
+                        
                         lblDuiPaciente.Text = Convert.ToString(CachePaciente.Dui);
                         lblNombrePaciente.Text = CachePaciente.NombrePaciente;
                         lblApellidoPaciente.Text = CachePaciente.ApellidoPaciente;
-                        lblFechaNacPaciente.Text = Convert.ToString( CachePaciente.FechaNacimientoPaciente);
-                        lblFechaExpedientePaciente.Text =Convert.ToString( CacheExpediente.FechaCreacionExpediente);
-                        numExpedientePaciente.Text = Convert.ToString( CacheExpediente.NumExpediente);
+                        lblFechaNacPaciente.Text = Convert.ToString(CachePaciente.FechaNacimientoPaciente);
+                        lblFechaExpedientePaciente.Text = Convert.ToString(CacheExpediente.FechaCreacionExpediente);
+                        numExpedientePaciente.Text = Convert.ToString(CacheExpediente.NumExpediente);
                         Errorlbl.Visible = false;
                         ErrorBusquedad.Visible = false;
-
+                        acceso = true;
 
                     }
                     else
                     {
-
+                        acceso = false;
                         msjError("Usuario No Encontrado");
                     }
                 }
-                catch (FormatException) {
+                catch (Exception)
+                {
+                    acceso = false;
                     msjError("Dui Invalido");
                 }
+
             }
             else
             {
+                acceso = false;
                 msjError("Ingrese Un Usuario");
             }
+
+
+
         }
 
-      
+        private void DeleteExpediente_Click(object sender, EventArgs e)
+        {
+
+            if (SearchExp.Text == "Buscar" || acceso == false || SearchExp.Text == "" )
+            {
+                msjError("Ingrese un Dui Valido");
+                SearchExp.Focus();
+                
+
+            }
+            else
+            {
+                try
+                {
+                    ModeloPaciente eliminar = new ModeloPaciente();
+                    eliminar.EliminarExp();
+                    MessageBox.Show("Expediente Eliminado");
+                    reset();
+
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error Al Eliminar Expediente");
+                }
+            }
+
+
+        }
+
+        public void reset() {
+
+            lblDuiPaciente.Text = "";
+            lblNombrePaciente.Text = "";
+            lblApellidoPaciente.Text = "";
+            lblFechaNacPaciente.Text = "";
+            lblFechaExpedientePaciente.Text = "";
+            numExpedientePaciente.Text = "";
+            
+        }
+
+        private void SearchExp_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchExp.Text.Length == 9)
+            {
+                BuscarExpe();
+            }
+            if (SearchExp.Text.Length >=1 && SearchExp.Text.Length < 9 ) {
+            Errorlbl.Visible = false;
+             ErrorBusquedad.Visible = false;
+                reset();
+
+            }
+
+        }
+        private void panel2_MouseEnter(object sender, EventArgs e)
+        {
+            if (act == true) { BuscarExpe(); act = false; }
+        }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.GobCaptura = new System.Windows.Forms.GroupBox();
+            this.FechaExp = new System.Windows.Forms.DateTimePicker();
+            this.Resetbtn = new System.Windows.Forms.Button();
             this.txtDui = new System.Windows.Forms.TextBox();
             this.rtbMedicamentos = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -54,12 +56,12 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnCrear = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.Resetbtn = new System.Windows.Forms.Button();
             this.GobCaptura.SuspendLayout();
             this.SuspendLayout();
             // 
             // GobCaptura
             // 
+            this.GobCaptura.Controls.Add(this.FechaExp);
             this.GobCaptura.Controls.Add(this.Resetbtn);
             this.GobCaptura.Controls.Add(this.txtDui);
             this.GobCaptura.Controls.Add(this.rtbMedicamentos);
@@ -92,6 +94,28 @@
             this.GobCaptura.TabIndex = 19;
             this.GobCaptura.TabStop = false;
             this.GobCaptura.Text = "Actualizar Expediente";
+            // 
+            // FechaExp
+            // 
+            this.FechaExp.Enabled = false;
+            this.FechaExp.Location = new System.Drawing.Point(512, 257);
+            this.FechaExp.Name = "FechaExp";
+            this.FechaExp.Size = new System.Drawing.Size(244, 23);
+            this.FechaExp.TabIndex = 91;
+            // 
+            // Resetbtn
+            // 
+            this.Resetbtn.FlatAppearance.BorderSize = 0;
+            this.Resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Resetbtn.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
+            this.Resetbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.Resetbtn.Location = new System.Drawing.Point(793, 337);
+            this.Resetbtn.Name = "Resetbtn";
+            this.Resetbtn.Size = new System.Drawing.Size(80, 30);
+            this.Resetbtn.TabIndex = 20;
+            this.Resetbtn.Text = "Limpiar";
+            this.Resetbtn.UseVisualStyleBackColor = true;
+            this.Resetbtn.Click += new System.EventHandler(this.Resetbtn_Click);
             // 
             // txtDui
             // 
@@ -386,20 +410,6 @@
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
-            // Resetbtn
-            // 
-            this.Resetbtn.FlatAppearance.BorderSize = 0;
-            this.Resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Resetbtn.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
-            this.Resetbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.Resetbtn.Location = new System.Drawing.Point(793, 337);
-            this.Resetbtn.Name = "Resetbtn";
-            this.Resetbtn.Size = new System.Drawing.Size(80, 30);
-            this.Resetbtn.TabIndex = 20;
-            this.Resetbtn.Text = "Limpiar";
-            this.Resetbtn.UseVisualStyleBackColor = true;
-            this.Resetbtn.Click += new System.EventHandler(this.Resetbtn_Click);
-            // 
             // ActualizarExp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,5 +458,6 @@
         private System.Windows.Forms.Button BtnCrear;
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button Resetbtn;
+        private System.Windows.Forms.DateTimePicker FechaExp;
     }
 }

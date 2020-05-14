@@ -84,7 +84,7 @@ namespace AccesoDatos
 
 
         }
-        public void actualizarPaciente(string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, string FechaNaciemientoP)
+        public void actualizarPaciente(int DuiP,string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, string FechaNaciemientoP)
         {
 
             using (var Conexion = GetConnection())
@@ -94,7 +94,7 @@ namespace AccesoDatos
                 using (var Comando = new SqlCommand())
                 {
                     Comando.Connection = Conexion;
-                    Comando.CommandText = "update Paciente set Nombre_Paciente= @nombre , Apellidos_Paciente = @apellido , Sexo_Paciente = @sexo, Telefono_Paciente = @telefono, Direccion_Paciente = @direccion ,EstadoCivil = @estadocivil , FechaNacimiento =@fechanac";
+                    Comando.CommandText = "update Paciente set Nombre_Paciente= @nombre , Apellidos_Paciente = @apellido , Sexo_Paciente = @sexo, Telefono_Paciente = @telefono, Direccion_Paciente = @direccion ,EstadoCivil = @estadocivil , FechaNacimiento =@fechanac where dui = @dui";
                     Comando.Parameters.AddWithValue("@nombre", nombreP);
                     Comando.Parameters.AddWithValue("@apellido", apellidosP);
                     Comando.Parameters.AddWithValue("@sexo", SexoP);
@@ -102,6 +102,7 @@ namespace AccesoDatos
                     Comando.Parameters.AddWithValue("@direccion", DireccionP);
                     Comando.Parameters.AddWithValue("@estadocivil", EstadoCivilP);
                     Comando.Parameters.AddWithValue("@fechanac", FechaNaciemientoP);
+                    Comando.Parameters.AddWithValue("@dui", DuiP);
                     Comando.CommandType = CommandType.Text;
                     Comando.ExecuteNonQuery();
 
@@ -148,7 +149,7 @@ namespace AccesoDatos
                 using (var Comando = new SqlCommand())
                 {
                     Comando.Connection = Conexion;
-                    Comando.CommandText = "insert into Expediente values (SYSDATETIME(),@,'','O RH+',1)";
+                    Comando.CommandText = "insert into Expediente values (SYSDATETIME(),@antecendetes,@medicamentos,@sangre,@dui)";
                     Comando.Parameters.AddWithValue("@antecendetes", Antecedentes);
                     Comando.Parameters.AddWithValue("@medicamentos", medicamentos);
                     Comando.Parameters.AddWithValue("@sangre", tipoSangre);
@@ -158,10 +159,26 @@ namespace AccesoDatos
 
                 }
             }
-
-
-
         }
+
+        public void EliminarExp(int dui)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "delete from Expediente where dui = @dui ; delete from Paciente where Dui = @dui";
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.CommandType = CommandType.Text;
+                    Comando.ExecuteNonQuery();
+                }
+            }
+        }
+
 
 
 

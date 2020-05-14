@@ -13,8 +13,10 @@ using CapaComun.Cache;
 
 namespace GUI_Principal
 {
+    
     public partial class ActualizarExp : Form
     {
+        
         public ActualizarExp()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace GUI_Principal
             
             cargar_Datos();
             
+
         }
         private void cargar_Datos() {
             TxtNombre.Text = CachePaciente.NombrePaciente;
@@ -43,6 +46,7 @@ namespace GUI_Principal
             RtbDireccion.Text = CachePaciente.DirrecionPaciente;
             rtbAntecedentes.Text = CacheExpediente.AntecedentesClinicos;
             rtbMedicamentos.Text = CacheExpediente.MedicamentosPreEscritos;
+            FechaExp.Value = CacheExpediente.FechaCreacionExpediente;
         }
         private void Reiniciar()
         {
@@ -52,6 +56,7 @@ namespace GUI_Principal
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 ModeloPaciente actPaciente = new ModeloPaciente(dui: CachePaciente.Dui,
@@ -69,14 +74,16 @@ namespace GUI_Principal
                 MessageBox.Show(resultado);
                 Reiniciar();
                 this.Hide();
+                
+
             }
-            catch (Exception) {
+            catch (Exception)
+            {
 
                 MessageBox.Show("Error al actulizar datos");
-
+                
             }
-            
-            
+
 
         }
 

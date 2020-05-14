@@ -54,6 +54,9 @@
             this.btnPrueba = new FontAwesome.Sharp.IconButton();
             this.SerachExpediente = new FontAwesome.Sharp.IconButton();
             this.addPaciente = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelvisual1 = new System.Windows.Forms.Panel();
+            this.panelvisual2 = new System.Windows.Forms.Panel();
             this.PanelPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorBusquedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
@@ -73,7 +76,7 @@
             this.PanelPaciente.Name = "PanelPaciente";
             this.PanelPaciente.Size = new System.Drawing.Size(905, 426);
             this.PanelPaciente.TabIndex = 0;
-            
+            this.PanelPaciente.MouseEnter += new System.EventHandler(this.PanelPaciente_MouseEnter);
             // 
             // Errorlbl
             // 
@@ -130,10 +133,12 @@
             this.SearchExp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchExp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.SearchExp.Location = new System.Drawing.Point(25, 28);
+            this.SearchExp.MaxLength = 9;
             this.SearchExp.Name = "SearchExp";
-            this.SearchExp.Size = new System.Drawing.Size(314, 20);
+            this.SearchExp.Size = new System.Drawing.Size(310, 20);
             this.SearchExp.TabIndex = 13;
-            this.SearchExp.Text = "Buscar Expediente";
+            this.SearchExp.Text = "Buscar";
+            this.SearchExp.TextChanged += new System.EventHandler(this.SearchExp_TextChanged);
             this.SearchExp.Enter += new System.EventHandler(this.textBox1_Enter);
             this.SearchExp.Leave += new System.EventHandler(this.SearchExp_Leave);
             // 
@@ -161,6 +166,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(866, 332);
             this.panel2.TabIndex = 12;
+        
+            this.panel2.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
             // 
             // NewSearch
             // 
@@ -178,7 +185,7 @@
             this.NewSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.NewSearch.IconSize = 70;
             this.NewSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewSearch.Location = new System.Drawing.Point(654, 247);
+            this.NewSearch.Location = new System.Drawing.Point(650, 247);
             this.NewSearch.Name = "NewSearch";
             this.NewSearch.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.NewSearch.Rotation = 0D;
@@ -280,6 +287,7 @@
             this.DeleteExpediente.Text = "Eliminar Expediente";
             this.DeleteExpediente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.DeleteExpediente.UseVisualStyleBackColor = false;
+            this.DeleteExpediente.Click += new System.EventHandler(this.DeleteExpediente_Click);
             // 
             // Actualizar
             // 
@@ -411,7 +419,6 @@
             // 
             this.btnPrueba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
             this.btnPrueba.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrueba.FlatAppearance.BorderSize = 0;
             this.btnPrueba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrueba.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPrueba.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -420,10 +427,10 @@
             this.btnPrueba.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnPrueba.IconSize = 25;
             this.btnPrueba.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrueba.Location = new System.Drawing.Point(35, 6);
+            this.btnPrueba.Location = new System.Drawing.Point(35, 5);
             this.btnPrueba.Name = "btnPrueba";
             this.btnPrueba.Rotation = 0D;
-            this.btnPrueba.Size = new System.Drawing.Size(250, 35);
+            this.btnPrueba.Size = new System.Drawing.Size(251, 35);
             this.btnPrueba.TabIndex = 10;
             this.btnPrueba.Text = "Busquedad De Expediente";
             this.btnPrueba.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,20 +454,21 @@
             this.SerachExpediente.Location = new System.Drawing.Point(35, 5);
             this.SerachExpediente.Name = "SerachExpediente";
             this.SerachExpediente.Rotation = 0D;
-            this.SerachExpediente.Size = new System.Drawing.Size(250, 35);
+            this.SerachExpediente.Size = new System.Drawing.Size(251, 35);
             this.SerachExpediente.TabIndex = 8;
             this.SerachExpediente.Text = "Busquedad De Expediente";
             this.SerachExpediente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SerachExpediente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SerachExpediente.UseVisualStyleBackColor = false;
             this.SerachExpediente.Click += new System.EventHandler(this.SerachExpediente_Click);
-            this.SerachExpediente.Leave += new System.EventHandler(this.SerachExpediente_Leave);
             // 
             // addPaciente
             // 
             this.addPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
             this.addPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addPaciente.FlatAppearance.BorderSize = 0;
+            this.addPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.addPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.addPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPaciente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.addPaciente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -469,10 +477,10 @@
             this.addPaciente.IconColor = System.Drawing.Color.Gainsboro;
             this.addPaciente.IconSize = 25;
             this.addPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addPaciente.Location = new System.Drawing.Point(320, 6);
+            this.addPaciente.Location = new System.Drawing.Point(320, 3);
             this.addPaciente.Name = "addPaciente";
             this.addPaciente.Rotation = 0D;
-            this.addPaciente.Size = new System.Drawing.Size(250, 35);
+            this.addPaciente.Size = new System.Drawing.Size(251, 35);
             this.addPaciente.TabIndex = 9;
             this.addPaciente.Text = "Crear Nuevo Expediente";
             this.addPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -480,13 +488,41 @@
             this.addPaciente.UseVisualStyleBackColor = false;
             this.addPaciente.Click += new System.EventHandler(this.addPaciente_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.panel3.Location = new System.Drawing.Point(11, 33);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(907, 428);
+            this.panel3.TabIndex = 11;
+            // 
+            // panelvisual1
+            // 
+            this.panelvisual1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
+            this.panelvisual1.Location = new System.Drawing.Point(38, 30);
+            this.panelvisual1.Name = "panelvisual1";
+            this.panelvisual1.Size = new System.Drawing.Size(245, 10);
+            this.panelvisual1.TabIndex = 17;
+            // 
+            // panelvisual2
+            // 
+            this.panelvisual2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
+            this.panelvisual2.Location = new System.Drawing.Point(323, 30);
+            this.panelvisual2.Name = "panelvisual2";
+            this.panelvisual2.Size = new System.Drawing.Size(245, 10);
+            this.panelvisual2.TabIndex = 18;
+            this.panelvisual2.Visible = false;
+            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(929, 472);
+            this.Controls.Add(this.panelvisual2);
+            this.Controls.Add(this.panelvisual1);
             this.Controls.Add(this.PanelPaciente);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnPrueba);
             this.Controls.Add(this.SerachExpediente);
             this.Controls.Add(this.addPaciente);
@@ -532,5 +568,8 @@
         private FontAwesome.Sharp.IconButton btnPrueba;
         private FontAwesome.Sharp.IconPictureBox ErrorBusquedad;
         private System.Windows.Forms.Label Errorlbl;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelvisual1;
+        private System.Windows.Forms.Panel panelvisual2;
     }
 }
