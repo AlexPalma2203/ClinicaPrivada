@@ -294,5 +294,10 @@ namespace GUI_Principal
         {
             if (act == true) { BuscarExpe(); act = false; }
         }
+
+        private void Citas_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijoPaciente(new Citas());
+        }
     }
 }

@@ -67,6 +67,12 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas.Designer.cs">
+      <DependentUpon>Citas.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearExpediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Citas.resx">
+      <DependentUpon>Citas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearExpediente.resx">
       <DependentUpon>CrearExpediente.cs</DependentUpon>

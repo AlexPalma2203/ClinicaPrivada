@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.Menu = new System.Windows.Forms.Panel();
             this.Salir = new FontAwesome.Sharp.IconButton();
@@ -46,6 +47,10 @@
             this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
             this.Close = new FontAwesome.Sharp.IconPictureBox();
             this.Formularios = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.Menu.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconUsers)).BeginInit();
@@ -54,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconFormularioActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
+            this.Formularios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu
@@ -85,7 +92,7 @@
             this.Salir.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salir.ForeColor = System.Drawing.Color.Gainsboro;
             this.Salir.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.Salir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Salir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Salir.IconSize = 50;
             this.Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Salir.Location = new System.Drawing.Point(0, 469);
@@ -114,7 +121,7 @@
             this.Programadores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Programadores.ForeColor = System.Drawing.Color.Gainsboro;
             this.Programadores.IconChar = FontAwesome.Sharp.IconChar.UserAstronaut;
-            this.Programadores.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Programadores.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Programadores.IconSize = 50;
             this.Programadores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Programadores.Location = new System.Drawing.Point(0, 342);
@@ -143,7 +150,7 @@
             this.Administrador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Administrador.ForeColor = System.Drawing.Color.Gainsboro;
             this.Administrador.IconChar = FontAwesome.Sharp.IconChar.UserShield;
-            this.Administrador.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Administrador.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Administrador.IconSize = 50;
             this.Administrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Administrador.Location = new System.Drawing.Point(0, 282);
@@ -172,7 +179,7 @@
             this.Registros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registros.ForeColor = System.Drawing.Color.Gainsboro;
             this.Registros.IconChar = FontAwesome.Sharp.IconChar.Bitcoin;
-            this.Registros.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Registros.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Registros.IconSize = 50;
             this.Registros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Registros.Location = new System.Drawing.Point(0, 222);
@@ -201,7 +208,7 @@
             this.Paciente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Paciente.ForeColor = System.Drawing.Color.Gainsboro;
             this.Paciente.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
-            this.Paciente.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Paciente.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Paciente.IconSize = 50;
             this.Paciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Paciente.Location = new System.Drawing.Point(0, 162);
@@ -255,9 +262,9 @@
             // iconUsers
             // 
             this.iconUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(16)))), ((int)(((byte)(31)))));
-            this.iconUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.iconUsers.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconUsers.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.iconUsers.IconSize = 109;
             this.iconUsers.Location = new System.Drawing.Point(41, 10);
             this.iconUsers.Name = "iconUsers";
@@ -276,7 +283,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(200, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(929, 57);
+            this.BarraTitulo.Size = new System.Drawing.Size(929, 48);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
             // 
@@ -284,9 +291,9 @@
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.iconPictureBox1.IconSize = 33;
             this.iconPictureBox1.Location = new System.Drawing.Point(809, 12);
             this.iconPictureBox1.Name = "iconPictureBox1";
@@ -301,7 +308,7 @@
             this.TituloFormularioHijo.BackColor = System.Drawing.Color.Transparent;
             this.TituloFormularioHijo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloFormularioHijo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TituloFormularioHijo.Location = new System.Drawing.Point(63, 20);
+            this.TituloFormularioHijo.Location = new System.Drawing.Point(63, 18);
             this.TituloFormularioHijo.Name = "TituloFormularioHijo";
             this.TituloFormularioHijo.Size = new System.Drawing.Size(60, 23);
             this.TituloFormularioHijo.TabIndex = 4;
@@ -311,11 +318,11 @@
             // iconFormularioActual
             // 
             this.iconFormularioActual.BackColor = System.Drawing.Color.Transparent;
-            this.iconFormularioActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconFormularioActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.iconFormularioActual.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconFormularioActual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.iconFormularioActual.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.iconFormularioActual.IconSize = 50;
-            this.iconFormularioActual.Location = new System.Drawing.Point(7, 6);
+            this.iconFormularioActual.Location = new System.Drawing.Point(7, 4);
             this.iconFormularioActual.Name = "iconFormularioActual";
             this.iconFormularioActual.Size = new System.Drawing.Size(50, 50);
             this.iconFormularioActual.TabIndex = 3;
@@ -326,9 +333,9 @@
             // 
             this.Minimizar.BackColor = System.Drawing.Color.Transparent;
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.GripLines;
-            this.Minimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Minimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Minimizar.Location = new System.Drawing.Point(851, 13);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(32, 32);
@@ -340,9 +347,9 @@
             // 
             this.Close.BackColor = System.Drawing.Color.Transparent;
             this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Close.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.Close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.Close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Close.Location = new System.Drawing.Point(889, 12);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(32, 32);
@@ -353,11 +360,53 @@
             // Formularios
             // 
             this.Formularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.Formularios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Formularios.Location = new System.Drawing.Point(200, 57);
+            this.Formularios.Controls.Add(this.lblFecha);
+            this.Formularios.Controls.Add(this.lblHora);
+            this.Formularios.Controls.Add(this.pictureBox1);
+            this.Formularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Formularios.Location = new System.Drawing.Point(200, 48);
             this.Formularios.Name = "Formularios";
-            this.Formularios.Size = new System.Drawing.Size(929, 472);
+            this.Formularios.Size = new System.Drawing.Size(929, 481);
             this.Formularios.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(173, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(568, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.lblHora.Location = new System.Drawing.Point(313, 327);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(279, 78);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "00:00:00";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFecha.Location = new System.Drawing.Point(204, 405);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(518, 44);
+            this.lblFecha.TabIndex = 2;
+            this.lblFecha.Text = "jueves, 14 de mayo de 2020";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HoraFecha
+            // 
+            this.HoraFecha.Enabled = true;
+            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
             // 
             // FormPrincipal
             // 
@@ -384,6 +433,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconFormularioActual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
+            this.Formularios.ResumeLayout(false);
+            this.Formularios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,6 +459,10 @@
         private FontAwesome.Sharp.IconPictureBox iconUsers;
         private System.Windows.Forms.Label Cargo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Timer HoraFecha;
     }
 }
 

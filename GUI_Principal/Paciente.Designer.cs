@@ -35,7 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchExp = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.NewSearch = new FontAwesome.Sharp.IconButton();
+            this.Citas = new FontAwesome.Sharp.IconButton();
             this.numExpedientePaciente = new System.Windows.Forms.Label();
             this.lblFechaExpedientePaciente = new System.Windows.Forms.Label();
             this.lblFechaNacPaciente = new System.Windows.Forms.Label();
@@ -57,12 +57,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelvisual1 = new System.Windows.Forms.Panel();
             this.panelvisual2 = new System.Windows.Forms.Panel();
-            this.Citas = new FontAwesome.Sharp.IconPictureBox();
             this.PanelPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorBusquedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Citas)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPaciente
@@ -148,7 +146,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.panel2.Controls.Add(this.Citas);
-            this.panel2.Controls.Add(this.NewSearch);
             this.panel2.Controls.Add(this.numExpedientePaciente);
             this.panel2.Controls.Add(this.lblFechaExpedientePaciente);
             this.panel2.Controls.Add(this.lblFechaNacPaciente);
@@ -171,32 +168,32 @@
             this.panel2.TabIndex = 12;
             this.panel2.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
             // 
-            // NewSearch
+            // Citas
             // 
-            this.NewSearch.BackColor = System.Drawing.Color.Transparent;
-            this.NewSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NewSearch.FlatAppearance.BorderSize = 0;
-            this.NewSearch.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.NewSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
-            this.NewSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
-            this.NewSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewSearch.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.NewSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.NewSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.NewSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.NewSearch.IconSize = 70;
-            this.NewSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewSearch.Location = new System.Drawing.Point(650, 247);
-            this.NewSearch.Name = "NewSearch";
-            this.NewSearch.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.NewSearch.Rotation = 0D;
-            this.NewSearch.Size = new System.Drawing.Size(212, 74);
-            this.NewSearch.TabIndex = 16;
-            this.NewSearch.Text = "Nueva Busquedad";
-            this.NewSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.NewSearch.UseVisualStyleBackColor = false;
-            this.NewSearch.Click += new System.EventHandler(this.NewSearch_Click);
+            this.Citas.BackColor = System.Drawing.Color.Transparent;
+            this.Citas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Citas.FlatAppearance.BorderSize = 0;
+            this.Citas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.Citas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Citas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Citas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Citas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.Citas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Citas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Citas.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
+            this.Citas.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.Citas.IconSize = 70;
+            this.Citas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Citas.Location = new System.Drawing.Point(212, 247);
+            this.Citas.Name = "Citas";
+            this.Citas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Citas.Rotation = 0D;
+            this.Citas.Size = new System.Drawing.Size(212, 74);
+            this.Citas.TabIndex = 18;
+            this.Citas.Text = "Citas Medicas";
+            this.Citas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Citas.UseVisualStyleBackColor = false;
+            this.Citas.Click += new System.EventHandler(this.Citas_Click);
             // 
             // numExpedientePaciente
             // 
@@ -280,7 +277,7 @@
             this.DeleteExpediente.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.DeleteExpediente.IconSize = 70;
             this.DeleteExpediente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteExpediente.Location = new System.Drawing.Point(420, 247);
+            this.DeleteExpediente.Location = new System.Drawing.Point(651, 247);
             this.DeleteExpediente.Name = "DeleteExpediente";
             this.DeleteExpediente.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.DeleteExpediente.Rotation = 0D;
@@ -307,7 +304,7 @@
             this.Actualizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.Actualizar.IconSize = 70;
             this.Actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Actualizar.Location = new System.Drawing.Point(209, 247);
+            this.Actualizar.Location = new System.Drawing.Point(420, 247);
             this.Actualizar.Name = "Actualizar";
             this.Actualizar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Actualizar.Rotation = 0D;
@@ -425,7 +422,7 @@
             this.btnPrueba.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPrueba.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrueba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.btnPrueba.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
+            this.btnPrueba.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnPrueba.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
             this.btnPrueba.IconSize = 25;
             this.btnPrueba.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -449,7 +446,7 @@
             this.SerachExpediente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.SerachExpediente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SerachExpediente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.SerachExpediente.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
+            this.SerachExpediente.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.SerachExpediente.IconColor = System.Drawing.Color.Gainsboro;
             this.SerachExpediente.IconSize = 25;
             this.SerachExpediente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -515,18 +512,6 @@
             this.panelvisual2.TabIndex = 18;
             this.panelvisual2.Visible = false;
             // 
-            // Citas
-            // 
-            this.Citas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.Citas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.Citas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.Citas.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.Citas.Location = new System.Drawing.Point(518, 14);
-            this.Citas.Name = "Citas";
-            this.Citas.Size = new System.Drawing.Size(32, 32);
-            this.Citas.TabIndex = 17;
-            this.Citas.TabStop = false;
-            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,7 +535,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Search)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Citas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,13 +563,12 @@
         private System.Windows.Forms.TextBox SearchExp;
         private FontAwesome.Sharp.IconPictureBox Search;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton NewSearch;
         private FontAwesome.Sharp.IconButton btnPrueba;
         private FontAwesome.Sharp.IconPictureBox ErrorBusquedad;
         private System.Windows.Forms.Label Errorlbl;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelvisual1;
         private System.Windows.Forms.Panel panelvisual2;
-        private FontAwesome.Sharp.IconPictureBox Citas;
+        private FontAwesome.Sharp.IconButton Citas;
     }
 }

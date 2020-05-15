@@ -228,5 +228,22 @@ namespace PresentacionGUI
             iconPictureBox1.ForeColor = Color.FromArgb(245, 50, 87);
             iconUsers.ForeColor = Color.FromArgb(245, 50, 87);
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HoraFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+
+        }
     }
 }
