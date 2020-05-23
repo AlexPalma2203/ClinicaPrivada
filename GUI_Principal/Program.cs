@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI_Principal.Formularios_Acciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +17,9 @@ namespace GUI_Principal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Contenedor());
-          
+            Application.Run(new ActualizarUsuario());
+
+
         }
     }
 }

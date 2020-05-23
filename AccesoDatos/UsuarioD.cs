@@ -52,6 +52,34 @@ namespace AccesoDatos
 
         }
 
+        public void EditarUsuario(string usuario, string nombre, string apellido, string contraseña)
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+
+
+                    comando.Connection = conexion;
+                    comando.CommandText = "update Usuario set Id_Usuario=@usuario,Nombre_Usuario=@nombre,Apellido_Usuario=@apellido,Contraseña_Usuasio=@contraseña where Id_Usuario=@usuario";
+                    comando.Parameters.AddWithValue("@usuario", usuario);
+                    comando.Parameters.AddWithValue("@contraseña", contraseña);
+                    comando.Parameters.AddWithValue("@nombre", nombre);
+                    comando.Parameters.AddWithValue("@apellido", apellido);
+                    
+                    comando.CommandType = CommandType.Text;
+                    SqlDataReader lectura = comando.ExecuteReader();
+                    
+                    
+
+                }
+
+            }
+
+
+        }
+
         
 
     }

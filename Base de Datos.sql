@@ -3,7 +3,7 @@ go
 use SistemaClinico
 Go
 Create table Usuario(
-Id_Usuario nvarchar (20) primary key,
+Id_Usuario nvarchar (20) adminprimary key ,
 Nombre_Usuario varchar(50),
 Apellido_Usuario varchar(50),
 Cargo_Usuario varchar(30),
@@ -32,13 +32,13 @@ dui int references Paciente(Dui)
 Go
 Create table Diagnostico(
 Id_Diagnostico int primary key identity(1,1),
-Enfermedad varchar(250),
 Estado varchar(50),
-peso double,
-estatura double,
-presion double,
+Enfermedad nvarchar(250),
+Peso float,
+estatura float,
+presion float,
 fechaDiagnostico datetime,
-temperatura double,
+temperatura float,
 detalles varchar(200),
 recomendaciones varchar(200),
 Num_Expediente int references Expediente(Num_Expediente)
@@ -47,9 +47,11 @@ Go
 
 Create table Citas(
 num_cita int primary key identity(1,1),
-Fecha_Hora datetime,
+Fecha_HoraCreacion datetime,
+Fecha_HoraCita datetime unique,
 Motivo varchar(100),
-Id_Diagnostico int references Diagnostico(Id_Diagnostico ),
+CreadoPor nvarchar(100),
+Precio float,
 dui int references Paciente(dui));
 Go
 Create table Movimientos(
@@ -71,6 +73,17 @@ insert into Paciente values (1,'Nombre','Apellido','M',7875457,'Soyapango','ALon
 go
 insert into Expediente values (SYSDATETIME(),'','','O RH+',1)
 go
-select * from Expediente E inner join Paciente P on E.dui = P.Dui where E.dui = 1 and P.Dui=1
-
-
+update Usuario set Id_Usuario='admin',Nombre_Usuario='',Apellido_Usuario='',Cargo_Usuario='',Contraseña_Usuasio='admin' where Id_Usuario='admin'
+--select *  from Expediente E inner join Paciente P on E.dui = P.Dui where E.dui = 1 and P.Dui=1
+--select * from Citas where dui = 2 and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =2)
+--drop database SistemaClinico
+--insert into Citas values (SYSDATETIME(),convert(datetime,'21-05-20',5),'',1)
+--insert into Citas values (SYSDATETIME(),convert(datetime,'21-05-19',5),'',1)
+--insert into Citas values (SYSDATETIME(),convert(datetime,'22-06-21',5),'',1)
+--select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 1 and C.dui = 1
+--select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 2 and C.dui = 2
+--select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 2 and C.dui = 2 and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =2) 
+-- select * from Usuario
+--delete from Citas where dui = 1
+--Update Citas set Fecha_HoraCita=SYSDATETIME(),Motivo='',CreadoPor='',Precio=10 where dui = 2 and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =2)
+--select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 2 and C.dui = 2 and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui=2)

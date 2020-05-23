@@ -34,18 +34,18 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CargoBienvenida = new System.Windows.Forms.Label();
-            this.iconoBienvenida = new FontAwesome.Sharp.IconPictureBox();
             this.UsuarioBienvenida = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconoBienvenida = new FontAwesome.Sharp.IconPictureBox();
+            this.CargoBienvenida = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -109,16 +109,28 @@
             this.panel2.Size = new System.Drawing.Size(1000, 443);
             this.panel2.TabIndex = 1;
             // 
-            // CargoBienvenida
+            // UsuarioBienvenida
             // 
-            this.CargoBienvenida.Font = new System.Drawing.Font("Century Gothic", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CargoBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
-            this.CargoBienvenida.Location = new System.Drawing.Point(350, 253);
-            this.CargoBienvenida.Name = "CargoBienvenida";
-            this.CargoBienvenida.Size = new System.Drawing.Size(374, 56);
-            this.CargoBienvenida.TabIndex = 9;
-            this.CargoBienvenida.Text = "Cargo";
-            this.CargoBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UsuarioBienvenida.Font = new System.Drawing.Font("Century Gothic", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioBienvenida.ForeColor = System.Drawing.Color.Gainsboro;
+            this.UsuarioBienvenida.Location = new System.Drawing.Point(307, 334);
+            this.UsuarioBienvenida.Name = "UsuarioBienvenida";
+            this.UsuarioBienvenida.Size = new System.Drawing.Size(466, 56);
+            this.UsuarioBienvenida.TabIndex = 7;
+            this.UsuarioBienvenida.Text = "Usuario";
+            this.UsuarioBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(389, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(300, 56);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "BIENVENIDO";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // iconoBienvenida
             // 
@@ -133,16 +145,27 @@
             this.iconoBienvenida.TabIndex = 8;
             this.iconoBienvenida.TabStop = false;
             // 
-            // UsuarioBienvenida
+            // CargoBienvenida
             // 
-            this.UsuarioBienvenida.Font = new System.Drawing.Font("Century Gothic", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuarioBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
-            this.UsuarioBienvenida.Location = new System.Drawing.Point(307, 334);
-            this.UsuarioBienvenida.Name = "UsuarioBienvenida";
-            this.UsuarioBienvenida.Size = new System.Drawing.Size(466, 56);
-            this.UsuarioBienvenida.TabIndex = 7;
-            this.UsuarioBienvenida.Text = "Usuario";
-            this.UsuarioBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CargoBienvenida.Font = new System.Drawing.Font("Century Gothic", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CargoBienvenida.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CargoBienvenida.Location = new System.Drawing.Point(350, 253);
+            this.CargoBienvenida.Name = "CargoBienvenida";
+            this.CargoBienvenida.Size = new System.Drawing.Size(374, 56);
+            this.CargoBienvenida.TabIndex = 9;
+            this.CargoBienvenida.Text = "Cargo";
+            this.CargoBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-75, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(491, 488);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // panel6
             // 
@@ -178,7 +201,7 @@
             this.circularProgressBar1.AnimationSpeed = 500;
             this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
             this.circularProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.Gainsboro;
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -2;
@@ -198,25 +221,13 @@
             this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 2, 0);
             this.circularProgressBar1.SubscriptText = "";
-            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
+            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.Gainsboro;
             this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circularProgressBar1.SuperscriptText = "%";
             this.circularProgressBar1.TabIndex = 3;
             this.circularProgressBar1.Text = "0";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
-            this.label2.Location = new System.Drawing.Point(389, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 56);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "BIENVENIDO";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // timer1
             // 
@@ -227,17 +238,6 @@
             // 
             this.timer2.Interval = 30;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-75, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(491, 488);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // FormBienvenida
             // 

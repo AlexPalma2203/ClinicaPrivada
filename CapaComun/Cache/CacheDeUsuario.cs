@@ -39,5 +39,15 @@ namespace CapaComun.Cache
 
     }
 
+    public static class CacheCita {
+
+        public static int numCita { get; set; }
+        public static DateTime fechaCreacion  { get; set; }
+        public static DateTime fechaCita { get; set; }
+        public static string motivo { get; set; }
+        public static string CreadoPor { get; set; }
+        public static double Precio { get; set; }
+    }
+
     
 }

@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using GUI_Principal;
-using Login;
+
 using CapaComun;
 using CapaComun.Cache;
+using GUI_Principal.Formularios_Acciones;
 
 namespace PresentacionGUI
 {
@@ -64,12 +65,8 @@ namespace PresentacionGUI
         {
             lblNombre.Text = CacheDeUsuario.NonbreUsuario +" "+CacheDeUsuario.ApellidoUsuario+".";
             Cargo.Text = CacheDeUsuario.CargoUsuario;
-
-
-
-
-
         }
+
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -97,6 +94,7 @@ namespace PresentacionGUI
                 Minimizar.ForeColor = color;
                 iconPictureBox1.ForeColor = color;
                 iconUsers.ForeColor = color;
+                linklblEditar.LinkColor = color;
             }
         }
         private void DisableButton()
@@ -131,6 +129,7 @@ namespace PresentacionGUI
             TituloFormularioHijo.Text = FormularioHijo.Text;
 
         }
+        
 
         private void Close_Click(object sender, EventArgs e)
         {
@@ -139,7 +138,7 @@ namespace PresentacionGUI
 
         private void Minimizar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void Paciente_Click(object sender, EventArgs e)
@@ -153,7 +152,7 @@ namespace PresentacionGUI
         private void Registros_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(84, 177, 248));
-            AbrirFormularioHijo(new Registros());
+            AbrirFormularioHijo(new Citas());
         }
 
         private void Administrador_Click(object sender, EventArgs e)
@@ -180,6 +179,11 @@ namespace PresentacionGUI
             TituloFormularioHijo.ForeColor = Color.Gainsboro;
             Close.ForeColor = Color.FromArgb(245, 50, 87);
             Minimizar.ForeColor = Color.FromArgb(245, 50, 87);
+            iconUsers.IconColor = Color.FromArgb(245, 50, 87);
+            iconPictureBox1.IconColor = Color.FromArgb(245, 50, 87);
+            iconPictureBox1.ForeColor = Color.FromArgb(245, 50, 87);
+            iconUsers.ForeColor = Color.FromArgb(245, 50, 87);
+            linklblEditar.LinkColor = Color.FromArgb(245, 50, 87);
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -225,8 +229,8 @@ namespace PresentacionGUI
                 currentChildForm.Close();
             }
             Reset();
-            iconPictureBox1.ForeColor = Color.FromArgb(245, 50, 87);
-            iconUsers.ForeColor = Color.FromArgb(245, 50, 87);
+            
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -244,6 +248,22 @@ namespace PresentacionGUI
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
 
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_MouseEnter(object sender, EventArgs e)
+        {
+            CargaDatosUsuario();
+        }
+
+        private void linklblEditar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirFormularioHijo(new ActualizarUsuario());
+            Reset();
         }
     }
 }

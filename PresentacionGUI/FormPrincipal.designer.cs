@@ -47,10 +47,11 @@
             this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
             this.Close = new FontAwesome.Sharp.IconPictureBox();
             this.Formularios = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.linklblEditar = new System.Windows.Forms.LinkLabel();
             this.Menu.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconUsers)).BeginInit();
@@ -178,7 +179,7 @@
             this.Registros.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.Registros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registros.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Registros.IconChar = FontAwesome.Sharp.IconChar.Bitcoin;
+            this.Registros.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
             this.Registros.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.Registros.IconSize = 50;
             this.Registros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,7 +189,7 @@
             this.Registros.Rotation = 0D;
             this.Registros.Size = new System.Drawing.Size(200, 60);
             this.Registros.TabIndex = 2;
-            this.Registros.Text = ".";
+            this.Registros.Text = "Citas";
             this.Registros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Registros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Registros.UseVisualStyleBackColor = false;
@@ -225,6 +226,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.linklblEditar);
             this.panel3.Controls.Add(this.Cargo);
             this.panel3.Controls.Add(this.lblNombre);
             this.panel3.Controls.Add(this.iconUsers);
@@ -234,14 +236,16 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.panel3.Size = new System.Drawing.Size(200, 162);
             this.panel3.TabIndex = 0;
+            this.panel3.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
             // 
             // Cargo
             // 
             this.Cargo.AutoSize = true;
             this.Cargo.BackColor = System.Drawing.Color.Transparent;
+            this.Cargo.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Cargo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cargo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Cargo.Location = new System.Drawing.Point(37, 107);
+            this.Cargo.Location = new System.Drawing.Point(26, 111);
             this.Cargo.Name = "Cargo";
             this.Cargo.Size = new System.Drawing.Size(77, 21);
             this.Cargo.TabIndex = 6;
@@ -251,9 +255,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblNombre.Location = new System.Drawing.Point(37, 131);
+            this.lblNombre.Location = new System.Drawing.Point(26, 135);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(90, 21);
             this.lblNombre.TabIndex = 0;
@@ -265,10 +270,10 @@
             this.iconUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
             this.iconUsers.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.iconUsers.IconSize = 109;
-            this.iconUsers.Location = new System.Drawing.Point(41, 10);
+            this.iconUsers.IconSize = 120;
+            this.iconUsers.Location = new System.Drawing.Point(33, 11);
             this.iconUsers.Name = "iconUsers";
-            this.iconUsers.Size = new System.Drawing.Size(127, 109);
+            this.iconUsers.Size = new System.Drawing.Size(120, 121);
             this.iconUsers.TabIndex = 5;
             this.iconUsers.TabStop = false;
             // 
@@ -369,28 +374,6 @@
             this.Formularios.Size = new System.Drawing.Size(929, 481);
             this.Formularios.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(173, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(568, 324);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.lblHora.Location = new System.Drawing.Point(313, 327);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(279, 78);
-            this.lblHora.TabIndex = 1;
-            this.lblHora.Text = "00:00:00";
-            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
@@ -403,10 +386,48 @@
             this.lblFecha.Text = "jueves, 14 de mayo de 2020";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.lblHora.Location = new System.Drawing.Point(313, 327);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(279, 78);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "00:00:00";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(173, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(568, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // HoraFecha
             // 
             this.HoraFecha.Enabled = true;
             this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
+            // 
+            // linklblEditar
+            // 
+            this.linklblEditar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.linklblEditar.AutoSize = true;
+            this.linklblEditar.DisabledLinkColor = System.Drawing.Color.DimGray;
+            this.linklblEditar.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Bold);
+            this.linklblEditar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
+            this.linklblEditar.Location = new System.Drawing.Point(137, 13);
+            this.linklblEditar.Name = "linklblEditar";
+            this.linklblEditar.Size = new System.Drawing.Size(59, 14);
+            this.linklblEditar.TabIndex = 19;
+            this.linklblEditar.TabStop = true;
+            this.linklblEditar.Text = "Editar Perfil";
+            this.linklblEditar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblEditar_LinkClicked);
             // 
             // FormPrincipal
             // 
@@ -463,6 +484,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer HoraFecha;
+        private System.Windows.Forms.LinkLabel linklblEditar;
     }
 }
 
