@@ -41,7 +41,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.CboEstadoCivil = new System.Windows.Forms.ComboBox();
-            this.TxtFechaNaciemiemto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtDui = new System.Windows.Forms.TextBox();
             this.RtbDireccion = new System.Windows.Forms.RichTextBox();
@@ -55,11 +54,27 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnCrear = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtAño = new System.Windows.Forms.TextBox();
+            this.txtMes = new System.Windows.Forms.TextBox();
+            this.txtDia = new System.Windows.Forms.TextBox();
             this.GrpCrearExpediente.SuspendLayout();
             this.SuspendLayout();
             // 
             // GrpCrearExpediente
             // 
+            this.GrpCrearExpediente.Controls.Add(this.label5);
+            this.GrpCrearExpediente.Controls.Add(this.label14);
+            this.GrpCrearExpediente.Controls.Add(this.label15);
+            this.GrpCrearExpediente.Controls.Add(this.label16);
+            this.GrpCrearExpediente.Controls.Add(this.label17);
+            this.GrpCrearExpediente.Controls.Add(this.txtAño);
+            this.GrpCrearExpediente.Controls.Add(this.txtMes);
+            this.GrpCrearExpediente.Controls.Add(this.txtDia);
             this.GrpCrearExpediente.Controls.Add(this.label4);
             this.GrpCrearExpediente.Controls.Add(this.rtbMedicamentos);
             this.GrpCrearExpediente.Controls.Add(this.label13);
@@ -72,7 +87,6 @@
             this.GrpCrearExpediente.Controls.Add(this.label10);
             this.GrpCrearExpediente.Controls.Add(this.label9);
             this.GrpCrearExpediente.Controls.Add(this.CboEstadoCivil);
-            this.GrpCrearExpediente.Controls.Add(this.TxtFechaNaciemiemto);
             this.GrpCrearExpediente.Controls.Add(this.label8);
             this.GrpCrearExpediente.Controls.Add(this.TxtDui);
             this.GrpCrearExpediente.Controls.Add(this.RtbDireccion);
@@ -224,24 +238,13 @@
             this.CboEstadoCivil.Items.AddRange(new object[] {
             "Soltero",
             "Casado",
-            "Divosiado",
+            "Divorsiado",
             "Viudo"});
             this.CboEstadoCivil.Location = new System.Drawing.Point(163, 291);
             this.CboEstadoCivil.Name = "CboEstadoCivil";
             this.CboEstadoCivil.Size = new System.Drawing.Size(138, 24);
             this.CboEstadoCivil.TabIndex = 6;
             this.CboEstadoCivil.SelectedIndexChanged += new System.EventHandler(this.CboEstadoCivil_SelectedIndexChanged_1);
-            // 
-            // TxtFechaNaciemiemto
-            // 
-            this.TxtFechaNaciemiemto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.TxtFechaNaciemiemto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtFechaNaciemiemto.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
-            this.TxtFechaNaciemiemto.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TxtFechaNaciemiemto.Location = new System.Drawing.Point(163, 207);
-            this.TxtFechaNaciemiemto.Name = "TxtFechaNaciemiemto";
-            this.TxtFechaNaciemiemto.Size = new System.Drawing.Size(138, 16);
-            this.TxtFechaNaciemiemto.TabIndex = 4;
             // 
             // label8
             // 
@@ -259,6 +262,7 @@
             this.TxtDui.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
             this.TxtDui.ForeColor = System.Drawing.Color.Gainsboro;
             this.TxtDui.Location = new System.Drawing.Point(163, 109);
+            this.TxtDui.MaxLength = 9;
             this.TxtDui.Name = "TxtDui";
             this.TxtDui.Size = new System.Drawing.Size(138, 16);
             this.TxtDui.TabIndex = 2;
@@ -282,6 +286,7 @@
             this.TxtNumero.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
             this.TxtNumero.ForeColor = System.Drawing.Color.Gainsboro;
             this.TxtNumero.Location = new System.Drawing.Point(163, 242);
+            this.TxtNumero.MaxLength = 10;
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(138, 16);
             this.TxtNumero.TabIndex = 5;
@@ -377,6 +382,90 @@
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(240, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 120;
+            this.label5.Text = "AAAA";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(204, 195);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 15);
+            this.label14.TabIndex = 119;
+            this.label14.Text = "MM";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.DimGray;
+            this.label15.Location = new System.Drawing.Point(173, 195);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 15);
+            this.label15.TabIndex = 118;
+            this.label15.Text = "DD";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(228, 210);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 16);
+            this.label16.TabIndex = 117;
+            this.label16.Text = "/";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(192, 210);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 16);
+            this.label17.TabIndex = 116;
+            this.label17.Text = "/";
+            // 
+            // txtAño
+            // 
+            this.txtAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtAño.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAño.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtAño.Location = new System.Drawing.Point(242, 210);
+            this.txtAño.MaxLength = 4;
+            this.txtAño.Name = "txtAño";
+            this.txtAño.Size = new System.Drawing.Size(37, 16);
+            this.txtAño.TabIndex = 115;
+            // 
+            // txtMes
+            // 
+            this.txtMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtMes.Location = new System.Drawing.Point(206, 210);
+            this.txtMes.MaxLength = 2;
+            this.txtMes.Name = "txtMes";
+            this.txtMes.Size = new System.Drawing.Size(22, 16);
+            this.txtMes.TabIndex = 114;
+            // 
+            // txtDia
+            // 
+            this.txtDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtDia.Location = new System.Drawing.Point(176, 209);
+            this.txtDia.MaxLength = 2;
+            this.txtDia.Name = "txtDia";
+            this.txtDia.Size = new System.Drawing.Size(18, 16);
+            this.txtDia.TabIndex = 113;
+            // 
             // FrmCrearExpediente
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
@@ -405,7 +494,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox CboEstadoCivil;
-        private System.Windows.Forms.TextBox TxtFechaNaciemiemto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtDui;
         private System.Windows.Forms.RichTextBox RtbDireccion;
@@ -421,5 +509,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtAño;
+        private System.Windows.Forms.TextBox txtMes;
+        private System.Windows.Forms.TextBox txtDia;
     }
 }

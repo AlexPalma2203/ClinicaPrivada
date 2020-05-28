@@ -47,7 +47,7 @@ namespace PresentacionGUI
             if (CacheDeUsuario.CargoUsuario == Cargos.Enfermera)
             {
                 iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserNurse;
-                Administrador.Enabled = false;
+                Reportes.Enabled = false;
                 Paciente.Enabled = false;
                 Programadores.Enabled = false;
 
@@ -55,7 +55,7 @@ namespace PresentacionGUI
             if (CacheDeUsuario.CargoUsuario == Cargos.Doctor)
             {
                 iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserMd;
-                Administrador.Enabled = false;
+                Reportes.Enabled = false;
                 Programadores.Enabled = false;
             }
 
@@ -143,8 +143,6 @@ namespace PresentacionGUI
 
         private void Paciente_Click(object sender, EventArgs e)
         {
-
-           
             ActivateButton(sender, Color.FromArgb(253, 138, 114));
             AbrirFormularioHijo(new Paciente());
         }
@@ -153,6 +151,8 @@ namespace PresentacionGUI
         {
             ActivateButton(sender, Color.FromArgb(84, 177, 248));
             AbrirFormularioHijo(new Citas());
+            
+
         }
 
         private void Administrador_Click(object sender, EventArgs e)

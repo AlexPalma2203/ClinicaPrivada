@@ -19,26 +19,76 @@ namespace GUI_Principal
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
+            if(Cache != true) {
+                TxtEstatura.Clear();
+                TxtPeso.Clear();
+                TxtPresion.Clear();
+                TxtTemperatura.Clear();
+                txtEnfermedad.Clear();
+                txtEstado.Clear();
+                rtbRecomendaciones.Clear();
+                RtbDetalles.Clear();
+            }
+            else
+            {
+
+                resestCache();
+            }
             
-            TxtEstatura.Clear();
-            TxtFecha.Clear();
-            TxtPeso.Clear();
-            TxtPresion.Clear();
-            TxtTemperatura.Clear();
-            txtEnfermedad.Clear();
-            txtEstado.Clear();
-            rtbRecomendaciones.Clear();
-            RtbDetalles.Clear();
 
             
 
         }
-
+        public string fechaGet()
+        {
+            DateTime fec = DateTime.Today;
+            return fec.ToString("d");
+        }
+        bool Cache = false;
         private void FrmExpediente_Load(object sender, EventArgs e)
         {
+            Cache = false;
             Nombre_newcita.Text = CachePaciente.NombrePaciente;
             numExpe_newcita.Text = Convert.ToString( CacheExpediente.NumExpediente);
+            lblFecha.Text =  fechaGet();
+            cargarDiagnostico();
+           
         }
+        
+        private void cargarDiagnostico()
+        {
+            if (CacheDiagnostico.id != 0) {
+
+                TxtTemperatura.Text = Convert.ToString(CacheDiagnostico.temperatura);
+                TxtPeso.Text = Convert.ToString(CacheDiagnostico.peso);
+                txtEnfermedad.Text = CacheDiagnostico.enfermead;
+                lblFecha.Text = Convert.ToString( CacheDiagnostico.fechaCreacion);
+                TxtPresion.Text = Convert.ToString(CacheDiagnostico.presion);
+                TxtEstatura.Text = Convert.ToString(CacheDiagnostico.estatura);
+                rtbRecomendaciones.Text = CacheDiagnostico.recomendaciones;
+                txtEstado.Text = CacheDiagnostico.estado;
+                RtbDetalles.Text = CacheDiagnostico.detalles;
+                BtnGuardar.Text = "Actualizar";
+                Cache = true;
+
+            }
+        }
+        private void resestCache()
+        {
+
+
+                TxtTemperatura.Text = Convert.ToString(CacheDiagnostico.temperatura);
+                TxtPeso.Text = Convert.ToString(CacheDiagnostico.peso);
+                txtEnfermedad.Text = CacheDiagnostico.enfermead;
+                lblFecha.Text = Convert.ToString(CacheDiagnostico.fechaCreacion);
+                TxtPresion.Text = Convert.ToString(CacheDiagnostico.presion);
+                TxtEstatura.Text = Convert.ToString(CacheDiagnostico.estatura);
+                rtbRecomendaciones.Text = CacheDiagnostico.recomendaciones;
+                txtEstado.Text = CacheDiagnostico.estado;
+                RtbDetalles.Text = CacheDiagnostico.detalles;
+
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

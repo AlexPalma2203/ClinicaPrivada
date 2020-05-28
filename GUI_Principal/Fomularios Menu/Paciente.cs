@@ -12,7 +12,7 @@ using Dominio;
 using CapaComun.Cache;
 
 using System.Runtime.InteropServices;
-
+using GUI_Principal.Formularios_Acciones;
 
 namespace GUI_Principal
 {
@@ -247,19 +247,19 @@ namespace GUI_Principal
             }
             else
             {
-                try
-                {
+                //try
+                //{
                     ModeloPaciente eliminar = new ModeloPaciente();
                     eliminar.EliminarExp();
                     MessageBox.Show("Expediente Eliminado");
                     reset();
 
 
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Error Al Eliminar Expediente");
-                }
+                //}
+                //catch (Exception)
+                //{
+                //    MessageBox.Show("Error Al Eliminar Expediente");
+                //}
             }
 
 
@@ -284,7 +284,7 @@ namespace GUI_Principal
             }
             if (SearchExp.Text.Length >=1 && SearchExp.Text.Length < 9 ) {
             Errorlbl.Visible = false;
-             ErrorBusquedad.Visible = false;
+            ErrorBusquedad.Visible = false;
                 reset();
 
             }
@@ -298,6 +298,11 @@ namespace GUI_Principal
         private void Citas_Click(object sender, EventArgs e)
         {
             //AbrirFormularioHijoPaciente(new Citas());
+        }
+
+        private void icondatabse_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijoPaciente(new DatosPaciente());
         }
     }
 }

@@ -35,10 +35,16 @@ namespace GUI_Principal
 
         }
         private void cargar_Datos() {
+            DateTime fecha = CachePaciente.FechaNacimientoPaciente;
+            int dia =fecha.Day;
+            int mes = fecha.Month;
+            int año = fecha.Year;
             TxtNombre.Text = CachePaciente.NombrePaciente;
             TxtApellido.Text = CachePaciente.ApellidoPaciente;
             txtDui.Text = Convert.ToString(CachePaciente.Dui);
-            TxtFechaNaciemiemto.Text = CachePaciente.FechaNacimientoPaciente;
+            txtDia.Text = Convert.ToString(dia);
+            txtMes.Text = Convert.ToString(mes);
+            txtAño.Text = Convert.ToString(año);
             TxtNumero.Text = Convert.ToString(CachePaciente.TelefonoPaciente);
             CboSexo.SelectedItem = CachePaciente.SexoPaciente;
             CboEstadoCivil.SelectedItem = CachePaciente.EstadoCivilPaciente;
@@ -56,7 +62,7 @@ namespace GUI_Principal
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
-           
+            DateTime fecha = new DateTime(Convert.ToInt32(txtAño.Text), Convert.ToInt32(txtMes.Text), Convert.ToInt32(txtDia.Text));
             try
             {
                 ModeloPaciente actPaciente = new ModeloPaciente(dui: CachePaciente.Dui,
@@ -69,7 +75,7 @@ namespace GUI_Principal
                numeroTeleP: Convert.ToInt32(TxtNumero.Text),
                direccionP: RtbDireccion.Text,
                estadoCivilP: Convert.ToString(CboEstadoCivil.SelectedItem),
-               fechaNaciemientoP: TxtFechaNaciemiemto.Text);
+               fechaNaciemientoP: fecha);
                 var resultado = actPaciente.ActualizarExpediente();
                 MessageBox.Show(resultado);
                 Reiniciar();

@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using AccesoDatos;
 using CapaComun.Cache;
+using System.Data;
+using System.Collections.Concurrent;
 
 namespace Dominio
 {
     public class ModeloUsuario
-
     {
 
         private string nombre, usuario, contraseña, cargo, apellido;
@@ -21,7 +22,6 @@ namespace Dominio
             this.nombre = nombre;
             this.usuario = usuario;
             this.contraseña = contraseña;
-            
             this.apellido = apellido;
         }
         public ModeloUsuario() { }
@@ -53,12 +53,13 @@ namespace Dominio
         private string Antecedentes;
         private string medicamentos;
         private string tipoSangre;
-        private string nombreP,apellidosP,  SexoP, DireccionP, EstadoCivilP, FechaNaciemientoP;
+        private string nombreP,apellidosP,  SexoP, DireccionP, EstadoCivilP;
+        DateTime FechaNaciemientoP;
 
 
         PacienteD pacienteD = new PacienteD();
 
-        public ModeloPaciente(int dui, string antecedentes, string medicamentos, string tipoSangre, string nombreP, string apellidosP, string sexoP, int numeroTeleP, string direccionP, string estadoCivilP, string fechaNaciemientoP)
+        public ModeloPaciente(int dui, string antecedentes, string medicamentos, string tipoSangre, string nombreP, string apellidosP, string sexoP, int numeroTeleP, string direccionP, string estadoCivilP, DateTime fechaNaciemientoP)
         {
             Dui = dui;
             Antecedentes = antecedentes;
@@ -74,8 +75,24 @@ namespace Dominio
         }
         public ModeloPaciente() { }
 
-        
+        public void BusquedadExpediente(int dui,int id)
+        {
 
+            pacienteD.BusquedadDiagnostico(dui,id);
+
+        }
+        public DataTable mostrarExpedientes()
+        {
+            DataTable tabla = new DataTable();
+            tabla = pacienteD.BusquedadExpedientes();
+            return tabla;
+        }
+        public DataTable mostrarExpedientes(int dui)
+        {
+            DataTable tabla = new DataTable();
+            tabla = pacienteD.BusquedadExpedientes(dui);
+            return tabla;
+        }
         public bool BusquedadPaciente(int dui)
         {
             return pacienteD.BusquedadPaciente(dui);
@@ -117,7 +134,7 @@ namespace Dominio
 
         public void EliminarExp()
         {
-            pacienteD.EliminarExp(CachePaciente.Dui);
+            pacienteD.EliminarExp(CachePaciente.Dui,CacheExpediente.NumExpediente);
 
         }
 
@@ -156,6 +173,7 @@ namespace Dominio
         private DateTime fechaCita;
         private int dui;
         private double Precio;
+        
 
         public ModeloCita(string motivo, DateTime fechaCita, string CreadoPor, double Precio, int dui) {
             this.motivo = motivo;
@@ -165,13 +183,12 @@ namespace Dominio
             this.CreadoPor = CreadoPor;
 
         }
+
+        public ModeloCita() { }
         public ModeloCita(int dui, DateTime fechaCita)
         {
-            
             this.fechaCita = fechaCita;
             this.dui = dui;
-          
-
         }
         PacienteD C1 = new PacienteD();
         public string Cita()
@@ -185,6 +202,11 @@ namespace Dominio
             }
 
         }
+        public void busquedad(int dui)
+        {
+            C1.BusquedadPacienteCitaSinfecha(dui);
+
+        }
         public string ActCita() {
 
             C1.actualizarCita(motivo, fechaCita, CreadoPor, Precio, dui);
@@ -194,11 +216,44 @@ namespace Dominio
 
             return C1.eliminarcita(dui, fechaCita); 
         }
+        public int eliminarCitasinfecha(int dui,DateTime fecha)
+        {
 
-    
-    
-    
-    
+            return C1.eliminarcitasinfecha(dui, fecha);
+        }
+
+        public DataTable mostrar(){
+            DataTable tabla = new DataTable();
+            tabla = C1.MostrarCitas();
+            return tabla;
+        }
+
+        public DataTable MostrarFechaCita(DateTime fecha)
+        {
+            DataTable tabla = new DataTable();
+            tabla = C1.MostrarCitasFecha(fecha);
+            return tabla;
+
+        }
+        public DataTable MostrarFechaCitaPersona(DateTime fecha, int id)
+        {
+            DataTable tabla = new DataTable();
+            tabla = C1.MostrarCitasFechaPersona(fecha,id);
+            return tabla;
+
+        }
+        public DataTable MostrarCitasPersona(int id)
+        {
+            DataTable tabla = new DataTable();
+            tabla = C1.MostrarCitasPersona(id);
+            return tabla;
+
+        }
+
+
+
+
+
     }
     
     

@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.PanelPaciente = new System.Windows.Forms.Panel();
+            this.icondatabse = new FontAwesome.Sharp.IconButton();
             this.Errorlbl = new System.Windows.Forms.Label();
             this.ErrorBusquedad = new FontAwesome.Sharp.IconPictureBox();
             this.Search = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchExp = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.EleminarCita = new FontAwesome.Sharp.IconButton();
             this.lblMotivo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCreador = new System.Windows.Forms.Label();
@@ -50,7 +52,6 @@
             this.Nombre = new System.Windows.Forms.Label();
             this.Dui = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.DeleteExpediente = new FontAwesome.Sharp.IconButton();
             this.PanelPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorBusquedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Search)).BeginInit();
@@ -60,6 +61,7 @@
             // PanelPaciente
             // 
             this.PanelPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
+            this.PanelPaciente.Controls.Add(this.icondatabse);
             this.PanelPaciente.Controls.Add(this.Errorlbl);
             this.PanelPaciente.Controls.Add(this.ErrorBusquedad);
             this.PanelPaciente.Controls.Add(this.Search);
@@ -70,6 +72,33 @@
             this.PanelPaciente.Name = "PanelPaciente";
             this.PanelPaciente.Size = new System.Drawing.Size(905, 448);
             this.PanelPaciente.TabIndex = 19;
+            // 
+            // icondatabse
+            // 
+            this.icondatabse.BackColor = System.Drawing.Color.Transparent;
+            this.icondatabse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icondatabse.FlatAppearance.BorderSize = 0;
+            this.icondatabse.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.icondatabse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.icondatabse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.icondatabse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icondatabse.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.icondatabse.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icondatabse.ForeColor = System.Drawing.Color.Gainsboro;
+            this.icondatabse.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.icondatabse.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(248)))));
+            this.icondatabse.IconSize = 40;
+            this.icondatabse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icondatabse.Location = new System.Drawing.Point(735, 26);
+            this.icondatabse.Name = "icondatabse";
+            this.icondatabse.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.icondatabse.Rotation = 0D;
+            this.icondatabse.Size = new System.Drawing.Size(154, 42);
+            this.icondatabse.TabIndex = 23;
+            this.icondatabse.Text = "Registros";
+            this.icondatabse.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.icondatabse.UseVisualStyleBackColor = false;
+            this.icondatabse.Click += new System.EventHandler(this.icondatabse_Click);
             // 
             // Errorlbl
             // 
@@ -138,7 +167,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.panel2.Controls.Add(this.DeleteExpediente);
+            this.panel2.Controls.Add(this.EleminarCita);
             this.panel2.Controls.Add(this.lblMotivo);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lblCreador);
@@ -160,6 +189,33 @@
             this.panel2.TabIndex = 12;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
+            // 
+            // EleminarCita
+            // 
+            this.EleminarCita.BackColor = System.Drawing.Color.Transparent;
+            this.EleminarCita.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EleminarCita.FlatAppearance.BorderSize = 0;
+            this.EleminarCita.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.EleminarCita.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.EleminarCita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.EleminarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EleminarCita.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.EleminarCita.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EleminarCita.ForeColor = System.Drawing.Color.Gainsboro;
+            this.EleminarCita.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.EleminarCita.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(248)))));
+            this.EleminarCita.IconSize = 70;
+            this.EleminarCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EleminarCita.Location = new System.Drawing.Point(609, 269);
+            this.EleminarCita.Name = "EleminarCita";
+            this.EleminarCita.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.EleminarCita.Rotation = 0D;
+            this.EleminarCita.Size = new System.Drawing.Size(229, 74);
+            this.EleminarCita.TabIndex = 22;
+            this.EleminarCita.Text = "Eliminar Cita";
+            this.EleminarCita.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EleminarCita.UseVisualStyleBackColor = false;
+            this.EleminarCita.Click += new System.EventHandler(this.DeleteExpediente_Click);
             // 
             // lblMotivo
             // 
@@ -361,33 +417,6 @@
             this.panel3.Size = new System.Drawing.Size(907, 450);
             this.panel3.TabIndex = 23;
             // 
-            // DeleteExpediente
-            // 
-            this.DeleteExpediente.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteExpediente.FlatAppearance.BorderSize = 0;
-            this.DeleteExpediente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.DeleteExpediente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
-            this.DeleteExpediente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
-            this.DeleteExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteExpediente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.DeleteExpediente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteExpediente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.DeleteExpediente.IconChar = FontAwesome.Sharp.IconChar.UserTimes;
-            this.DeleteExpediente.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(248)))));
-            this.DeleteExpediente.IconSize = 70;
-            this.DeleteExpediente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteExpediente.Location = new System.Drawing.Point(609, 269);
-            this.DeleteExpediente.Name = "DeleteExpediente";
-            this.DeleteExpediente.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.DeleteExpediente.Rotation = 0D;
-            this.DeleteExpediente.Size = new System.Drawing.Size(212, 74);
-            this.DeleteExpediente.TabIndex = 22;
-            this.DeleteExpediente.Text = "Eliminar Expediente";
-            this.DeleteExpediente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DeleteExpediente.UseVisualStyleBackColor = false;
-            this.DeleteExpediente.Click += new System.EventHandler(this.DeleteExpediente_Click);
-            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +462,7 @@
         private System.Windows.Forms.Label lblCreadoPor;
         private System.Windows.Forms.Label lblMotivo;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton DeleteExpediente;
+        private FontAwesome.Sharp.IconButton EleminarCita;
+        private FontAwesome.Sharp.IconButton icondatabse;
     }
 }

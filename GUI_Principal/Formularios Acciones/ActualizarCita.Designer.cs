@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblVolver = new System.Windows.Forms.Label();
-            this.Regresar = new FontAwesome.Sharp.IconPictureBox();
             this.GrpCrearExpediente = new System.Windows.Forms.GroupBox();
             this.lblNumCita = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -64,8 +63,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCrear = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Regresar)).BeginInit();
+            this.Regresar = new FontAwesome.Sharp.IconPictureBox();
             this.GrpCrearExpediente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Regresar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVolver
@@ -79,19 +79,7 @@
             this.lblVolver.Size = new System.Drawing.Size(66, 16);
             this.lblVolver.TabIndex = 104;
             this.lblVolver.Text = "Regresar";
-            // 
-            // Regresar
-            // 
-            this.Regresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
-            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Regresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(248)))));
-            this.Regresar.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            this.Regresar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(248)))));
-            this.Regresar.Location = new System.Drawing.Point(17, 7);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(32, 32);
-            this.Regresar.TabIndex = 103;
-            this.Regresar.TabStop = false;
+            this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
             // 
             // GrpCrearExpediente
             // 
@@ -173,6 +161,7 @@
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecio.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtPrecio.Location = new System.Drawing.Point(725, 145);
+            this.txtPrecio.MaxLength = 3;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(30, 16);
             this.txtPrecio.TabIndex = 129;
@@ -259,6 +248,7 @@
             this.txtHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHora.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtHora.Location = new System.Drawing.Point(585, 145);
+            this.txtHora.MaxLength = 2;
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(30, 16);
             this.txtHora.TabIndex = 107;
@@ -278,6 +268,7 @@
             this.txtAño.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAño.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtAño.Location = new System.Drawing.Point(289, 145);
+            this.txtAño.MaxLength = 4;
             this.txtAño.Name = "txtAño";
             this.txtAño.Size = new System.Drawing.Size(56, 16);
             this.txtAño.TabIndex = 105;
@@ -288,6 +279,7 @@
             this.txtMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMes.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtMes.Location = new System.Drawing.Point(248, 145);
+            this.txtMes.MaxLength = 2;
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(30, 16);
             this.txtMes.TabIndex = 104;
@@ -298,6 +290,7 @@
             this.txtDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDia.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtDia.Location = new System.Drawing.Point(205, 145);
+            this.txtDia.MaxLength = 2;
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(30, 16);
             this.txtDia.TabIndex = 103;
@@ -459,6 +452,20 @@
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
+            // Regresar
+            // 
+            this.Regresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Regresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(248)))));
+            this.Regresar.IconChar = FontAwesome.Sharp.IconChar.Reply;
+            this.Regresar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(248)))));
+            this.Regresar.Location = new System.Drawing.Point(17, 7);
+            this.Regresar.Name = "Regresar";
+            this.Regresar.Size = new System.Drawing.Size(32, 32);
+            this.Regresar.TabIndex = 103;
+            this.Regresar.TabStop = false;
+            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
+            // 
             // ActualizarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,9 +479,9 @@
             this.Name = "ActualizarCita";
             this.Text = "ActualizarCita";
             this.Load += new System.EventHandler(this.ActualizarCita_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Regresar)).EndInit();
             this.GrpCrearExpediente.ResumeLayout(false);
             this.GrpCrearExpediente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Regresar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelPaciente = new System.Windows.Forms.Panel();
+            this.icondatabse = new FontAwesome.Sharp.IconButton();
             this.Errorlbl = new System.Windows.Forms.Label();
             this.ErrorBusquedad = new FontAwesome.Sharp.IconPictureBox();
             this.Search = new FontAwesome.Sharp.IconPictureBox();
@@ -65,6 +66,7 @@
             // PanelPaciente
             // 
             this.PanelPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
+            this.PanelPaciente.Controls.Add(this.icondatabse);
             this.PanelPaciente.Controls.Add(this.Errorlbl);
             this.PanelPaciente.Controls.Add(this.ErrorBusquedad);
             this.PanelPaciente.Controls.Add(this.Search);
@@ -76,6 +78,33 @@
             this.PanelPaciente.Size = new System.Drawing.Size(905, 426);
             this.PanelPaciente.TabIndex = 0;
             this.PanelPaciente.MouseEnter += new System.EventHandler(this.PanelPaciente_MouseEnter);
+            // 
+            // icondatabse
+            // 
+            this.icondatabse.BackColor = System.Drawing.Color.Transparent;
+            this.icondatabse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icondatabse.FlatAppearance.BorderSize = 0;
+            this.icondatabse.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.icondatabse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.icondatabse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.icondatabse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icondatabse.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.icondatabse.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icondatabse.ForeColor = System.Drawing.Color.Gainsboro;
+            this.icondatabse.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.icondatabse.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.icondatabse.IconSize = 40;
+            this.icondatabse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icondatabse.Location = new System.Drawing.Point(732, 26);
+            this.icondatabse.Name = "icondatabse";
+            this.icondatabse.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.icondatabse.Rotation = 0D;
+            this.icondatabse.Size = new System.Drawing.Size(154, 42);
+            this.icondatabse.TabIndex = 24;
+            this.icondatabse.Text = "Registros";
+            this.icondatabse.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.icondatabse.UseVisualStyleBackColor = false;
+            this.icondatabse.Click += new System.EventHandler(this.icondatabse_Click);
             // 
             // Errorlbl
             // 
@@ -498,7 +527,8 @@
             this.Controls.Add(this.addPaciente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Paciente";
-            this.Text = "    ";
+            this.Tag = "Paciente";
+            this.Text = "Paciente";
             this.Load += new System.EventHandler(this.Paciente_Load);
             this.PanelPaciente.ResumeLayout(false);
             this.PanelPaciente.PerformLayout();
@@ -540,5 +570,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelvisual1;
         private System.Windows.Forms.Panel panelvisual2;
+        private FontAwesome.Sharp.IconButton icondatabse;
     }
 }

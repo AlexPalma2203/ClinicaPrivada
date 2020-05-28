@@ -30,6 +30,11 @@
         {
             this.editarUsuario = new FontAwesome.Sharp.IconPictureBox();
             this.panelEdicion = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.linkEditarContraseña = new System.Windows.Forms.LinkLabel();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -44,8 +49,6 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.linkEditarContraseña = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCargo = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -57,10 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.user = new FontAwesome.Sharp.IconPictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panelConexion = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.editarUsuario)).BeginInit();
             this.panelEdicion.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -110,6 +110,58 @@
             this.panelEdicion.TabIndex = 8;
             this.panelEdicion.Visible = false;
             this.panelEdicion.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(329, 13);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 446);
+            this.panel11.TabIndex = 31;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 459);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(339, 13);
+            this.panel9.TabIndex = 30;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(339, 13);
+            this.panel8.TabIndex = 29;
+            // 
+            // linkEditarContraseña
+            // 
+            this.linkEditarContraseña.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.linkEditarContraseña.AutoSize = true;
+            this.linkEditarContraseña.DisabledLinkColor = System.Drawing.Color.DimGray;
+            this.linkEditarContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkEditarContraseña.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
+            this.linkEditarContraseña.Location = new System.Drawing.Point(202, 231);
+            this.linkEditarContraseña.Name = "linkEditarContraseña";
+            this.linkEditarContraseña.Size = new System.Drawing.Size(125, 16);
+            this.linkEditarContraseña.TabIndex = 13;
+            this.linkEditarContraseña.TabStop = true;
+            this.linkEditarContraseña.Text = "Editar Contraseña";
+            this.linkEditarContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEditarContraseña_LinkClicked);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(85, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 23);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Editar Perfil";
             // 
             // btnCancel
             // 
@@ -182,7 +234,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtUsuario.Location = new System.Drawing.Point(27, 93);
-            this.txtUsuario.MaxLength = 9;
+            this.txtUsuario.MaxLength = 100;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(290, 20);
             this.txtUsuario.TabIndex = 25;
@@ -205,7 +257,7 @@
             this.ContraseñaAnterior.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContraseñaAnterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.ContraseñaAnterior.Location = new System.Drawing.Point(27, 354);
-            this.ContraseñaAnterior.MaxLength = 9;
+            this.ContraseñaAnterior.MaxLength = 100;
             this.ContraseñaAnterior.Name = "ContraseñaAnterior";
             this.ContraseñaAnterior.Size = new System.Drawing.Size(290, 20);
             this.ContraseñaAnterior.TabIndex = 23;
@@ -228,7 +280,7 @@
             this.txtRContraseñaN.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRContraseñaN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.txtRContraseñaN.Location = new System.Drawing.Point(27, 306);
-            this.txtRContraseñaN.MaxLength = 9;
+            this.txtRContraseñaN.MaxLength = 100;
             this.txtRContraseñaN.Name = "txtRContraseñaN";
             this.txtRContraseñaN.Size = new System.Drawing.Size(290, 20);
             this.txtRContraseñaN.TabIndex = 21;
@@ -251,7 +303,7 @@
             this.txtContraseñaN.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.txtContraseñaN.Location = new System.Drawing.Point(27, 250);
-            this.txtContraseñaN.MaxLength = 9;
+            this.txtContraseñaN.MaxLength = 100;
             this.txtContraseñaN.Name = "txtContraseñaN";
             this.txtContraseñaN.Size = new System.Drawing.Size(290, 20);
             this.txtContraseñaN.TabIndex = 19;
@@ -274,7 +326,7 @@
             this.txtApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtApellido.Location = new System.Drawing.Point(27, 189);
-            this.txtApellido.MaxLength = 9;
+            this.txtApellido.MaxLength = 100;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(290, 20);
             this.txtApellido.TabIndex = 17;
@@ -297,38 +349,13 @@
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtNombre.Location = new System.Drawing.Point(27, 140);
-            this.txtNombre.MaxLength = 9;
+            this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(290, 20);
             this.txtNombre.TabIndex = 15;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(85, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 23);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Editar Perfil";
-            // 
-            // linkEditarContraseña
-            // 
-            this.linkEditarContraseña.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.linkEditarContraseña.AutoSize = true;
-            this.linkEditarContraseña.DisabledLinkColor = System.Drawing.Color.DimGray;
-            this.linkEditarContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkEditarContraseña.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
-            this.linkEditarContraseña.Location = new System.Drawing.Point(202, 231);
-            this.linkEditarContraseña.Name = "linkEditarContraseña";
-            this.linkEditarContraseña.Size = new System.Drawing.Size(125, 16);
-            this.linkEditarContraseña.TabIndex = 13;
-            this.linkEditarContraseña.TabStop = true;
-            this.linkEditarContraseña.Text = "Editar Contraseña";
-            this.linkEditarContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEditarContraseña_LinkClicked);
             // 
             // panel1
             // 
@@ -460,24 +487,6 @@
             this.user.TabIndex = 13;
             this.user.TabStop = false;
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(339, 13);
-            this.panel8.TabIndex = 29;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 459);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(339, 13);
-            this.panel9.TabIndex = 30;
-            // 
             // panelConexion
             // 
             this.panelConexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
@@ -486,15 +495,6 @@
             this.panelConexion.Size = new System.Drawing.Size(86, 100);
             this.panelConexion.TabIndex = 14;
             this.panelConexion.Visible = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(329, 13);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 446);
-            this.panel11.TabIndex = 31;
             // 
             // ActualizarUsuario
             // 

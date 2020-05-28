@@ -66,5 +66,15 @@ namespace GUI_Principal.Formularios_Acciones
             }
             
         }
+
+        private void Regresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void lblVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

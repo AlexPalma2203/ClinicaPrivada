@@ -33,10 +33,11 @@
             this.Menu = new System.Windows.Forms.Panel();
             this.Salir = new FontAwesome.Sharp.IconButton();
             this.Programadores = new FontAwesome.Sharp.IconButton();
-            this.Administrador = new FontAwesome.Sharp.IconButton();
+            this.Reportes = new FontAwesome.Sharp.IconButton();
             this.Registros = new FontAwesome.Sharp.IconButton();
             this.Paciente = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.linklblEditar = new System.Windows.Forms.LinkLabel();
             this.Cargo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.iconUsers = new FontAwesome.Sharp.IconPictureBox();
@@ -51,7 +52,7 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
-            this.linklblEditar = new System.Windows.Forms.LinkLabel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Menu.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconUsers)).BeginInit();
@@ -69,7 +70,7 @@
             this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(16)))), ((int)(((byte)(31)))));
             this.Menu.Controls.Add(this.Salir);
             this.Menu.Controls.Add(this.Programadores);
-            this.Menu.Controls.Add(this.Administrador);
+            this.Menu.Controls.Add(this.Reportes);
             this.Menu.Controls.Add(this.Registros);
             this.Menu.Controls.Add(this.Paciente);
             this.Menu.Controls.Add(this.panel3);
@@ -137,34 +138,34 @@
             this.Programadores.UseVisualStyleBackColor = false;
             this.Programadores.Click += new System.EventHandler(this.Programadores_Click);
             // 
-            // Administrador
+            // Reportes
             // 
-            this.Administrador.BackColor = System.Drawing.Color.Transparent;
-            this.Administrador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Administrador.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Administrador.FlatAppearance.BorderSize = 0;
-            this.Administrador.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Administrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
-            this.Administrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
-            this.Administrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Administrador.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Administrador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Administrador.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Administrador.IconChar = FontAwesome.Sharp.IconChar.UserShield;
-            this.Administrador.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Administrador.IconSize = 50;
-            this.Administrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Administrador.Location = new System.Drawing.Point(0, 282);
-            this.Administrador.Name = "Administrador";
-            this.Administrador.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Administrador.Rotation = 0D;
-            this.Administrador.Size = new System.Drawing.Size(200, 60);
-            this.Administrador.TabIndex = 3;
-            this.Administrador.Text = "Administrador";
-            this.Administrador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Administrador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Administrador.UseVisualStyleBackColor = false;
-            this.Administrador.Click += new System.EventHandler(this.Administrador_Click);
+            this.Reportes.BackColor = System.Drawing.Color.Transparent;
+            this.Reportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Reportes.FlatAppearance.BorderSize = 0;
+            this.Reportes.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.Reportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reportes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.Reportes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reportes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Reportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.Reportes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.Reportes.IconSize = 50;
+            this.Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reportes.Location = new System.Drawing.Point(0, 282);
+            this.Reportes.Name = "Reportes";
+            this.Reportes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Reportes.Rotation = 0D;
+            this.Reportes.Size = new System.Drawing.Size(200, 60);
+            this.Reportes.TabIndex = 3;
+            this.Reportes.Text = "Reportes";
+            this.Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reportes.UseVisualStyleBackColor = false;
+            this.Reportes.Click += new System.EventHandler(this.Administrador_Click);
             // 
             // Registros
             // 
@@ -237,6 +238,21 @@
             this.panel3.Size = new System.Drawing.Size(200, 162);
             this.panel3.TabIndex = 0;
             this.panel3.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
+            // 
+            // linklblEditar
+            // 
+            this.linklblEditar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.linklblEditar.AutoSize = true;
+            this.linklblEditar.DisabledLinkColor = System.Drawing.Color.DimGray;
+            this.linklblEditar.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Bold);
+            this.linklblEditar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
+            this.linklblEditar.Location = new System.Drawing.Point(137, 13);
+            this.linklblEditar.Name = "linklblEditar";
+            this.linklblEditar.Size = new System.Drawing.Size(59, 14);
+            this.linklblEditar.TabIndex = 19;
+            this.linklblEditar.TabStop = true;
+            this.linklblEditar.Text = "Editar Perfil";
+            this.linklblEditar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblEditar_LinkClicked);
             // 
             // Cargo
             // 
@@ -414,34 +430,24 @@
             this.HoraFecha.Enabled = true;
             this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
             // 
-            // linklblEditar
+            // bunifuElipse1
             // 
-            this.linklblEditar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.linklblEditar.AutoSize = true;
-            this.linklblEditar.DisabledLinkColor = System.Drawing.Color.DimGray;
-            this.linklblEditar.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Bold);
-            this.linklblEditar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
-            this.linklblEditar.Location = new System.Drawing.Point(137, 13);
-            this.linklblEditar.Name = "linklblEditar";
-            this.linklblEditar.Size = new System.Drawing.Size(59, 14);
-            this.linklblEditar.TabIndex = 19;
-            this.linklblEditar.TabStop = true;
-            this.linklblEditar.Text = "Editar Perfil";
-            this.linklblEditar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblEditar_LinkClicked);
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1129, 529);
             this.Controls.Add(this.Formularios);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "Menu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.Menu.ResumeLayout(false);
@@ -470,7 +476,7 @@
         private FontAwesome.Sharp.IconPictureBox Minimizar;
         private FontAwesome.Sharp.IconButton Paciente;
         private FontAwesome.Sharp.IconButton Programadores;
-        private FontAwesome.Sharp.IconButton Administrador;
+        private FontAwesome.Sharp.IconButton Reportes;
         private FontAwesome.Sharp.IconButton Registros;
         private FontAwesome.Sharp.IconPictureBox iconFormularioActual;
         private System.Windows.Forms.Label TituloFormularioHijo;
@@ -480,11 +486,12 @@
         private FontAwesome.Sharp.IconPictureBox iconUsers;
         private System.Windows.Forms.Label Cargo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer HoraFecha;
         private System.Windows.Forms.LinkLabel linklblEditar;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 

@@ -3,7 +3,7 @@ go
 use SistemaClinico
 Go
 Create table Usuario(
-Id_Usuario nvarchar (20) adminprimary key ,
+Id_Usuario nvarchar (20) primary key ,
 Nombre_Usuario varchar(50),
 Apellido_Usuario varchar(50),
 Cargo_Usuario varchar(30),
@@ -29,7 +29,7 @@ Medicamentos_Escritos varchar(200),
 tipo_sangre varchar(5),
 dui int references Paciente(Dui)
 );
-Go
+
 Create table Diagnostico(
 Id_Diagnostico int primary key identity(1,1),
 Estado varchar(50),
@@ -65,25 +65,92 @@ Id_Usuario nvarchar (20) references Usuario(Id_Usuario)
 );
 
 go
-insert into Usuario values ('admin','Alex','Palma','Administrador','admin')
+
 
 go
-insert into Paciente values (1,'Nombre','Apellido','M',7875457,'Soyapango','ALoneLikeJosue','17/04/2001')
 
+
+select num_cita,Fecha_HoraCita,Fecha_HoraCreacion,Motivo,CreadoPor,Precio,P.dui,Nombre_Paciente,Apellidos_Paciente from Citas C inner join Paciente P on C.dui = P.Dui 
+
+
+
+/*Insertar Usuarios
+roles:
+Administrador
+Doctor
+Enfermera
+*/
+
+insert into Usuario values ('UserName','Nombre','Apellido','Administrador','Contraseña')
+
+
+/*Insertar Paciente Y Expediente
+--Sexo: F o M
+--Estado Civil: 
+Soltero
+Casado
+Divorsiado
+--Sangre:
+O -
+O +
+A -
+A +
+B -
+B +
+AB -
+AB +
+*/
+insert into Paciente values (Dui,'Nombre','Apellido','M',telefono,'Direccion','Soltero','FechaNac')
 go
-insert into Expediente values (SYSDATETIME(),'','','O RH+',1)
-go
-update Usuario set Id_Usuario='admin',Nombre_Usuario='',Apellido_Usuario='',Cargo_Usuario='',Contraseña_Usuasio='admin' where Id_Usuario='admin'
---select *  from Expediente E inner join Paciente P on E.dui = P.Dui where E.dui = 1 and P.Dui=1
---select * from Citas where dui = 2 and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =2)
---drop database SistemaClinico
---insert into Citas values (SYSDATETIME(),convert(datetime,'21-05-20',5),'',1)
---insert into Citas values (SYSDATETIME(),convert(datetime,'21-05-19',5),'',1)
---insert into Citas values (SYSDATETIME(),convert(datetime,'22-06-21',5),'',1)
---select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 1 and C.dui = 1
---select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 2 and C.dui = 2
---select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 2 and C.dui = 2 and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =2) 
--- select * from Usuario
---delete from Citas where dui = 1
---Update Citas set Fecha_HoraCita=SYSDATETIME(),Motivo='',CreadoPor='',Precio=10 where dui = 2 and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =2)
---select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = 2 and C.dui = 2 and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui=2)
+insert into Expediente values (SYSDATETIME(),'Antecedentes','Medicamentos','Sangre',Dui);
+
+/*Insertar Diagnostico*/
+insert into Diagnostico values ('Enfermedad','Estado',peso,estatura,presion,SYSDATETIME(),temperatura,'detalles','recomendaciones',numExpe)
+
+/*Insertar Citas*/
+insert into Citas values (SYSDATETIME(),fecha,'Motivo','Nombre de Usuario',precio,dui)
+
+
+--Paciente
+--1
+--select * from Expediente E inner join Paciente P on E.dui = P.Dui where E.dui = @dui and P.Dui=@dui 
+--2
+--select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = @dui and C.dui = @dui and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui=@dui)
+--3
+--update Expediente set Antecedentes_Clinicos = @antecendetes, Medicamentos_Escritos= @medicamentos, tipo_sangre= @sangre where dui = @dui 
+--4
+--update Paciente set Nombre_Paciente= @nombre , Apellidos_Paciente = @apellido , Sexo_Paciente = @sexo, Telefono_Paciente = @telefono, Direccion_Paciente = @direccion ,EstadoCivil = @estadocivil , FechaNacimiento =@fechanac where dui = @dui
+--5
+--Insert into Paciente values(@dui,@nombre,@apellido,@sexo,@telefono,@direccion,@estadocivil,@fechanac)
+--6
+--insert into Expediente values (SYSDATETIME(),@antecendetes,@medicamentos,@sangre,@dui)
+--7
+--delete from Expediente where dui = @dui ; delete from Paciente where Dui = @dui
+--8
+--
+--9
+--insert into Citas values (SYSDATETIME(),@fechaCita,@motivo,@CreadoPor,@Precio,@dui)
+--10
+--Update Citas set Fecha_HoraCita=@fechaCita,Motivo=@motivo,CreadoPor=@CreadoPor,Precio=@Precio where dui = @dui and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =@dui)
+--11
+--delete from citas where dui = @dui and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =@dui)
+--Usuario
+--1
+--Select * from Usuario where Id_Usuario = @usuario and Contraseña_Usuasio = @contraseña
+--2
+--update Usuario set Id_Usuario=@usuario,Nombre_Usuario=@nombre,Apellido_Usuario=@apellido,Contraseña_Usuasio=@contraseña where Id_Usuario=@usuario
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

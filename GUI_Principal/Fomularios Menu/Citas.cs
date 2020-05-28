@@ -26,22 +26,7 @@ namespace GUI_Principal
         {
 
         }
-        private void AbrirFormularioHijo(Form FormularioHijo)
-        {
-            //open only form
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            currentChildForm = FormularioHijo;
-            //End
-            FormularioHijo.TopLevel = false;
-            FormularioHijo.FormBorderStyle = FormBorderStyle.None;
-            FormularioHijo.Dock = DockStyle.Fill;
-            
-            FormularioHijo.BringToFront();
-            FormularioHijo.Show();
-        }
+        
         bool acceso = false;
         private void msjError(string msj)
         {
@@ -95,7 +80,8 @@ namespace GUI_Principal
                             lblApellidoPaciente.Text = CachePaciente.ApellidoPaciente;
                             
                             lblProx.Text = "";
-                         
+                            lblCreador.Text = "";
+                            lblMotivo.Text = "";
                             Errorlbl.Visible = false;
                             ErrorBusquedad.Visible = false;
                             acceso = true;
@@ -244,12 +230,32 @@ namespace GUI_Principal
         private void DeleteExpediente_Click(object sender, EventArgs e)
         {
             try {
-                ModeloCita c1 = new ModeloCita(CachePaciente.Dui, CacheCita.fechaCita);
-                var resultado = c1.eliminarCita();
-                MessageBox.Show(Convert.ToString( resultado));
-                if (resultado >= 1) {
-                    BuscarExpe();
+
+                if (SearchExp.Text == "Buscar" || acceso == false)
+            {
+                msjError("Ingrese un Dui");
+                SearchExp.Focus();
+
+            }
+            else
+            {
+
+                    ModeloCita c1 = new ModeloCita(CachePaciente.Dui, CacheCita.fechaCita);
+                    var resultado = c1.eliminarCita();
+
+                    if (resultado >= 1)
+                    {
+                        BuscarExpe();
+                        MessageBox.Show("Cita Eliminada");
+
+                    }
+                    else { MessageBox.Show("Cita No Encontrada"); }
+                    
                 }
+
+
+
+                
 
             } catch (Exception) {
 
@@ -258,6 +264,11 @@ namespace GUI_Principal
            
 
 
+        }
+
+        private void icondatabse_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijoCita(new DatosCitas());
         }
     }
 }

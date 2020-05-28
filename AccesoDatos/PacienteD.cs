@@ -42,11 +42,7 @@ namespace AccesoDatos
                             CachePaciente.TelefonoPaciente = Lectura.GetInt32(10);
                             CachePaciente.DirrecionPaciente = Lectura.GetString(11);
                             CachePaciente.EstadoCivilPaciente = Lectura.GetString(12);
-                            CachePaciente.FechaNacimientoPaciente = Lectura.GetString(13);
-                            
-
-
-
+                            CachePaciente.FechaNacimientoPaciente = Lectura.GetDateTime(13);
                         }
                         return true;
                     }
@@ -112,6 +108,117 @@ namespace AccesoDatos
 
 
         }
+        public void BusquedadPacienteCitaSinfecha(int dui)
+        {
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "select * from citas where dui = @dui";
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.CommandType = CommandType.Text;
+
+                    SqlDataReader Lectura = Comando.ExecuteReader();
+
+                 
+    
+                }
+
+            }
+
+
+        }
+        DataTable tablaExpedientes = new DataTable();
+        public DataTable BusquedadExpedientes()
+        {
+            using (var Conexion = GetConnection())
+            {
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "select Id_Diagnostico as Consulta,P.Dui,Nombre_Paciente as Nombre,P.Apellidos_Paciente as Apellido,fechaDiagnostico as FechaConsulta,E.Num_Expediente as Expediente from Expediente  E inner join Paciente P on E.dui = P.Dui inner join Diagnostico D on D.Num_Expediente = E.Num_Expediente";
+                    Comando.CommandType = CommandType.Text;
+                    SqlDataReader Lectura = Comando.ExecuteReader();
+                    tablaExpedientes.Load(Lectura);
+                    return tablaExpedientes;
+                }
+
+            }
+
+
+        }
+
+
+        DataTable tablaExpedientesDui = new DataTable();
+        public DataTable BusquedadExpedientes(int dui)
+        {
+            using (var Conexion = GetConnection())
+            {
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "select Id_Diagnostico as Consulta,P.Dui,Nombre_Paciente as Nombre,P.Apellidos_Paciente as Apellido,fechaDiagnostico as FechaConsulta,E.Num_Expediente as Expediente from Expediente  E inner join Paciente P on E.dui = P.Dui inner join Diagnostico D on D.Num_Expediente = E.Num_Expediente where P.Dui = @dui";
+                    Comando.CommandType = CommandType.Text;
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    SqlDataReader Lectura = Comando.ExecuteReader();
+                    tablaExpedientesDui.Load(Lectura);
+                    return tablaExpedientesDui;
+                }
+
+            }
+
+
+        }
+        
+        public void BusquedadDiagnostico(int dui, int id)
+        {
+            using (var Conexion = GetConnection())
+            {
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = Conexion;
+
+                    Comando.CommandText = "select * from Expediente  E inner join Paciente P on E.dui = P.Dui inner join Diagnostico D on D.Num_Expediente = E.Num_Expediente where P.Dui = @dui and Id_Diagnostico = @id_Diagnostico";
+                    Comando.CommandType = CommandType.Text;
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.Parameters.AddWithValue("@id_Diagnostico", id);
+                    SqlDataReader Lectura = Comando.ExecuteReader();
+                    if (Lectura.HasRows)
+                    {
+                        while (Lectura.Read())
+                        {
+                            CacheExpediente.NumExpediente = Lectura.GetInt32(0);
+                            CachePaciente.Dui = Lectura.GetInt32(6);
+                            CachePaciente.NombrePaciente = Lectura.GetString(7);
+                            CachePaciente.ApellidoPaciente = Lectura.GetString(8);
+                            CacheDiagnostico.id = Lectura.GetInt32(14);
+                            CacheDiagnostico.estado = Lectura.GetString(15);
+                            CacheDiagnostico.enfermead = Lectura.GetString(16);
+                            CacheDiagnostico.peso = Lectura.GetDouble(17);
+                            CacheDiagnostico.estatura = Lectura.GetDouble(18);
+                            CacheDiagnostico.presion = Lectura.GetDouble(19);
+                            CacheDiagnostico.fechaCreacion = Lectura.GetDateTime(20);
+                            CacheDiagnostico.temperatura = Lectura.GetDouble(21);
+                            CacheDiagnostico.detalles = Lectura.GetString(22);
+                            CacheDiagnostico.recomendaciones = Lectura.GetString(23);
+                        }
+                        
+                    }
+
+                }
+
+            }
+
+
+        }
+
 
         public void actualizarExpedinte(string Antecedentes, string medicamentos, string tipoSangre, int dui)
         {
@@ -138,7 +245,7 @@ namespace AccesoDatos
 
         }
 
-        public void actualizarPaciente(int DuiP, string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, string FechaNaciemientoP)
+        public void actualizarPaciente(int DuiP, string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, DateTime FechaNaciemientoP)
         {
 
             using (var Conexion = GetConnection())
@@ -166,7 +273,7 @@ namespace AccesoDatos
 
 
         }
-        public void crearPaciente(int DuiP, string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, string FechaNaciemientoP)
+        public void crearPaciente(int DuiP, string nombreP, string apellidosP, string SexoP, int numeroTeleP, string DireccionP, string EstadoCivilP, DateTime FechaNaciemientoP)
         {
             using (var Conexion = GetConnection())
             {
@@ -215,7 +322,7 @@ namespace AccesoDatos
             }
         }
 
-        public void EliminarExp(int dui)
+        public void EliminarExp(int dui,int numExpe)
         {
 
             using (var Conexion = GetConnection())
@@ -225,8 +332,9 @@ namespace AccesoDatos
                 using (var Comando = new SqlCommand())
                 {
                     Comando.Connection = Conexion;
-                    Comando.CommandText = "delete from Expediente where dui = @dui ; delete from Paciente where Dui = @dui";
+                    Comando.CommandText = "delete from Citas where dui = @dui;delete from Diagnostico where Num_Expediente = @numExpe ;delete from Expediente where dui = @dui ; delete from Paciente where Dui = @dui;";
                     Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.Parameters.AddWithValue("@numExpe", numExpe);
                     Comando.CommandType = CommandType.Text;
                     Comando.ExecuteNonQuery();
                 }
@@ -336,6 +444,111 @@ namespace AccesoDatos
             }
 
         }
+        public int eliminarcitasinfecha(int dui, DateTime fechaCita)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+
+                    Comando.Connection = Conexion;
+
+                    Comando.CommandText = "delete from citas where dui = @dui and Fecha_HoraCita= @fechacita";
+                    Comando.Parameters.AddWithValue("@fechaCita", fechaCita);
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.CommandType = CommandType.Text;
+                    return Comando.ExecuteNonQuery();
+
+                }
+            }
+
+        }
+
+        DataTable tablaCitas = new DataTable();
+        public DataTable MostrarCitas()
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio  from Citas C inner join Paciente P on C.dui = P.Dui ";
+                    comando.CommandType = CommandType.Text;
+                    SqlDataReader lectura = comando.ExecuteReader();
+                    tablaCitas.Load(lectura);
+                    return tablaCitas;
+                }
+
+            }
+
+        }
+        DataTable tablaCitasFecha = new DataTable();
+        public DataTable MostrarCitasFecha(DateTime fecha)
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio from Citas C inner join Paciente P on C.dui = P.Dui where (SELECT CONVERT(VARCHAR(10), Fecha_HoraCita, 103) from Citas) = @fecha";
+                    comando.Parameters.AddWithValue("@fecha", fecha);
+                    comando.CommandType = CommandType.Text;
+                    
+                    SqlDataReader lectura = comando.ExecuteReader();
+                    tablaCitasFecha.Load(lectura);
+                    return tablaCitasFecha;
+                }
+
+            }
+
+        }
+        DataTable tablaCitasFechaPersona = new DataTable();
+        public DataTable MostrarCitasFechaPersona(DateTime fecha,int id)
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio from Citas C inner join Paciente P on C.dui = P.Dui where P.dui = @dui  and(SELECT CONVERT(VARCHAR(10), Fecha_HoraCita, 103) from Citas) = @fecha ";
+                    comando.CommandType = CommandType.Text;
+                    comando.Parameters.AddWithValue("@dui", id);
+                    comando.Parameters.AddWithValue("@fecha", fecha);
+                    SqlDataReader lectura = comando.ExecuteReader();
+                    tablaCitasFechaPersona.Load(lectura);
+                    return tablaCitasFechaPersona;
+                }
+
+            }
+
+        }
+        DataTable tablaCitasPersona = new DataTable();
+        public DataTable MostrarCitasPersona( int id)
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio from Citas C inner join Paciente P on C.dui = P.Dui where P.dui = @dui";
+                    comando.CommandType = CommandType.Text;
+                    comando.Parameters.AddWithValue("@dui", id);
+                    SqlDataReader lectura = comando.ExecuteReader();
+                    tablaCitasPersona.Load(lectura);
+                    return tablaCitasPersona;
+                }
+
+            }
+
+        }
+
 
     }
 }

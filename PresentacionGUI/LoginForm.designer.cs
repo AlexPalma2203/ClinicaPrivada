@@ -28,71 +28,292 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.info = new FontAwesome.Sharp.IconPictureBox();
+            this.userLogin = new FontAwesome.Sharp.IconPictureBox();
+            this.iniciar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.logopic = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panelregistro = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
+            this.ErrorIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.Close = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Error = new System.Windows.Forms.Label();
             this.Usuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Contraseña = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Acceder = new System.Windows.Forms.Button();
-            this.Close = new FontAwesome.Sharp.IconPictureBox();
-            this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
-            this.Error = new System.Windows.Forms.Label();
-            this.ErrorIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.bunifuGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logopic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
+            this.panelregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.panel1.Controls.Add(this.bunifuGradientPanel2);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 330);
+            this.panel1.Size = new System.Drawing.Size(793, 464);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.info);
+            this.bunifuGradientPanel2.Controls.Add(this.userLogin);
+            this.bunifuGradientPanel2.Controls.Add(this.iniciar);
+            this.bunifuGradientPanel2.Controls.Add(this.label5);
+            this.bunifuGradientPanel2.Controls.Add(this.logopic);
+            this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(50)))), ((int)(((byte)(87)))));
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(-7, 0);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(800, 464);
+            this.bunifuGradientPanel2.TabIndex = 15;
+            // 
+            // info
+            // 
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.info.ForeColor = System.Drawing.Color.Silver;
+            this.info.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.info.IconColor = System.Drawing.Color.Silver;
+            this.info.IconSize = 50;
+            this.info.Location = new System.Drawing.Point(352, 367);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(52, 50);
+            this.info.TabIndex = 17;
+            this.info.TabStop = false;
+            this.info.Click += new System.EventHandler(this.info_Click);
+            // 
+            // userLogin
+            // 
+            this.userLogin.BackColor = System.Drawing.Color.Transparent;
+            this.userLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.userLogin.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.userLogin.IconColor = System.Drawing.Color.Gainsboro;
+            this.userLogin.IconSize = 155;
+            this.userLogin.Location = new System.Drawing.Point(123, 115);
+            this.userLogin.Name = "userLogin";
+            this.userLogin.Size = new System.Drawing.Size(155, 155);
+            this.userLogin.TabIndex = 16;
+            this.userLogin.TabStop = false;
+            this.userLogin.Visible = false;
+            // 
+            // iniciar
+            // 
+            this.iniciar.BackColor = System.Drawing.Color.Transparent;
+            this.iniciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iniciar.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.iniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.iniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iniciar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iniciar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iniciar.Location = new System.Drawing.Point(151, 302);
+            this.iniciar.Name = "iniciar";
+            this.iniciar.Size = new System.Drawing.Size(110, 40);
+            this.iniciar.TabIndex = 15;
+            this.iniciar.Text = "Iniciar Sesion";
+            this.iniciar.UseVisualStyleBackColor = false;
+            this.iniciar.Visible = false;
+            this.iniciar.Click += new System.EventHandler(this.iniciar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(56, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(296, 38);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "¡Hola, Bienvenido!";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // logopic
+            // 
+            this.logopic.BackColor = System.Drawing.Color.Transparent;
+            this.logopic.Image = ((System.Drawing.Image)(resources.GetObject("logopic.Image")));
+            this.logopic.Location = new System.Drawing.Point(44, 85);
+            this.logopic.Name = "logopic";
+            this.logopic.Size = new System.Drawing.Size(338, 296);
+            this.logopic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logopic.TabIndex = 18;
+            this.logopic.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(10, 284);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 19);
+            this.label6.TabIndex = 26;
+            this.label6.Text = ".";
+            this.label6.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-37, -32);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 375);
+            this.pictureBox1.Size = new System.Drawing.Size(282, 267);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // panelregistro
+            // 
+            this.panelregistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.panelregistro.Controls.Add(this.panel4);
+            this.panelregistro.Controls.Add(this.Minimizar);
+            this.panelregistro.Controls.Add(this.ErrorIcon);
+            this.panelregistro.Controls.Add(this.Close);
+            this.panelregistro.Controls.Add(this.label1);
+            this.panelregistro.Controls.Add(this.Error);
+            this.panelregistro.Controls.Add(this.Usuario);
+            this.panelregistro.Controls.Add(this.panel2);
+            this.panelregistro.Controls.Add(this.Contraseña);
+            this.panelregistro.Controls.Add(this.Acceder);
+            this.panelregistro.Controls.Add(this.panel3);
+            this.panelregistro.Location = new System.Drawing.Point(395, -2);
+            this.panelregistro.Name = "panelregistro";
+            this.panelregistro.Size = new System.Drawing.Size(400, 464);
+            this.panelregistro.TabIndex = 13;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.panel4.Enabled = false;
+            this.panel4.Location = new System.Drawing.Point(31, 387);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(345, 1);
+            this.panel4.TabIndex = 19;
+            // 
+            // Minimizar
+            // 
+            this.Minimizar.BackColor = System.Drawing.Color.Transparent;
+            this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.GripLines;
+            this.Minimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.Minimizar.Location = new System.Drawing.Point(306, 11);
+            this.Minimizar.Name = "Minimizar";
+            this.Minimizar.Size = new System.Drawing.Size(32, 32);
+            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Minimizar.TabIndex = 21;
+            this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click_1);
+            // 
+            // ErrorIcon
+            // 
+            this.ErrorIcon.BackColor = System.Drawing.Color.Transparent;
+            this.ErrorIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.ErrorIcon.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.ErrorIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.ErrorIcon.IconSize = 23;
+            this.ErrorIcon.Location = new System.Drawing.Point(71, 280);
+            this.ErrorIcon.Name = "ErrorIcon";
+            this.ErrorIcon.Size = new System.Drawing.Size(27, 23);
+            this.ErrorIcon.TabIndex = 23;
+            this.ErrorIcon.TabStop = false;
+            this.ErrorIcon.Visible = false;
+            // 
+            // Close
+            // 
+            this.Close.BackColor = System.Drawing.Color.Transparent;
+            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.Close.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.Close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.Close.Location = new System.Drawing.Point(344, 11);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(32, 32);
+            this.Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Close.TabIndex = 20;
+            this.Close.TabStop = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.label1.Location = new System.Drawing.Point(447, 9);
+            this.label1.Location = new System.Drawing.Point(101, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LOGIN";
+            this.label1.Size = new System.Drawing.Size(185, 32);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Iniciar Sesion";
+            // 
+            // Error
+            // 
+            this.Error.AutoSize = true;
+            this.Error.BackColor = System.Drawing.Color.Transparent;
+            this.Error.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.Error.Location = new System.Drawing.Point(104, 284);
+            this.Error.Name = "Error";
+            this.Error.Size = new System.Drawing.Size(41, 18);
+            this.Error.TabIndex = 22;
+            this.Error.Text = "Error";
+            this.Error.Visible = false;
             // 
             // Usuario
             // 
-            this.Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
             this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
-            this.Usuario.Location = new System.Drawing.Point(281, 62);
+            this.Usuario.Location = new System.Drawing.Point(65, 149);
             this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(468, 20);
-            this.Usuario.TabIndex = 1;
+            this.Usuario.Size = new System.Drawing.Size(270, 20);
+            this.Usuario.TabIndex = 15;
             this.Usuario.Text = ".:.USUARIO.:.";
-            this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
             this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
             this.Usuario.Leave += new System.EventHandler(this.Usuario_Leave);
             // 
@@ -100,37 +321,28 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
             this.panel2.Enabled = false;
-            this.panel2.Location = new System.Drawing.Point(281, 88);
+            this.panel2.Location = new System.Drawing.Point(65, 175);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 2);
-            this.panel2.TabIndex = 3;
+            this.panel2.Size = new System.Drawing.Size(267, 2);
+            this.panel2.TabIndex = 17;
             // 
             // Contraseña
             // 
-            this.Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
             this.Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Contraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
-            this.Contraseña.Location = new System.Drawing.Point(281, 152);
+            this.Contraseña.Location = new System.Drawing.Point(65, 239);
             this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Size = new System.Drawing.Size(468, 20);
-            this.Contraseña.TabIndex = 2;
+            this.Contraseña.Size = new System.Drawing.Size(270, 20);
+            this.Contraseña.TabIndex = 16;
             this.Contraseña.Text = ".:.CONTRASEÑA.:.";
-            this.Contraseña.TextChanged += new System.EventHandler(this.Contraseña_TextChanged);
             this.Contraseña.Enter += new System.EventHandler(this.Contraseña_Enter);
             this.Contraseña.Leave += new System.EventHandler(this.Contraseña_Leave);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
-            this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(281, 178);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(465, 2);
-            this.panel3.TabIndex = 4;
-            // 
             // Acceder
             // 
+            this.Acceder.BackColor = System.Drawing.Color.Transparent;
             this.Acceder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Acceder.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
             this.Acceder.FlatAppearance.BorderSize = 0;
@@ -139,119 +351,80 @@
             this.Acceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Acceder.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Acceder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Acceder.Location = new System.Drawing.Point(458, 249);
+            this.Acceder.Location = new System.Drawing.Point(156, 341);
             this.Acceder.Name = "Acceder";
             this.Acceder.Size = new System.Drawing.Size(90, 40);
-            this.Acceder.TabIndex = 0;
+            this.Acceder.TabIndex = 13;
             this.Acceder.Text = "ACCEDER";
             this.Acceder.UseVisualStyleBackColor = false;
-            this.Acceder.Click += new System.EventHandler(this.Acceder_Click);
+            this.Acceder.Click += new System.EventHandler(this.Acceder_Click_1);
             // 
-            // Close
+            // panel3
             // 
-            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Close.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.Close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Close.Location = new System.Drawing.Point(745, 3);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(32, 32);
-            this.Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Close.TabIndex = 8;
-            this.Close.TabStop = false;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
-            // Minimizar
-            // 
-            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.GripLines;
-            this.Minimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Minimizar.Location = new System.Drawing.Point(707, 3);
-            this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(32, 32);
-            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Minimizar.TabIndex = 9;
-            this.Minimizar.TabStop = false;
-            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
-            // 
-            // Error
-            // 
-            this.Error.AutoSize = true;
-            this.Error.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Error.Location = new System.Drawing.Point(316, 197);
-            this.Error.Name = "Error";
-            this.Error.Size = new System.Drawing.Size(41, 18);
-            this.Error.TabIndex = 11;
-            this.Error.Text = "Error";
-            this.Error.Visible = false;
-            this.Error.Click += new System.EventHandler(this.Error_Click_1);
-            // 
-            // ErrorIcon
-            // 
-            this.ErrorIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.ErrorIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.ErrorIcon.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
-            this.ErrorIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.ErrorIcon.IconSize = 23;
-            this.ErrorIcon.Location = new System.Drawing.Point(290, 195);
-            this.ErrorIcon.Name = "ErrorIcon";
-            this.ErrorIcon.Size = new System.Drawing.Size(27, 23);
-            this.ErrorIcon.TabIndex = 12;
-            this.ErrorIcon.TabStop = false;
-            this.ErrorIcon.Visible = false;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.panel3.Enabled = false;
+            this.panel3.Location = new System.Drawing.Point(65, 265);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(267, 2);
+            this.panel3.TabIndex = 18;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(780, 330);
-            this.Controls.Add(this.ErrorIcon);
-            this.Controls.Add(this.Error);
-            this.Controls.Add(this.Minimizar);
-            this.Controls.Add(this.Close);
-            this.Controls.Add(this.Acceder);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.Contraseña);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.Usuario);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(790, 417);
+            this.Controls.Add(this.panelregistro);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
-            this.Opacity = 0.85D;
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logopic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
+            this.panelregistro.ResumeLayout(false);
+            this.panelregistro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelregistro;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconPictureBox Minimizar;
+        private FontAwesome.Sharp.IconPictureBox ErrorIcon;
+        private FontAwesome.Sharp.IconPictureBox Close;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Error;
         private System.Windows.Forms.TextBox Usuario;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox Contraseña;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button Acceder;
-        private new FontAwesome.Sharp.IconPictureBox Close;
-        private FontAwesome.Sharp.IconPictureBox Minimizar;
-        private System.Windows.Forms.Label Error;
-        private FontAwesome.Sharp.IconPictureBox ErrorIcon;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button iniciar;
+        private FontAwesome.Sharp.IconPictureBox userLogin;
+        private FontAwesome.Sharp.IconPictureBox info;
+        private System.Windows.Forms.PictureBox logopic;
+        private System.Windows.Forms.Button Acceder;
     }
 }
 

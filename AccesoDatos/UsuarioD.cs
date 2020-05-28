@@ -22,10 +22,9 @@ namespace AccesoDatos
 
 
                     comando.Connection = conexion;
-                    comando.CommandText = "Select * from Usuario where Id_Usuario = @usuario and Contraseña_Usuasio = @contraseña ";
+                    comando.CommandText = "Select * from Usuario where Id_Usuario = @usuario and Contraseña_Usuasio = @contraseña";
                     comando.Parameters.AddWithValue("@usuario", usuario);
                     comando.Parameters.AddWithValue("@contraseña", contraseña);
-
                     comando.CommandType = CommandType.Text;
                     SqlDataReader lectura = comando.ExecuteReader();
                     if (lectura.HasRows)

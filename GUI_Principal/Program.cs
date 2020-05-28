@@ -17,7 +17,7 @@ namespace GUI_Principal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ActualizarUsuario());
+            Application.Run(new Citas());
 
 
         }

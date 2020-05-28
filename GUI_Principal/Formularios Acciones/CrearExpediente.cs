@@ -20,7 +20,7 @@ namespace GUI_Principal
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
-            
+            DateTime fecha = new DateTime(Convert.ToInt32(txtAño.Text), Convert.ToInt32(txtMes.Text), Convert.ToInt32(txtDia.Text));
             try {
                 ModeloPaciente createPaciente = new ModeloPaciente(dui: Convert.ToInt32(TxtDui.Text),
               nombreP: TxtNombre.Text,
@@ -29,7 +29,7 @@ namespace GUI_Principal
               numeroTeleP: Convert.ToInt32(TxtNumero.Text),
               direccionP: RtbDireccion.Text,
               estadoCivilP: Convert.ToString(CboEstadoCivil.SelectedItem),
-              fechaNaciemientoP: TxtFechaNaciemiemto.Text,
+              fechaNaciemientoP: fecha,
               antecedentes: rtbAntecedentes.Text,
               medicamentos: rtbMedicamentos.Text,
               tipoSangre: Convert.ToString(CboTipoSangre.SelectedItem)
@@ -78,16 +78,12 @@ namespace GUI_Principal
 
         private void CboSexo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CboSexo.Items.Add("F");
-            CboSexo.Items.Add("M");
+
         }
 
         private void CboEstadoCivil_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            CboEstadoCivil.Items.Add("Soltero");
-            CboEstadoCivil.Items.Add("Casado");
-            CboEstadoCivil.Items.Add("Divorsiado");
-            CboEstadoCivil.Items.Add("Viudo");
+
 
         }
         private void Reset()
@@ -97,10 +93,11 @@ namespace GUI_Principal
             TxtNombre.Clear();
             TxtApellido.Clear();
             TxtDui.Clear();
-            TxtFechaNaciemiemto.Clear();
             RtbDireccion.Clear();
             TxtNumero.Clear();
-
+            txtDia.Clear();
+            txtMes.Clear();
+            txtAño.Clear();
             CboSexo.Items.Clear();
             CboSexo.Items.Add("F");
             CboSexo.Items.Add("M");
