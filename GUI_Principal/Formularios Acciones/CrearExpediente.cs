@@ -20,8 +20,9 @@ namespace GUI_Principal
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
-            DateTime fecha = new DateTime(Convert.ToInt32(txtAño.Text), Convert.ToInt32(txtMes.Text), Convert.ToInt32(txtDia.Text));
+            
             try {
+                DateTime fecha = new DateTime(Convert.ToInt32(txtAño.Text), Convert.ToInt32(txtMes.Text), Convert.ToInt32(txtDia.Text));
                 ModeloPaciente createPaciente = new ModeloPaciente(dui: Convert.ToInt32(TxtDui.Text),
               nombreP: TxtNombre.Text,
               apellidosP: TxtApellido.Text,
@@ -54,10 +55,6 @@ namespace GUI_Principal
             Reset();
 
         }
-
-      
-
-      
 
         private void FrmCrearExpediente_Load(object sender, EventArgs e)
         {

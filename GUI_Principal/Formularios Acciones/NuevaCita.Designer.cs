@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.GrpCrearExpediente = new System.Windows.Forms.GroupBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.lblVolver = new System.Windows.Forms.Label();
             this.Regresar = new FontAwesome.Sharp.IconPictureBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.GrpCrearExpediente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Regresar)).BeginInit();
             this.SuspendLayout();
@@ -103,6 +103,25 @@
             this.GrpCrearExpediente.TabIndex = 1;
             this.GrpCrearExpediente.TabStop = false;
             this.GrpCrearExpediente.Text = "Nueva Cita";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecio.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtPrecio.Location = new System.Drawing.Point(689, 117);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(30, 16);
+            this.txtPrecio.TabIndex = 100;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(625, 116);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 16);
+            this.label15.TabIndex = 114;
+            this.label15.Text = "Precio : $ ";
             // 
             // label14
             // 
@@ -168,6 +187,7 @@
             this.txtHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHora.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtHora.Location = new System.Drawing.Point(494, 116);
+            this.txtHora.MaxLength = 2;
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(30, 16);
             this.txtHora.TabIndex = 107;
@@ -187,6 +207,7 @@
             this.txtAño.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAño.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtAño.Location = new System.Drawing.Point(237, 116);
+            this.txtAño.MaxLength = 4;
             this.txtAño.Name = "txtAño";
             this.txtAño.Size = new System.Drawing.Size(56, 16);
             this.txtAño.TabIndex = 105;
@@ -197,6 +218,7 @@
             this.txtMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMes.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtMes.Location = new System.Drawing.Point(196, 116);
+            this.txtMes.MaxLength = 2;
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(30, 16);
             this.txtMes.TabIndex = 104;
@@ -207,6 +229,7 @@
             this.txtDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDia.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtDia.Location = new System.Drawing.Point(153, 116);
+            this.txtDia.MaxLength = 2;
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(30, 16);
             this.txtDia.TabIndex = 103;
@@ -393,25 +416,6 @@
             this.Regresar.TabIndex = 2;
             this.Regresar.TabStop = false;
             this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrecio.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtPrecio.Location = new System.Drawing.Point(689, 117);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(30, 16);
-            this.txtPrecio.TabIndex = 115;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(625, 116);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 16);
-            this.label15.TabIndex = 114;
-            this.label15.Text = "Precio : $ ";
             // 
             // NuevaCita
             // 

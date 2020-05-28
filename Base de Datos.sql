@@ -18,7 +18,7 @@ Sexo_Paciente nvarchar(1),
 Telefono_Paciente int,
 Direccion_Paciente varchar(250),
 EstadoCivil nvarchar(20),
-FechaNacimiento nvarchar(20),
+FechaNacimiento datetime,
 );
 Go
 Create table Expediente(
@@ -66,49 +66,69 @@ Id_Usuario nvarchar (20) references Usuario(Id_Usuario)
 
 go
 
+--/*Insertar Usuarios
+--roles:
+--Administrador
+--Doctor
+--Enfermera
+--*/
+
+--insert into Usuario values ('UserName','Nombre','Apellido','Administrador','Contraseña')
+
+
+--/*Insertar Paciente Y Expediente
+----Sexo: F o M
+----Estado Civil: 
+--Soltero
+--Casado
+--Divorsiado
+----Sangre:
+--O -
+--O +
+--A -
+--A +
+--B -
+--B +
+--AB -
+--AB +
+--*/
+--insert into Paciente values (Dui,'Nombre','Apellido','M',telefono,'Direccion','Soltero','FechaNac')
+--go
+--insert into Expediente values (SYSDATETIME(),'Antecedentes','Medicamentos','Sangre',Dui);
+
+--/*Insertar Diagnostico*/
+--insert into Diagnostico values ('Enfermedad','Estado',peso,estatura,presion,SYSDATETIME(),temperatura,'detalles','recomendaciones',numExpe)
+
+--/*Insertar Citas*/
+--insert into Citas values (SYSDATETIME(),fecha,'Motivo','Nombre de Usuario',precio,dui)
 
 go
-
-
-select num_cita,Fecha_HoraCita,Fecha_HoraCreacion,Motivo,CreadoPor,Precio,P.dui,Nombre_Paciente,Apellidos_Paciente from Citas C inner join Paciente P on C.dui = P.Dui 
-
-
-
-/*Insertar Usuarios
-roles:
-Administrador
-Doctor
-Enfermera
-*/
-
-insert into Usuario values ('UserName','Nombre','Apellido','Administrador','Contraseña')
-
-
-/*Insertar Paciente Y Expediente
---Sexo: F o M
---Estado Civil: 
-Soltero
-Casado
-Divorsiado
---Sangre:
-O -
-O +
-A -
-A +
-B -
-B +
-AB -
-AB +
-*/
-insert into Paciente values (Dui,'Nombre','Apellido','M',telefono,'Direccion','Soltero','FechaNac')
+insert into Usuario values ('admin','Alex','Palma','Administrador','admin')
 go
-insert into Expediente values (SYSDATETIME(),'Antecedentes','Medicamentos','Sangre',Dui);
 
-/*Insertar Diagnostico*/
-insert into Diagnostico values ('Enfermedad','Estado',peso,estatura,presion,SYSDATETIME(),temperatura,'detalles','recomendaciones',numExpe)
-
-/*Insertar Citas*/
-insert into Citas values (SYSDATETIME(),fecha,'Motivo','Nombre de Usuario',precio,dui)
+insert into Paciente values 
+(105698367,'Juan','Perez','M',22559678,'San Juan','Soltero','19990618'),
+(145963248,'Jose','Flores','M',25504870,'Ilopango','Casado','19901210'),
+(549320157,'Maria','Martinez','F',70801465,'Soyapango','Soltera','19950522'),
+(586315774,'Jennifer','Aguilar','F',76524893,'San Miguel','Casado','20001203'),
+(259863104,'Nancy','Lopez','F',73598614,'Mejicanos','Soltera','19980210'),
+(496852301,'Pedro','Castro','M',79651236,'Ciudad Delgado','Casado','19931008'),
+(596321458,'Jaime','Juarez','M',71102560,'La Cima','Soltero','19850520'),
+(863254109,'Jazmin','Ortega','F',74563259,'Lourdes Colon','Soltera','19990616'),
+(102598171,'Karla','Guzman','F',60489530,'Alta Vista','Casado','20000130'),
+(369851450,'Paola','Aleman','F',74698520,'San Juan Opico','Soltera','19950615')
+go
+insert into Expediente values 
+(SYSDATETIME(),'Ninguno','Ninguno','O +',105698367),
+(SYSDATETIME(),'Riuma','Dolofin','A -',145963248),
+(SYSDATETIME(),'Daltonico','Ninguno','O +',549320157),
+(SYSDATETIME(),'Asmatico','Metaproterenol','AB +',586315774),
+(SYSDATETIME(),'Ninguno','Ninguno','B -',259863104),
+(SYSDATETIME(),'Ninguno','Nunguno','B +',496852301),
+(SYSDATETIME(),'Chikungunya','Analgesicos','O -',596321458),
+(SYSDATETIME(),'Covid 19','Hidroxicloroquina','AB -',863254109),
+(SYSDATETIME(),'Ninguno','Ninguno','A +',102598171),
+(SYSDATETIME(),'Ninguno','Ninguno','A -',369851450)
 
 
 --Paciente

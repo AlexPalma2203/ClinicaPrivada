@@ -148,11 +148,15 @@ namespace GUI_Principal.Formularios_Acciones
 
         private void ActualizarCita_Click(object sender, EventArgs e)
         {
-            SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString();
-            int id= Convert.ToInt32( dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
-            ModeloPaciente p1 = new ModeloPaciente();
-            p1.BusquedadPacienteCita(id);
-            AbrirFormularioHijoCita(new ActualizarCita());
+            try {
+                SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString();
+                int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
+                ModeloPaciente p1 = new ModeloPaciente();
+                p1.BusquedadPacienteCita(id);
+                AbrirFormularioHijoCita(new ActualizarCita());
+            }
+            catch (Exception) { MessageBox.Show("Selecione Fila"); }
+            
         }
         private Form currentChildForm;
         private void AbrirFormularioHijoCita(Form FormularioHijo)
@@ -175,35 +179,39 @@ namespace GUI_Principal.Formularios_Acciones
 
         private void EleminarCita_Click(object sender, EventArgs e)
         {
-            SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString();
-            ModeloCita md = new ModeloCita();
-            int id;
-            if (dataGridView1.SelectedRows.Count ==1)
-            {
-                id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
-               
-                ModeloCita c1 = new ModeloCita();
-                c1.busquedad(id);
-                var resultado = c1.eliminarCitasinfecha(CachePaciente.Dui,CacheCita.fechaCita);
-                
-
-                if (resultado >= 1)
+            
+                SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString();
+                ModeloCita md = new ModeloCita();
+                int id;
+                if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    
-                    MessageBox.Show("Cita Eliminada");
-                    Busquedad();
-                    
+                    id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
+
+                    ModeloCita c1 = new ModeloCita();
+                    c1.busquedad(id);
+                    var resultado = c1.eliminarCitasinfecha(CachePaciente.Dui, CacheCita.fechaCita);
+
+
+                    if (resultado >= 1)
+                    {
+
+                        MessageBox.Show("Cita Eliminada");
+                        Busquedad();
+
+
+                    }
+                    else { MessageBox.Show("Cita No Encontrada"); }
+
 
                 }
-                else { MessageBox.Show("Cita No Encontrada"); }
+                else
+                {
+                    MessageBox.Show("Selecione Una Fila");
 
-
-            }
-            else
-            {
-
-                MessageBox.Show("Selecione Una Fila");
-            }
+                }
+            
+            
+            
         }
 
         private void lblVolver_Click(object sender, EventArgs e)
@@ -218,7 +226,8 @@ namespace GUI_Principal.Formularios_Acciones
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString();
+            try { SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString(); } catch (Exception) { }
+            
         }
     }
 }

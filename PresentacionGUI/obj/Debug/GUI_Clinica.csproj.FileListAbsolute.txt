@@ -40,7 +40,6 @@ C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Presentaci
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\PresentacionGUI.pdb
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\CapaComun.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\CircularProgressBar.dll
-C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Clock.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Dominio.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\GUI_Principal.exe

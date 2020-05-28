@@ -16,7 +16,7 @@ namespace GUI_Principal
 {
     public partial class Citas : Form
     {
-        private Form currentChildForm;
+        private Form FormularioActual;
         public Citas()
         {
             InitializeComponent();
@@ -172,13 +172,13 @@ namespace GUI_Principal
         }
         private void AbrirFormularioHijoCita(Form FormularioHijo)
         {
-            //open only form
-            if (currentChildForm != null)
+            
+            if (FormularioActual != null)
             {
-                currentChildForm.Close();
+                FormularioActual.Close();
             }
-            currentChildForm = FormularioHijo;
-            //End
+            FormularioActual = FormularioHijo;
+            
             FormularioHijo.TopLevel = false;
             FormularioHijo.FormBorderStyle = FormBorderStyle.None;
             FormularioHijo.Dock = DockStyle.Fill;

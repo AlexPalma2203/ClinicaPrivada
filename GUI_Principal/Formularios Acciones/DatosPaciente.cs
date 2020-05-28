@@ -94,13 +94,16 @@ namespace GUI_Principal.Formularios_Acciones
         }
         private void AbrirExpediente_Click(object sender, EventArgs e)
         {
-            int dui;
-            int id;
-            dui = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
-            id= Convert.ToInt32(dataGridView1.CurrentRow.Cells["Consulta"].Value.ToString());
-            ModeloPaciente mp = new ModeloPaciente();
-            mp.BusquedadExpediente(dui,id);
-            AbrirFormularioHijoCita(new FrmExpediente());
+            
+                int dui;
+                int id;
+                dui = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
+                id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Consulta"].Value.ToString());
+                ModeloPaciente mp = new ModeloPaciente();
+                mp.BusquedadExpediente(dui, id);
+                AbrirFormularioHijoCita(new FrmExpediente());
+            
+        
         }
     }
 }

@@ -176,7 +176,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(10, 284);
+            this.label6.Location = new System.Drawing.Point(7, 283);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(14, 19);
             this.label6.TabIndex = 26;
