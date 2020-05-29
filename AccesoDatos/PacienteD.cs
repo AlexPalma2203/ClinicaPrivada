@@ -495,10 +495,9 @@ namespace AccesoDatos
                 using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexion;
-                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio from Citas C inner join Paciente P on C.dui = P.Dui where (SELECT CONVERT(VARCHAR(10), Fecha_HoraCita, 103) from Citas) = @fecha";
+                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio  from Citas C inner join Paciente P on C.dui = P.Dui where CONVERT(VARCHAR(10), Fecha_HoraCita, 103) = @fecha";
                     comando.Parameters.AddWithValue("@fecha", fecha);
                     comando.CommandType = CommandType.Text;
-                    
                     SqlDataReader lectura = comando.ExecuteReader();
                     tablaCitasFecha.Load(lectura);
                     return tablaCitasFecha;
@@ -516,13 +515,40 @@ namespace AccesoDatos
                 using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexion;
-                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio from Citas C inner join Paciente P on C.dui = P.Dui where P.dui = @dui  and(SELECT CONVERT(VARCHAR(10), Fecha_HoraCita, 103) from Citas) = @fecha ";
+                    comando.CommandText = "select Nombre_Paciente as Nombre,Apellidos_Paciente as Apellido ,P.dui as Dui,num_cita as Cita,Fecha_HoraCita as Fecha ,Fecha_HoraCreacion as Creada ,Motivo,CreadoPor,Precio  from Citas C inner join Paciente P on C.dui = P.Dui where P.dui = @dui and CONVERT(VARCHAR(10), Fecha_HoraCita, 103) = @fecha";
                     comando.CommandType = CommandType.Text;
                     comando.Parameters.AddWithValue("@dui", id);
                     comando.Parameters.AddWithValue("@fecha", fecha);
                     SqlDataReader lectura = comando.ExecuteReader();
                     tablaCitasFechaPersona.Load(lectura);
                     return tablaCitasFechaPersona;
+                }
+
+            }
+
+        }
+        public bool BusquedadCitasEnPacientes(DateTime fecha, int id)
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = "select *  from Citas where dui = @dui and Fecha_HoraCita = @fecha";
+                    comando.CommandType = CommandType.Text;
+                    comando.Parameters.AddWithValue("@dui", id);
+                    comando.Parameters.AddWithValue("@fecha", fecha);
+                    SqlDataReader lectura = comando.ExecuteReader();
+                    if (lectura.HasRows) {
+                        return true;
+                    }
+                    else
+                    {
+
+                        return false;
+                    }
+                    
                 }
 
             }

@@ -8,6 +8,7 @@ using AccesoDatos;
 using CapaComun.Cache;
 using System.Data;
 using System.Collections.Concurrent;
+using System.Collections;
 
 namespace Dominio
 {
@@ -43,6 +44,19 @@ namespace Dominio
             }
            
             
+        }
+        public void Grafica() {
+            usuarioD.Grafica();
+        }
+        public double montoGrafica()
+        {
+
+            return usuarioD.Totalmonto();
+        }
+        public int TotalCitas()
+        {
+
+            return usuarioD.TotalCitas();
         }
 
 
@@ -241,6 +255,10 @@ namespace Dominio
             tabla = C1.MostrarCitasFechaPersona(fecha,id);
             return tabla;
 
+        }
+        public bool BusquedadCitasEnPacientes(int dui, DateTime fecha)
+        {
+           return C1.BusquedadCitasEnPacientes(fecha,dui);
         }
         public DataTable MostrarCitasPersona(int id)
         {

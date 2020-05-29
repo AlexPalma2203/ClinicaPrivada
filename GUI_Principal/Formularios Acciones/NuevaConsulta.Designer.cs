@@ -79,9 +79,9 @@
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Bold);
             this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.BtnGuardar.Location = new System.Drawing.Point(704, 391);
+            this.BtnGuardar.Location = new System.Drawing.Point(678, 391);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(75, 30);
+            this.BtnGuardar.Size = new System.Drawing.Size(101, 30);
             this.BtnGuardar.TabIndex = 9;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
@@ -227,7 +227,7 @@
             this.txtEnfermedad.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtEnfermedad.Location = new System.Drawing.Point(657, 49);
             this.txtEnfermedad.Name = "txtEnfermedad";
-            this.txtEnfermedad.Size = new System.Drawing.Size(100, 16);
+            this.txtEnfermedad.Size = new System.Drawing.Size(127, 16);
             this.txtEnfermedad.TabIndex = 5;
             // 
             // label9

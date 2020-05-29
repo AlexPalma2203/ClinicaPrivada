@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.GrpCrearExpediente = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtAño = new System.Windows.Forms.TextBox();
+            this.txtMes = new System.Windows.Forms.TextBox();
+            this.txtDia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.rtbMedicamentos = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -54,14 +62,6 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnCrear = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtAño = new System.Windows.Forms.TextBox();
-            this.txtMes = new System.Windows.Forms.TextBox();
-            this.txtDia = new System.Windows.Forms.TextBox();
             this.GrpCrearExpediente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,90 @@
             this.GrpCrearExpediente.TabStop = false;
             this.GrpCrearExpediente.Text = "Crear Expediente";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(240, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 120;
+            this.label5.Text = "AAAA";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(204, 195);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 15);
+            this.label14.TabIndex = 119;
+            this.label14.Text = "MM";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.DimGray;
+            this.label15.Location = new System.Drawing.Point(173, 195);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 15);
+            this.label15.TabIndex = 118;
+            this.label15.Text = "DD";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(228, 210);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 16);
+            this.label16.TabIndex = 117;
+            this.label16.Text = "/";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(192, 210);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 16);
+            this.label17.TabIndex = 116;
+            this.label17.Text = "/";
+            // 
+            // txtAño
+            // 
+            this.txtAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtAño.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAño.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtAño.Location = new System.Drawing.Point(242, 210);
+            this.txtAño.MaxLength = 4;
+            this.txtAño.Name = "txtAño";
+            this.txtAño.Size = new System.Drawing.Size(37, 16);
+            this.txtAño.TabIndex = 6;
+            // 
+            // txtMes
+            // 
+            this.txtMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtMes.Location = new System.Drawing.Point(206, 210);
+            this.txtMes.MaxLength = 2;
+            this.txtMes.Name = "txtMes";
+            this.txtMes.Size = new System.Drawing.Size(22, 16);
+            this.txtMes.TabIndex = 5;
+            // 
+            // txtDia
+            // 
+            this.txtDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtDia.Location = new System.Drawing.Point(176, 209);
+            this.txtDia.MaxLength = 2;
+            this.txtDia.Name = "txtDia";
+            this.txtDia.Size = new System.Drawing.Size(18, 16);
+            this.txtDia.TabIndex = 4;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -127,7 +211,7 @@
             this.rtbMedicamentos.Location = new System.Drawing.Point(545, 221);
             this.rtbMedicamentos.Name = "rtbMedicamentos";
             this.rtbMedicamentos.Size = new System.Drawing.Size(309, 51);
-            this.rtbMedicamentos.TabIndex = 10;
+            this.rtbMedicamentos.TabIndex = 11;
             this.rtbMedicamentos.Text = "";
             // 
             // label13
@@ -156,7 +240,7 @@
             this.rtbAntecedentes.Location = new System.Drawing.Point(545, 147);
             this.rtbAntecedentes.Name = "rtbAntecedentes";
             this.rtbAntecedentes.Size = new System.Drawing.Size(309, 45);
-            this.rtbAntecedentes.TabIndex = 9;
+            this.rtbAntecedentes.TabIndex = 10;
             this.rtbAntecedentes.Text = "";
             // 
             // label12
@@ -195,7 +279,7 @@
             this.CboTipoSangre.Location = new System.Drawing.Point(163, 349);
             this.CboTipoSangre.Name = "CboTipoSangre";
             this.CboTipoSangre.Size = new System.Drawing.Size(138, 24);
-            this.CboTipoSangre.TabIndex = 7;
+            this.CboTipoSangre.TabIndex = 8;
             // 
             // CboSexo
             // 
@@ -243,7 +327,7 @@
             this.CboEstadoCivil.Location = new System.Drawing.Point(163, 291);
             this.CboEstadoCivil.Name = "CboEstadoCivil";
             this.CboEstadoCivil.Size = new System.Drawing.Size(138, 24);
-            this.CboEstadoCivil.TabIndex = 6;
+            this.CboEstadoCivil.TabIndex = 7;
             this.CboEstadoCivil.SelectedIndexChanged += new System.EventHandler(this.CboEstadoCivil_SelectedIndexChanged_1);
             // 
             // label8
@@ -276,7 +360,7 @@
             this.RtbDireccion.Location = new System.Drawing.Point(545, 37);
             this.RtbDireccion.Name = "RtbDireccion";
             this.RtbDireccion.Size = new System.Drawing.Size(309, 77);
-            this.RtbDireccion.TabIndex = 8;
+            this.RtbDireccion.TabIndex = 9;
             this.RtbDireccion.Text = "";
             // 
             // TxtNumero
@@ -286,7 +370,7 @@
             this.TxtNumero.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
             this.TxtNumero.ForeColor = System.Drawing.Color.Gainsboro;
             this.TxtNumero.Location = new System.Drawing.Point(163, 242);
-            this.TxtNumero.MaxLength = 10;
+            this.TxtNumero.MaxLength = 16;
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(138, 16);
             this.TxtNumero.TabIndex = 5;
@@ -365,7 +449,7 @@
             this.BtnCrear.Location = new System.Drawing.Point(686, 361);
             this.BtnCrear.Name = "BtnCrear";
             this.BtnCrear.Size = new System.Drawing.Size(75, 28);
-            this.BtnCrear.TabIndex = 11;
+            this.BtnCrear.TabIndex = 12;
             this.BtnCrear.Text = "Crear";
             this.BtnCrear.UseVisualStyleBackColor = true;
             this.BtnCrear.Click += new System.EventHandler(this.BtnCrear_Click);
@@ -377,94 +461,10 @@
             this.BtnLimpiar.Location = new System.Drawing.Point(793, 361);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(75, 28);
-            this.BtnLimpiar.TabIndex = 12;
+            this.BtnLimpiar.TabIndex = 13;
             this.BtnLimpiar.Text = "Limpiar";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(240, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
-            this.label5.TabIndex = 120;
-            this.label5.Text = "AAAA";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.DimGray;
-            this.label14.Location = new System.Drawing.Point(204, 195);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 15);
-            this.label14.TabIndex = 119;
-            this.label14.Text = "MM";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(173, 195);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 15);
-            this.label15.TabIndex = 118;
-            this.label15.Text = "DD";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(228, 210);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 16);
-            this.label16.TabIndex = 117;
-            this.label16.Text = "/";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(192, 210);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(14, 16);
-            this.label17.TabIndex = 116;
-            this.label17.Text = "/";
-            // 
-            // txtAño
-            // 
-            this.txtAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.txtAño.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAño.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtAño.Location = new System.Drawing.Point(242, 210);
-            this.txtAño.MaxLength = 4;
-            this.txtAño.Name = "txtAño";
-            this.txtAño.Size = new System.Drawing.Size(37, 16);
-            this.txtAño.TabIndex = 115;
-            // 
-            // txtMes
-            // 
-            this.txtMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.txtMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtMes.Location = new System.Drawing.Point(206, 210);
-            this.txtMes.MaxLength = 2;
-            this.txtMes.Name = "txtMes";
-            this.txtMes.Size = new System.Drawing.Size(22, 16);
-            this.txtMes.TabIndex = 114;
-            // 
-            // txtDia
-            // 
-            this.txtDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.txtDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtDia.Location = new System.Drawing.Point(176, 209);
-            this.txtDia.MaxLength = 2;
-            this.txtDia.Name = "txtDia";
-            this.txtDia.Size = new System.Drawing.Size(18, 16);
-            this.txtDia.TabIndex = 113;
             // 
             // FrmCrearExpediente
             // 

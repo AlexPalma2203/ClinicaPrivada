@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,7 +50,7 @@ namespace CapaComun.Cache
         public static double Precio { get; set; }
     }
 
-    public static class CacheDiagnostico{
+    public static class CacheDiagnostico {
 
         public static int id { get; set; }
         public static string estado { get; set; }
@@ -62,7 +63,15 @@ namespace CapaComun.Cache
         public static string detalles { get; set; }
         public static string recomendaciones { get; set; }
 
-    }   
+    }
+    public static class cahcegrafica{
 
-    
+        public static ArrayList fecha { get; set; }
+        public static ArrayList monto { get; set; }
+
+
+    }
+
+
+
 }

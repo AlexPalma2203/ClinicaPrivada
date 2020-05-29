@@ -7,7 +7,7 @@ Id_Usuario nvarchar (20) primary key ,
 Nombre_Usuario varchar(50),
 Apellido_Usuario varchar(50),
 Cargo_Usuario varchar(30),
-Contraseña_Usuasio nvarchar(10)
+ContraseÃ±a_Usuasio nvarchar(10)
 );
 Go
 Create table Paciente(
@@ -91,7 +91,7 @@ insert into Expediente values
 (SYSDATETIME(),'Ninguno','Ninguno','A -',369851450)
 Go
 Insert into Diagnostico
-values('Estable','Reflujo gastroesofágico',67,1.68,110,SYSDATETIME(),38,'Restablecer el estado del paciente','Evitar comida chatarra y jugos artificiales',1),
+values('Estable','Reflujo gastroesofÃ¡gico',67,1.68,110,SYSDATETIME(),38,'Restablecer el estado del paciente','Evitar comida chatarra y jugos artificiales',1),
 ('Moderado','Rinitis',65,1.62,120,SYSDATETIME(),40,'Mejorar su regulacion respiratoria','Evitar comer cosas heladas',2),
 ('Critico','Cancer colorrectal',60,1.42,98,SYSDATETIME(),35,'Evitar el Avanze del cancer encontrado en el paciente','Dieta y Nutricion adecuada',3),
 ('Estable','Deshidratacion',62,1.56,122,SYSDATETIME(),39,'Restablezer la hidratacion del paciente','Dieta y Nutricion adecuada',4),
@@ -221,15 +221,15 @@ values
 ----Usuario
 ----1
 --create procedure consultar_usuario
---@usuario nvarchar (20),@contraseña nvarchar(10)
+--@usuario nvarchar (20),@contraseÃ±a nvarchar(10)
 --as
---Select * from Usuario where Id_Usuario = @usuario and Contraseña_Usuasio = @contraseña
+--Select * from Usuario where Id_Usuario = @usuario and ContraseÃ±a_Usuasio = @contraseÃ±a
 
 ----2
 --create procedure actualizar_Usuario
---@usuario nvarchar (20),@nombre varchar(50),@apellido varchar(50),@contraseña nvarchar(10)
+--@usuario nvarchar (20),@nombre varchar(50),@apellido varchar(50),@contraseÃ±a nvarchar(10)
 --as
---update Usuario set Id_Usuario=@usuario,Nombre_Usuario=@nombre,Apellido_Usuario=@apellido,Contraseña_Usuasio=@contraseña
+--update Usuario set Id_Usuario=@usuario,Nombre_Usuario=@nombre,Apellido_Usuario=@apellido,ContraseÃ±a_Usuasio=@contraseÃ±a
 -- where Id_Usuario=@usuario
 
 -----Graficos

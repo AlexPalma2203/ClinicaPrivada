@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,37 +8,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
+using CapaComun.Cache;
+
 
 namespace GUI_Principal
 {
     public partial class Administrador : Form
     {
-        private Form currentChildForm;
         public Administrador()
         {
             InitializeComponent();
         }
-        private void AbrirFormularioHijo(Form FormularioHijo)
+      
+        private void grafica()
         {
-            //open only form
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            currentChildForm = FormularioHijo;
-            //End
-            FormularioHijo.TopLevel = false;
-            FormularioHijo.FormBorderStyle = FormBorderStyle.None;
-            FormularioHijo.Dock = DockStyle.Fill;
-            FormularioHijo.BringToFront();
-            FormularioHijo.Show();
+            ModeloUsuario mu = new ModeloUsuario();
+            mu.Grafica();
+            chart1.Series[0].Points.DataBindXY(cahcegrafica.fecha, cahcegrafica.monto);
+            lblMonto.Text = "$" + Convert.ToString( mu.montoGrafica());
+            lblTotalCitas.Text = Convert.ToString(mu.TotalCitas());
         }
 
-        private void Administrador_Load(object sender, EventArgs e)
-        {
-            
-        }
+       
 
-        
+        private void Administrador_Load_1(object sender, EventArgs e)
+        {
+            grafica();
+        }
     }
 }

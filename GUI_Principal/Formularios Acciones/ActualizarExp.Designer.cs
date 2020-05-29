@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.GobCaptura = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtAño = new System.Windows.Forms.TextBox();
+            this.txtMes = new System.Windows.Forms.TextBox();
+            this.txtDia = new System.Windows.Forms.TextBox();
             this.FechaExp = new System.Windows.Forms.DateTimePicker();
             this.Resetbtn = new System.Windows.Forms.Button();
             this.txtDui = new System.Windows.Forms.TextBox();
@@ -55,14 +63,6 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnCrear = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtAño = new System.Windows.Forms.TextBox();
-            this.txtMes = new System.Windows.Forms.TextBox();
-            this.txtDia = new System.Windows.Forms.TextBox();
             this.GobCaptura.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,90 @@
             this.GobCaptura.TabStop = false;
             this.GobCaptura.Text = "Actualizar Expediente";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(205, 150);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 128;
+            this.label5.Text = "AAAA";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(169, 150);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 15);
+            this.label4.TabIndex = 127;
+            this.label4.Text = "MM";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.DimGray;
+            this.label15.Location = new System.Drawing.Point(138, 150);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 15);
+            this.label15.TabIndex = 126;
+            this.label15.Text = "DD";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(193, 165);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 16);
+            this.label16.TabIndex = 125;
+            this.label16.Text = "/";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(157, 165);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 16);
+            this.label17.TabIndex = 124;
+            this.label17.Text = "/";
+            // 
+            // txtAño
+            // 
+            this.txtAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtAño.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAño.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtAño.Location = new System.Drawing.Point(207, 165);
+            this.txtAño.MaxLength = 4;
+            this.txtAño.Name = "txtAño";
+            this.txtAño.Size = new System.Drawing.Size(37, 16);
+            this.txtAño.TabIndex = 5;
+            // 
+            // txtMes
+            // 
+            this.txtMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtMes.Location = new System.Drawing.Point(171, 165);
+            this.txtMes.MaxLength = 2;
+            this.txtMes.Name = "txtMes";
+            this.txtMes.Size = new System.Drawing.Size(22, 16);
+            this.txtMes.TabIndex = 4;
+            // 
+            // txtDia
+            // 
+            this.txtDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.txtDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtDia.Location = new System.Drawing.Point(141, 164);
+            this.txtDia.MaxLength = 2;
+            this.txtDia.Name = "txtDia";
+            this.txtDia.Size = new System.Drawing.Size(18, 16);
+            this.txtDia.TabIndex = 3;
+            // 
             // FechaExp
             // 
             this.FechaExp.Enabled = false;
@@ -126,7 +210,7 @@
             this.Resetbtn.Location = new System.Drawing.Point(793, 337);
             this.Resetbtn.Name = "Resetbtn";
             this.Resetbtn.Size = new System.Drawing.Size(80, 30);
-            this.Resetbtn.TabIndex = 20;
+            this.Resetbtn.TabIndex = 13;
             this.Resetbtn.Text = "Limpiar";
             this.Resetbtn.UseVisualStyleBackColor = true;
             this.Resetbtn.Click += new System.EventHandler(this.Resetbtn_Click);
@@ -227,7 +311,7 @@
             this.CboTipoSangre.Location = new System.Drawing.Point(141, 315);
             this.CboTipoSangre.Name = "CboTipoSangre";
             this.CboTipoSangre.Size = new System.Drawing.Size(121, 23);
-            this.CboTipoSangre.TabIndex = 7;
+            this.CboTipoSangre.TabIndex = 9;
             // 
             // CboSexo
             // 
@@ -242,7 +326,7 @@
             this.CboSexo.Location = new System.Drawing.Point(141, 236);
             this.CboSexo.Name = "CboSexo";
             this.CboSexo.Size = new System.Drawing.Size(121, 23);
-            this.CboSexo.TabIndex = 5;
+            this.CboSexo.TabIndex = 7;
             // 
             // label10
             // 
@@ -279,7 +363,7 @@
             this.CboEstadoCivil.Location = new System.Drawing.Point(141, 273);
             this.CboEstadoCivil.Name = "CboEstadoCivil";
             this.CboEstadoCivil.Size = new System.Drawing.Size(121, 23);
-            this.CboEstadoCivil.TabIndex = 6;
+            this.CboEstadoCivil.TabIndex = 8;
             // 
             // label8
             // 
@@ -310,9 +394,10 @@
             this.TxtNumero.Font = new System.Drawing.Font("Century Gothic", 9.55F, System.Drawing.FontStyle.Bold);
             this.TxtNumero.ForeColor = System.Drawing.Color.Gainsboro;
             this.TxtNumero.Location = new System.Drawing.Point(141, 198);
+            this.TxtNumero.MaxLength = 16;
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(100, 16);
-            this.TxtNumero.TabIndex = 4;
+            this.TxtNumero.TabIndex = 6;
             // 
             // TxtApellido
             // 
@@ -395,7 +480,7 @@
             this.BtnCrear.Location = new System.Drawing.Point(699, 388);
             this.BtnCrear.Name = "BtnCrear";
             this.BtnCrear.Size = new System.Drawing.Size(80, 30);
-            this.BtnCrear.TabIndex = 17;
+            this.BtnCrear.TabIndex = 14;
             this.BtnCrear.Text = "Guardar";
             this.BtnCrear.UseVisualStyleBackColor = true;
             this.BtnCrear.Click += new System.EventHandler(this.BtnCrear_Click);
@@ -409,94 +494,10 @@
             this.BtnLimpiar.Location = new System.Drawing.Point(800, 388);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(85, 30);
-            this.BtnLimpiar.TabIndex = 18;
+            this.BtnLimpiar.TabIndex = 15;
             this.BtnLimpiar.Text = "Salir";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(205, 150);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
-            this.label5.TabIndex = 128;
-            this.label5.Text = "AAAA";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(169, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 15);
-            this.label4.TabIndex = 127;
-            this.label4.Text = "MM";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(138, 150);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 15);
-            this.label15.TabIndex = 126;
-            this.label15.Text = "DD";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(193, 165);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 16);
-            this.label16.TabIndex = 125;
-            this.label16.Text = "/";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(157, 165);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(14, 16);
-            this.label17.TabIndex = 124;
-            this.label17.Text = "/";
-            // 
-            // txtAño
-            // 
-            this.txtAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.txtAño.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAño.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtAño.Location = new System.Drawing.Point(207, 165);
-            this.txtAño.MaxLength = 4;
-            this.txtAño.Name = "txtAño";
-            this.txtAño.Size = new System.Drawing.Size(37, 16);
-            this.txtAño.TabIndex = 123;
-            // 
-            // txtMes
-            // 
-            this.txtMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.txtMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtMes.Location = new System.Drawing.Point(171, 165);
-            this.txtMes.MaxLength = 2;
-            this.txtMes.Name = "txtMes";
-            this.txtMes.Size = new System.Drawing.Size(22, 16);
-            this.txtMes.TabIndex = 122;
-            // 
-            // txtDia
-            // 
-            this.txtDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.txtDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtDia.Location = new System.Drawing.Point(141, 164);
-            this.txtDia.MaxLength = 2;
-            this.txtDia.Name = "txtDia";
-            this.txtDia.Size = new System.Drawing.Size(18, 16);
-            this.txtDia.TabIndex = 121;
             // 
             // ActualizarExp
             // 

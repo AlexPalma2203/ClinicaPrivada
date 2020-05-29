@@ -71,18 +71,71 @@ namespace GUI_Principal
             
 
         }
+        public string diaGet()
+        {
+            return Convert.ToString(DateTime.Now.Day);
+        }
+        public string MesGet()
+        {
+            return Convert.ToString(DateTime.Now.Month);
+        }
+        public string AñoGet()
+        {
+            return Convert.ToString(DateTime.Now.Year);
+        }
+        public string HorasGet()
+        {
+            return Convert.ToString(DateTime.Now.Hour);
+        }
+        public string MinutesGet()
+        {
+            return Convert.ToString(DateTime.Now.Minute);
+        }
+        public DateTime FechaCitaBusquedad()
+        {
+            int seg = 00;
+            int minutes = 00;
+            DateTime fecha = new DateTime(Convert.ToInt32(AñoGet()), Convert.ToInt32(MesGet()), Convert.ToInt32(diaGet()), Convert.ToInt32(HorasGet()), minutes, seg);
+            return fecha;
+
+        }
+        public DateTime FechaCitaInsertar()
+        {
+            int seg = 00;
+            int minutes = Convert.ToInt32(MinutesGet());
+            DateTime fecha = new DateTime(Convert.ToInt32(AñoGet()), Convert.ToInt32(MesGet()), Convert.ToInt32(diaGet()), Convert.ToInt32(HorasGet()), minutes, seg);
+            return fecha;
+
+        }
 
         private void NewConsulta_Click(object sender, EventArgs e)
         {
+
+            ModeloCita usuario = new ModeloCita();
+            var resultado = usuario.BusquedadCitasEnPacientes(Convert.ToInt32(SearchExp.Text), FechaCitaBusquedad());
+            if(resultado == false)
+            {
+                ModeloCita d1 = new ModeloCita("Cita Comun",FechaCitaInsertar(),CacheDeUsuario.NonbreUsuario,5,Convert.ToInt32( SearchExp.Text));
+                d1.Cita();
+            }
+            
             if (SearchExp.Text == "Buscar" || acceso ==  false) 
             {
+
                 msjError("Ingrese un Dui");
                 SearchExp.Focus();
 
 
 
             }
-            else { AbrirFormularioHijoPaciente(new FrmExpediente()); }
+            else {
+                if (registros == true) {
+                    CacheDiagnostico.id = 0;
+                }
+                AbrirFormularioHijoPaciente(new FrmExpediente()); 
+            
+            
+            }
             
         }
 
@@ -137,8 +190,11 @@ namespace GUI_Principal
 
         private void Paciente_Load(object sender, EventArgs e)
         {
+            registros = false;
+
             
-       
+            
+
         }
        
 
@@ -194,9 +250,10 @@ namespace GUI_Principal
             
             if (SearchExp.Text != "Buscar")
             {
-                ModeloPaciente usuario = new ModeloPaciente();
+                
                 try
                 {
+                    ModeloPaciente usuario = new ModeloPaciente();
                     var BusquedadValida = usuario.BusquedadPaciente(Convert.ToInt32( SearchExp.Text));
                     if (BusquedadValida == true)
                     {
@@ -247,19 +304,19 @@ namespace GUI_Principal
             }
             else
             {
-                //try
-                //{
+                try
+                {
                     ModeloPaciente eliminar = new ModeloPaciente();
                     eliminar.EliminarExp();
                     MessageBox.Show("Expediente Eliminado");
                     reset();
 
 
-                //}
-                //catch (Exception)
-                //{
-                //    MessageBox.Show("Error Al Eliminar Expediente");
-                //}
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error Al Eliminar Expediente");
+                }
             }
 
 
@@ -295,14 +352,12 @@ namespace GUI_Principal
             if (act == true) { BuscarExpe(); act = false; }
         }
 
-        private void Citas_Click(object sender, EventArgs e)
-        {
-            //AbrirFormularioHijoPaciente(new Citas());
-        }
 
+        bool registros = false;
         private void icondatabse_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijoPaciente(new DatosPaciente());
+            registros = true;
         }
     }
 }

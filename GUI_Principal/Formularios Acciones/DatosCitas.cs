@@ -51,10 +51,17 @@ namespace GUI_Principal.Formularios_Acciones
             ModeloCita c1 = new ModeloCita();
             dataGridView1.DataSource = c1.MostrarFechaCitaPersona(Fecha(Convert.ToInt32(txtDia.Text), Convert.ToInt32(txtMes.Text), Convert.ToInt32(txtAño.Text)), Convert.ToInt32(SearchExp.Text));
         }
+        private void msjError(string msj)
+        {
+            Errorlbl.Text = msj;
+            Errorlbl.Visible = true;
+            ErrorBusquedad.Visible = true;
+        }
         private void MostrarCitasPersona()
         {
-            ModeloCita c1 = new ModeloCita();
-            dataGridView1.DataSource = c1.MostrarCitasPersona(Convert.ToInt32(SearchExp.Text));
+            
+                ModeloCita c1 = new ModeloCita();
+                dataGridView1.DataSource = c1.MostrarCitasPersona(Convert.ToInt32( SearchExp.Text));
         }
 
         private void SearchExp_Enter(object sender, EventArgs e)
@@ -77,44 +84,55 @@ namespace GUI_Principal.Formularios_Acciones
         }
         private void Busquedad()
         {
-            
-            if (txtDia.Text != "")
-            {
-                if (txtMes.Text != "")
-                {
-                    if (txtAño.Text != "")
+            try {
+
+                if (SearchExp.TextLength == 0 || SearchExp.TextLength == 9 || SearchExp.TextLength == 6) {
+
+                    if (txtDia.Text != "")
                     {
-                        if (SearchExp.Text != "Buscar" && SearchExp.Text != "") {
-                           
-                            MostrarCitasFechasPersona();
-                            MessageBox.Show("DUI Y Fecha");
-                        }
-                        else if (SearchExp.Text == "Buscar" || SearchExp.Text == "")
+                        if (txtMes.Text != "")
                         {
-
-                            MostrarCitasFechas();
-                            MessageBox.Show("Fecha");
+                            if (txtAño.Text != "")
+                            {
+                                if (SearchExp.Text != "Buscar" && SearchExp.Text != "")
+                                {
+                                    MostrarCitasFechasPersona();
+                                   
+                                   
+                                }
+                                else if (SearchExp.Text == "Buscar" || SearchExp.Text == "")
+                                {
+                                    MostrarCitasFechas();
+                                 
+                                }
+                            }
                         }
-
-
                     }
+                    else
+                    {
+                        MostrarCitasPersona();
+                    }
+
+
                 }
-            }
-            else
-            {
+                else { msjError("Complete Los 9 Digitos del Dui"); }
+               
+                }catch (FormatException)
+                {
+                msjError("Ingrese Un Dui Valido");
+                }
 
 
-                    MostrarCitasPersona();
-                    MessageBox.Show("Solo DUi");
-                
 
-            }
         }
         private void Search_Click(object sender, EventArgs e)
         {
+            try { Busquedad(); }
+            catch (FormatException)
+            {
+                msjError("Ingrese Un Dui Valido");
+            }
 
-
-            Busquedad();
 
         }
 
@@ -149,7 +167,7 @@ namespace GUI_Principal.Formularios_Acciones
         private void ActualizarCita_Click(object sender, EventArgs e)
         {
             try {
-                SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString();
+                
                 int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
                 ModeloPaciente p1 = new ModeloPaciente();
                 p1.BusquedadPacienteCita(id);
@@ -180,23 +198,24 @@ namespace GUI_Principal.Formularios_Acciones
         private void EleminarCita_Click(object sender, EventArgs e)
         {
             
-                SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString();
+                
                 ModeloCita md = new ModeloCita();
-                int id;
+                int dui = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
+                DateTime fecha = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["Fecha"].Value.ToString());
                 if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Dui"].Value.ToString());
+                    
 
                     ModeloCita c1 = new ModeloCita();
-                    c1.busquedad(id);
-                    var resultado = c1.eliminarCitasinfecha(CachePaciente.Dui, CacheCita.fechaCita);
+                    c1.busquedad(dui);
+                    var resultado = c1.eliminarCitasinfecha(dui, fecha);
+                    
 
-
-                    if (resultado >= 1)
+                if (resultado >= 1)
                     {
 
                         MessageBox.Show("Cita Eliminada");
-                        Busquedad();
+                         MostrarCitas();
 
 
                     }
@@ -226,8 +245,29 @@ namespace GUI_Principal.Formularios_Acciones
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try { SearchExp.Text = dataGridView1.CurrentRow.Cells["Dui"].Value.ToString(); } catch (Exception) { }
             
+        }
+
+        private void SearchExp_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (SearchExp.Text.Length == 9)
+                {
+                    Busquedad();
+                }
+                if (SearchExp.Text.Length <9 )
+                {
+                    Errorlbl.Visible = false;
+                    ErrorBusquedad.Visible = false;
+                    MostrarCitas();
+                }
+            }
+            catch (Exception)
+            {
+                msjError("Ingrese Un Dui Valido");
+
+            }
         }
     }
 }

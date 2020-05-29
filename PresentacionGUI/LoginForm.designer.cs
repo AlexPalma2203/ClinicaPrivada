@@ -411,7 +411,7 @@
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconPictureBox Minimizar;
         private FontAwesome.Sharp.IconPictureBox ErrorIcon;
-        private FontAwesome.Sharp.IconPictureBox Close;
+        private new FontAwesome.Sharp.IconPictureBox Close;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Error;
         private System.Windows.Forms.TextBox Usuario;

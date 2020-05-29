@@ -61,17 +61,25 @@ namespace GUI_Principal.Formularios_Acciones
 
         private void Search_Click(object sender, EventArgs e)
         {
-            if (SearchExp.Text != "Buscar" && SearchExp.Text != "")
-            {
+            try {
+                if (SearchExp.Text != "Buscar" && SearchExp.Text != "")
+                {
 
-                MostrarDatosDui(Convert.ToInt32(SearchExp.Text));
+                    MostrarDatosDui(Convert.ToInt32(SearchExp.Text));
+
+                }
+                else
+                {
+
+                    MostrarDatos();
+                }
+            }
+            catch (Exception)
+            {
+                msjError("Ingrese Un Dui Valido");
 
             }
-            else
-            {
-
-                MostrarDatos();
-            }
+            
 
         }
         private Form currentChildForm;
@@ -104,6 +112,34 @@ namespace GUI_Principal.Formularios_Acciones
                 AbrirFormularioHijoCita(new FrmExpediente());
             
         
+        }
+
+        private void SearchExp_TextChanged(object sender, EventArgs e)
+        {
+            try {
+                if (SearchExp.Text.Length == 9)
+                {
+                    MostrarDatosDui(Convert.ToInt32(SearchExp.Text));
+                }
+                if (SearchExp.Text.Length >= 1 && SearchExp.Text.Length < 9)
+                {
+                    Errorlbl.Visible = false;
+                    ErrorBusquedad.Visible = false;
+                    MostrarDatos();
+
+                }
+            }
+            catch (Exception) {
+                msjError("Ingrese Un Dui Valido");
+                
+            }
+            
+        }
+        private void msjError(string msj)
+        {
+            Errorlbl.Text = msj;
+            Errorlbl.Visible = true;
+            ErrorBusquedad.Visible = true;
         }
     }
 }

@@ -137,6 +137,7 @@
             this.circularProgressBar1.TabIndex = 3;
             this.circularProgressBar1.Text = "0";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(1);
+            this.circularProgressBar1.Value = 68;
             // 
             // panel1
             // 
@@ -152,9 +153,9 @@
             this.UsuarioBienvenida.BackColor = System.Drawing.Color.Transparent;
             this.UsuarioBienvenida.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
-            this.UsuarioBienvenida.Location = new System.Drawing.Point(310, 152);
+            this.UsuarioBienvenida.Location = new System.Drawing.Point(231, 191);
             this.UsuarioBienvenida.Name = "UsuarioBienvenida";
-            this.UsuarioBienvenida.Size = new System.Drawing.Size(204, 40);
+            this.UsuarioBienvenida.Size = new System.Drawing.Size(377, 40);
             this.UsuarioBienvenida.TabIndex = 21;
             this.UsuarioBienvenida.Text = "Usuario";
             this.UsuarioBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,7 +179,7 @@
             this.iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.iconoBienvenida.IconColor = System.Drawing.Color.MintCream;
             this.iconoBienvenida.IconSize = 122;
-            this.iconoBienvenida.Location = new System.Drawing.Point(352, 204);
+            this.iconoBienvenida.Location = new System.Drawing.Point(357, 234);
             this.iconoBienvenida.Name = "iconoBienvenida";
             this.iconoBienvenida.Size = new System.Drawing.Size(140, 122);
             this.iconoBienvenida.TabIndex = 22;
@@ -189,9 +190,9 @@
             this.CargoBienvenida.BackColor = System.Drawing.Color.Transparent;
             this.CargoBienvenida.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CargoBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(48)))), ((int)(((byte)(85)))));
-            this.CargoBienvenida.Location = new System.Drawing.Point(294, 329);
+            this.CargoBienvenida.Location = new System.Drawing.Point(302, 151);
             this.CargoBienvenida.Name = "CargoBienvenida";
-            this.CargoBienvenida.Size = new System.Drawing.Size(241, 40);
+            this.CargoBienvenida.Size = new System.Drawing.Size(233, 40);
             this.CargoBienvenida.TabIndex = 23;
             this.CargoBienvenida.Text = "Cargo";
             this.CargoBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

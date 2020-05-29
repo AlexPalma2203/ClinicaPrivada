@@ -164,7 +164,7 @@
             this.txtPrecio.MaxLength = 3;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(30, 16);
-            this.txtPrecio.TabIndex = 129;
+            this.txtPrecio.TabIndex = 5;
             // 
             // label16
             // 
@@ -251,7 +251,7 @@
             this.txtHora.MaxLength = 2;
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(30, 16);
-            this.txtHora.TabIndex = 107;
+            this.txtHora.TabIndex = 4;
             // 
             // label3
             // 
@@ -271,7 +271,7 @@
             this.txtAño.MaxLength = 4;
             this.txtAño.Name = "txtAño";
             this.txtAño.Size = new System.Drawing.Size(56, 16);
-            this.txtAño.TabIndex = 105;
+            this.txtAño.TabIndex = 3;
             // 
             // txtMes
             // 
@@ -282,7 +282,7 @@
             this.txtMes.MaxLength = 2;
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(30, 16);
-            this.txtMes.TabIndex = 104;
+            this.txtMes.TabIndex = 2;
             // 
             // txtDia
             // 
@@ -293,7 +293,7 @@
             this.txtDia.MaxLength = 2;
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(30, 16);
-            this.txtDia.TabIndex = 103;
+            this.txtDia.TabIndex = 1;
             // 
             // label5
             // 
@@ -372,7 +372,7 @@
             this.rtbMotivo.Location = new System.Drawing.Point(122, 204);
             this.rtbMotivo.Name = "rtbMotivo";
             this.rtbMotivo.Size = new System.Drawing.Size(657, 66);
-            this.rtbMotivo.TabIndex = 93;
+            this.rtbMotivo.TabIndex = 6;
             this.rtbMotivo.Text = "";
             // 
             // label7
@@ -435,7 +435,7 @@
             this.BtnCrear.Location = new System.Drawing.Point(664, 358);
             this.BtnCrear.Name = "BtnCrear";
             this.BtnCrear.Size = new System.Drawing.Size(97, 28);
-            this.BtnCrear.TabIndex = 11;
+            this.BtnCrear.TabIndex = 7;
             this.BtnCrear.Text = "Actualizar";
             this.BtnCrear.UseVisualStyleBackColor = true;
             this.BtnCrear.Click += new System.EventHandler(this.BtnCrear_Click);
@@ -447,7 +447,7 @@
             this.BtnLimpiar.Location = new System.Drawing.Point(793, 358);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(75, 28);
-            this.BtnLimpiar.TabIndex = 12;
+            this.BtnLimpiar.TabIndex = 8;
             this.BtnLimpiar.Text = "Limpiar";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);

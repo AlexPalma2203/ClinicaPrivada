@@ -184,7 +184,7 @@
             this.btnCancel.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCancel.Rotation = 0D;
             this.btnCancel.Size = new System.Drawing.Size(141, 49);
-            this.btnCancel.TabIndex = 28;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -212,7 +212,7 @@
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnGuardar.Rotation = 0D;
             this.btnGuardar.Size = new System.Drawing.Size(147, 49);
-            this.btnGuardar.TabIndex = 27;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -237,7 +237,7 @@
             this.txtUsuario.MaxLength = 100;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(290, 20);
-            this.txtUsuario.TabIndex = 25;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Text = "ID Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
@@ -260,7 +260,7 @@
             this.ContraseñaAnterior.MaxLength = 100;
             this.ContraseñaAnterior.Name = "ContraseñaAnterior";
             this.ContraseñaAnterior.Size = new System.Drawing.Size(290, 20);
-            this.ContraseñaAnterior.TabIndex = 23;
+            this.ContraseñaAnterior.TabIndex = 3;
             this.ContraseñaAnterior.Text = "Contraseña Actual";
             this.ContraseñaAnterior.Enter += new System.EventHandler(this.ContraseñaAnterior_Enter);
             this.ContraseñaAnterior.Leave += new System.EventHandler(this.ContraseñaAnterior_Leave);
@@ -283,7 +283,7 @@
             this.txtRContraseñaN.MaxLength = 100;
             this.txtRContraseñaN.Name = "txtRContraseñaN";
             this.txtRContraseñaN.Size = new System.Drawing.Size(290, 20);
-            this.txtRContraseñaN.TabIndex = 21;
+            this.txtRContraseñaN.TabIndex = 81;
             this.txtRContraseñaN.Text = "Confirmar Contraseña";
             this.txtRContraseñaN.Enter += new System.EventHandler(this.txtRContraseñaN_Enter);
             this.txtRContraseñaN.Leave += new System.EventHandler(this.txtRContraseñaN_Leave);
@@ -306,7 +306,7 @@
             this.txtContraseñaN.MaxLength = 100;
             this.txtContraseñaN.Name = "txtContraseñaN";
             this.txtContraseñaN.Size = new System.Drawing.Size(290, 20);
-            this.txtContraseñaN.TabIndex = 19;
+            this.txtContraseñaN.TabIndex = 80;
             this.txtContraseñaN.Text = "Contraseña Nueva";
             this.txtContraseñaN.Enter += new System.EventHandler(this.txtContraseñaN_Enter);
             this.txtContraseñaN.Leave += new System.EventHandler(this.txtContraseñaN_Leave);
@@ -329,7 +329,7 @@
             this.txtApellido.MaxLength = 100;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(290, 20);
-            this.txtApellido.TabIndex = 17;
+            this.txtApellido.TabIndex = 2;
             this.txtApellido.Text = "Apellido";
             this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
             this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
@@ -352,7 +352,7 @@
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(290, 20);
-            this.txtNombre.TabIndex = 15;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
