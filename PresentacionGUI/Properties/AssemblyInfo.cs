@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("PresentacionGUI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Sistema Clinico")]
+[assembly: AssemblyDescription("Sistema Para El Registro Clinico")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PresentacionGUI")]
+[assembly: AssemblyCompany("U Tech Medic")]
+[assembly: AssemblyProduct("Sistema Clinico")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
