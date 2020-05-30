@@ -23,10 +23,10 @@ namespace AccesoDatos
 
 
                     comando.Connection = conexion;
-                    comando.CommandText = "Select * from Usuario where Id_Usuario = @usuario and Contraseña_Usuasio = @contraseña";
+                    comando.CommandText = "consultar_usuario";
                     comando.Parameters.AddWithValue("@usuario", usuario);
                     comando.Parameters.AddWithValue("@contraseña", contraseña);
-                    comando.CommandType = CommandType.Text;
+                    comando.CommandType = CommandType.StoredProcedure;
                     SqlDataReader lectura = comando.ExecuteReader();
                     if (lectura.HasRows)
                     {
@@ -63,13 +63,13 @@ namespace AccesoDatos
 
 
                     comando.Connection = conexion;
-                    comando.CommandText = "update Usuario set Id_Usuario=@usuario,Nombre_Usuario=@nombre,Apellido_Usuario=@apellido,Contraseña_Usuasio=@contraseña where Id_Usuario=@usuario";
+                    comando.CommandText = "actualizar_Usuario";
                     comando.Parameters.AddWithValue("@usuario", usuario);
                     comando.Parameters.AddWithValue("@contraseña", contraseña);
                     comando.Parameters.AddWithValue("@nombre", nombre);
                     comando.Parameters.AddWithValue("@apellido", apellido);
 
-                    comando.CommandType = CommandType.Text;
+                    comando.CommandType = CommandType.StoredProcedure;
                     SqlDataReader lectura = comando.ExecuteReader();
 
 

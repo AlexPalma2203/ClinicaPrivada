@@ -21,9 +21,9 @@ namespace AccesoDatos
                 using (var Comando = new SqlCommand()) {
 
                     Comando.Connection = Conexion;
-                    Comando.CommandText = "select * from Expediente E inner join Paciente P on E.dui = P.Dui where E.dui = @dui and P.Dui=@dui ";
+                    Comando.CommandText = "Consultar";
                     Comando.Parameters.AddWithValue("@dui", dui);
-                    Comando.CommandType = CommandType.Text;
+                    Comando.CommandType = CommandType.StoredProcedure;
 
                     SqlDataReader Lectura = Comando.ExecuteReader();
 
@@ -57,7 +57,6 @@ namespace AccesoDatos
 
             }
 
-
         }
         public bool BusquedadPacienteCita(int dui)
         {
@@ -69,9 +68,9 @@ namespace AccesoDatos
                 {
 
                     Comando.Connection = Conexion;
-                    Comando.CommandText = "select* from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = @dui and C.dui = @dui and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui=@dui)";
+                    Comando.CommandText = "Citass";
                     Comando.Parameters.AddWithValue("@dui", dui);
-                    Comando.CommandType = CommandType.Text;
+                    Comando.CommandType = CommandType.StoredProcedure;
 
                     SqlDataReader Lectura = Comando.ExecuteReader();
 
@@ -101,9 +100,89 @@ namespace AccesoDatos
 
                     }
 
-
                 }
 
+            }
+
+
+        }
+        public void CrearDianostico(int NumExped, string EnfermedadP, string EstadoP, float pesoP, float estaturaP, float presionP, float temperaturaP, string detallesP, string recomendacionesP)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "insercion_Diagnostico";
+                    Comando.Parameters.AddWithValue("@Expe", NumExped);
+                    Comando.Parameters.AddWithValue("@Enfermedad", EnfermedadP);
+                    Comando.Parameters.AddWithValue("@Estado", EstadoP);
+                    Comando.Parameters.AddWithValue("@peso", pesoP);
+                    Comando.Parameters.AddWithValue("@estatura", estaturaP);
+                    Comando.Parameters.AddWithValue("@presion", presionP);
+                    Comando.Parameters.AddWithValue("@temperatura", temperaturaP);
+                    Comando.Parameters.AddWithValue("@detalles", detallesP);
+                    Comando.Parameters.AddWithValue("@recomendaciones", recomendacionesP);
+                    Comando.CommandType = CommandType.StoredProcedure;
+                    Comando.ExecuteNonQuery();
+
+                }
+            }
+
+
+        }
+
+        public void CrearCita(string motivo, DateTime fechaCita, string CreadoPor, double Precio, int dui)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+
+                    Comando.Connection = Conexion;
+                    Comando.CommandText = "insercion_Citas";
+                    Comando.Parameters.AddWithValue("@fechaCita", fechaCita);
+                    Comando.Parameters.AddWithValue("@motivo", motivo);
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.Parameters.AddWithValue("@Precio", Precio);
+                    Comando.Parameters.AddWithValue("@CreadoPor", CreadoPor);
+                    Comando.CommandType = CommandType.StoredProcedure;
+                    Comando.ExecuteNonQuery();
+
+                }
+            }
+
+
+        }
+        public void actualizarCita(string motivo, DateTime fechaCita, string CreadoPor, double Precio, int dui)
+        {
+
+            using (var Conexion = GetConnection())
+            {
+
+                Conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+
+                    Comando.Connection = Conexion;
+
+                    Comando.CommandText = "Actualizar_Citas";
+                    Comando.Parameters.AddWithValue("@fechaCita", fechaCita);
+                    Comando.Parameters.AddWithValue("@motivo", motivo);
+                    Comando.Parameters.AddWithValue("@dui", dui);
+                    Comando.Parameters.AddWithValue("@Precio", Precio);
+                    Comando.Parameters.AddWithValue("@CreadoPor", CreadoPor);
+                    Comando.CommandType = CommandType.StoredProcedure;
+                    Comando.ExecuteNonQuery();
+
+                }
             }
 
 
@@ -152,7 +231,6 @@ namespace AccesoDatos
 
 
         }
-
 
         DataTable tablaExpedientesDui = new DataTable();
         public DataTable BusquedadExpedientes(int dui)
@@ -218,7 +296,6 @@ namespace AccesoDatos
 
 
         }
-
 
         public void actualizarExpedinte(string Antecedentes, string medicamentos, string tipoSangre, int dui)
         {
@@ -341,88 +418,6 @@ namespace AccesoDatos
             }
         }
 
-
-        public void CrearDianostico(int NumExped, string EnfermedadP, string EstadoP, float pesoP, float estaturaP, float presionP, float temperaturaP, string detallesP, string recomendacionesP)
-        {
-
-            using (var Conexion = GetConnection())
-            {
-
-                Conexion.Open();
-                using (var Comando = new SqlCommand())
-                {
-
-                    Comando.Connection = Conexion;
-                    Comando.CommandText = "insert into Diagnostico values (@Enfermedad,@Estado,@peso,@estatura,@presion,SYSDATETIME(),@temperatura,@detalles,@recomendaciones,@Expe) ";
-                    Comando.Parameters.AddWithValue("@Expe", NumExped);
-                    Comando.Parameters.AddWithValue("@Enfermedad", EnfermedadP);
-                    Comando.Parameters.AddWithValue("@Estado", EstadoP);
-                    Comando.Parameters.AddWithValue("@peso", pesoP);
-                    Comando.Parameters.AddWithValue("@estatura", estaturaP);
-                    Comando.Parameters.AddWithValue("@presion", presionP);
-                    Comando.Parameters.AddWithValue("@temperatura", temperaturaP);
-                    Comando.Parameters.AddWithValue("@detalles", detallesP);
-                    Comando.Parameters.AddWithValue("@recomendaciones", recomendacionesP);
-                    Comando.CommandType = CommandType.Text;
-                    Comando.ExecuteNonQuery();
-
-                }
-            }
-
-
-        }
-
-        public void CrearCita(string motivo, DateTime fechaCita, string CreadoPor, double Precio, int dui)
-        {
-
-            using (var Conexion = GetConnection())
-            {
-
-                Conexion.Open();
-                using (var Comando = new SqlCommand())
-                {
-
-                    Comando.Connection = Conexion;
-                    Comando.CommandText = "insert into Citas values (SYSDATETIME(),@fechaCita,@motivo,@CreadoPor,@Precio,@dui) ";
-                    Comando.Parameters.AddWithValue("@fechaCita", fechaCita);
-                    Comando.Parameters.AddWithValue("@motivo", motivo);
-                    Comando.Parameters.AddWithValue("@dui", dui);
-                    Comando.Parameters.AddWithValue("@Precio", Precio);
-                    Comando.Parameters.AddWithValue("@CreadoPor", CreadoPor);
-                    Comando.CommandType = CommandType.Text;
-                    Comando.ExecuteNonQuery();
-
-                }
-            }
-
-
-        }
-        public void actualizarCita(string motivo, DateTime fechaCita, string CreadoPor,double Precio,int dui)
-        {
-
-            using (var Conexion = GetConnection())
-            {
-
-                Conexion.Open();
-                using (var Comando = new SqlCommand())
-                {
-
-                    Comando.Connection = Conexion;
-
-                    Comando.CommandText = "Update Citas set Fecha_HoraCita=@fechaCita,Motivo=@motivo,CreadoPor=@CreadoPor,Precio=@Precio where dui = @dui and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =@dui)";
-                    Comando.Parameters.AddWithValue("@fechaCita", fechaCita);
-                    Comando.Parameters.AddWithValue("@motivo", motivo);
-                    Comando.Parameters.AddWithValue("@dui", dui);
-                    Comando.Parameters.AddWithValue("@Precio", Precio);
-                    Comando.Parameters.AddWithValue("@CreadoPor", CreadoPor);
-                    Comando.CommandType = CommandType.Text;
-                    Comando.ExecuteNonQuery();
-
-                }
-            }
-
-
-        }
         public int eliminarcita(int dui,DateTime fechaCita) {
 
             using (var Conexion = GetConnection())
@@ -574,7 +569,6 @@ namespace AccesoDatos
             }
 
         }
-
 
     }
 }

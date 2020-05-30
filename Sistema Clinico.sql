@@ -126,124 +126,128 @@ values
 (SYSDATETIME(),'20200701 7:00','Infeccion de vias urinarias','Ruby',15.99,145963248),
 (SYSDATETIME(),'20200704 8:00','Infeccion en la piel','Ruby',15.99,105698367),
 (SYSDATETIME(),'20200801 7:00','Infeccion de vias urinarias','Ruby',15.99,145963248)
-
+go
 --select * from Usuario
 --select * from Paciente
 --select * from Expediente
 --select * from Diagnostico
 --select * from Citas
 --select * from Movimientos
-
---go
+drop database SistemaClinico
+----go
 ----Paciente
 ----1
+go
+create procedure Consultar
+@dui int
+as
+select * from Expediente E inner join Paciente P on E.dui = P.Dui where E.dui = @dui and P.Dui=@dui
 
---create procedure Consultar
---@dui int
---as
---select * from Expediente E inner join Paciente P on E.dui = P.Dui where E.dui = @dui and P.Dui=@dui
-
-
+go
 ----2
---create procedure citas
---@dui int
---as
---select * from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = @dui and C.dui = @dui and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui=@dui)
-
-
+create procedure Citass
+@dui int
+as
+select * from Paciente P inner join Citas C on C.dui = P.Dui where P.dui = @dui and C.dui = @dui and Fecha_HoraCita = (select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui=@dui)
 
 ----3
---create procedure Actualizar_Expediente
---@antecedentes varchar(100),@Medicamentos varchar(200),@dui int,@sangre varchar(5)
---as
---update Expediente set Antecedentes_Clinicos = @antecedentes, Medicamentos_Escritos= @medicamentos, tipo_sangre= @sangre 
---from  Expediente  where dui = @dui
+----create procedure Actualizar_Expediente
+----@antecedentes varchar(100),@Medicamentos varchar(200),@dui int,@sangre varchar(5)
+----as
+----update Expediente set Antecedentes_Clinicos = @antecedentes, Medicamentos_Escritos= @medicamentos, tipo_sangre= @sangre 
+----from  Expediente  where dui = @dui
 ----4
---create procedure Actualizar_Paciente
---@Nombre varchar(50),@apellido varchar(50),@sexo nvarchar(1),@telefono int,@direccion varchar(250),@estadocivil nvarchar(20),@fechanac nvarchar(20),@dui int
---as
---update Paciente set Nombre_Paciente= @nombre , Apellidos_Paciente = @apellido ,
--- Sexo_Paciente = @sexo, Telefono_Paciente = @telefono, Direccion_Paciente = @direccion ,
--- EstadoCivil = @estadocivil , FechaNacimiento =@fechanac 
---from Paciente where dui = @dui
+----create procedure Actualizar_Paciente
+----@Nombre varchar(50),@apellido varchar(50),@sexo nvarchar(1),@telefono int,@direccion varchar(250),@estadocivil nvarchar(20),@fechanac nvarchar(20),@dui int
+----as
+----update Paciente set Nombre_Paciente= @nombre , Apellidos_Paciente = @apellido ,
+---- Sexo_Paciente = @sexo, Telefono_Paciente = @telefono, Direccion_Paciente = @direccion ,
+---- EstadoCivil = @estadocivil , FechaNacimiento =@fechanac 
+----from Paciente where dui = @dui
 ----5
---create procedure insercion_Paciente
---@dui int,@Nombre varchar(50),@apellido varchar(50),@sexo nvarchar(1),@telefono int,@direccion varchar(250),@estadocivil nvarchar(20),@fechanac nvarchar(20)
---as
---Insert into Paciente(Dui,Nombre_Paciente,Apellidos_Paciente ,Sexo_Paciente ,Telefono_Paciente ,Direccion_Paciente,EstadoCivil ,FechaNacimiento)
---values(@dui,@nombre,@apellido,@sexo,@telefono,@direccion,@estadocivil,@fechanac)
+----create procedure insercion_Paciente
+----@dui int,@Nombre varchar(50),@apellido varchar(50),@sexo nvarchar(1),@telefono int,@direccion varchar(250),@estadocivil nvarchar(20),@fechanac nvarchar(20)
+----as
+----Insert into Paciente(Dui,Nombre_Paciente,Apellidos_Paciente ,Sexo_Paciente ,Telefono_Paciente ,Direccion_Paciente,EstadoCivil ,FechaNacimiento)
+----values(@dui,@nombre,@apellido,@sexo,@telefono,@direccion,@estadocivil,@fechanac)
 
 ----6
 
---create procedure insercion_Expediente
---@antecendetes varchar(100),@medicamentos varchar(200),@sangre varchar(5),@dui int
---as
---insert into Expediente (FechaCreacion,Antecedentes_Clinicos,Medicamentos_Escritos,tipo_sangre ,dui )
---values (SYSDATETIME(),@antecendetes ,@medicamentos,@sangre,@dui)
+----create procedure insercion_Expediente
+----@antecendetes varchar(100),@medicamentos varchar(200),@sangre varchar(5),@dui int
+----as
+----insert into Expediente (FechaCreacion,Antecedentes_Clinicos,Medicamentos_Escritos,tipo_sangre ,dui )
+----values (SYSDATETIME(),@antecendetes ,@medicamentos,@sangre,@dui)
 
 ----7
---create procedure eliminar_Expediente
---@dui int 
---as
---delete from Expediente where dui = @dui 
+----create procedure eliminar_Expediente
+----@dui int 
+----as
+----delete from Expediente where dui = @dui 
 
---create procedure eliminar_Paciente
---@dui int 
---as
---delete from Paciente where Dui = @dui
+----create procedure eliminar_Paciente
+----@dui int 
+----as
+----delete from Paciente where Dui = @dui
 
 ----8
---create procedure insercion_Diagnostico
---@Enfermedad nvarchar(250),@Estado varchar(50),@peso float ,@estatura float,@presion float ,@temperatura float,@detalles varchar(200),@recomendaciones varchar(200),@Expe int 
---as
---insert into Diagnostico (Enfermedad,Estado,Peso,estatura,presion ,fechaDiagnostico ,temperatura ,detalles ,recomendaciones,Num_Expediente)
---values (@Enfermedad,@Estado,@peso,@estatura,@presion,SYSDATETIME(),@temperatura,@detalles,@recomendaciones,@Expe)
+
+go
+create procedure insercion_Diagnostico
+@Enfermedad nvarchar(250),@Estado varchar(50),@peso float ,@estatura float,@presion float ,@temperatura float,@detalles varchar(200),@recomendaciones varchar(200),@Expe int 
+as
+insert into Diagnostico (Enfermedad,Estado,Peso,estatura,presion ,fechaDiagnostico ,temperatura ,detalles ,recomendaciones,Num_Expediente)
+values (@Enfermedad,@Estado,@peso,@estatura,@presion,SYSDATETIME(),@temperatura,@detalles,@recomendaciones,@Expe)
 
 ----9
---create procedure insercion_Citas
---@fechaCita datetime,@motivo varchar(100),@CreadoPor varchar(100),@Precio float,@dui int
---as
---insert into Citas (Fecha_HoraCreacion,Fecha_HoraCita,Motivo,CreadoPor,Precio,dui)
---values (SYSDATETIME(),@fechaCita,@motivo,@CreadoPor,@Precio,@dui)
+go
+create procedure insercion_Citas
+@fechaCita datetime,@motivo varchar(100),@CreadoPor varchar(100),@Precio float,@dui int
+as
+insert into Citas (Fecha_HoraCreacion,Fecha_HoraCita,Motivo,CreadoPor,Precio,dui)
+values (SYSDATETIME(),@fechaCita,@motivo,@CreadoPor,@Precio,@dui)
 
 ----10
---create procedure Actualizar_Citas
---@dui int,@fechaCita datetime, @motivo varchar(100),@CreadoPor varchar(50),@Precio float
---as
---Update Citas set Fecha_HoraCita=@fechaCita,Motivo=@motivo,CreadoPor=@CreadoPor,Precio=@Precio 
---from citas where dui = @dui and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =@dui)
+go
+create procedure Actualizar_Citas
+@dui int,@fechaCita datetime, @motivo varchar(100),@CreadoPor varchar(50),@Precio float
+as
+Update Citas set Fecha_HoraCita=@fechaCita,Motivo=@motivo,CreadoPor=@CreadoPor,Precio=@Precio 
+from citas where dui = @dui and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =@dui)
 ----11
---create procedure eliminar_citas
---@dui int
---as
---delete from citas where dui = @dui and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =@dui)
+----create procedure eliminar_citas
+----@dui int
+----as
+----delete from citas where dui = @dui and Fecha_HoraCita=(select min(Fecha_HoraCita) from Citas where Fecha_HoraCita >= SYSDATETIME() and dui =@dui)
 
 ----Usuario
-----1
---create procedure consultar_usuario
---@usuario nvarchar (20),@contraseña nvarchar(10)
---as
---Select * from Usuario where Id_Usuario = @usuario and Contraseña_Usuasio = @contraseña
+--1
+go
+create procedure consultar_usuario
+@usuario nvarchar (20),@contraseña nvarchar(10)
+as
+Select * from Usuario where Id_Usuario = @usuario and Contraseña_Usuasio = @contraseña
 
-----2
---create procedure actualizar_Usuario
---@usuario nvarchar (20),@nombre varchar(50),@apellido varchar(50),@contraseña nvarchar(10)
---as
---update Usuario set Id_Usuario=@usuario,Nombre_Usuario=@nombre,Apellido_Usuario=@apellido,Contraseña_Usuasio=@contraseña
--- where Id_Usuario=@usuario
+--2
+go
+create procedure actualizar_Usuario
+@usuario nvarchar (20),@nombre varchar(50),@apellido varchar(50),@contraseña nvarchar(10)
+as
+update Usuario set Id_Usuario=@usuario,Nombre_Usuario=@nombre,Apellido_Usuario=@apellido,Contraseña_Usuasio=@contraseña
+ where Id_Usuario=@usuario
 
 -----Graficos
---select CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH,CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50),DATEPART(year,convert(date,Fecha_HoraCita ))) as fecha,
---convert(varchar(50),SUM(Precio))
---from Citas
---where Fecha_HoraCita <= SYSDATETIME()
---group by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH,CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50),DATEPART(year,convert(date,Fecha_HoraCita ))) order by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)) asc
-----
---select CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2))+' '+ CAST(YEAR(Fecha_HoraCita) AS VARCHAR(4)) ,sum(Precio)
---from Citas
---group by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2))+' '+ CAST(YEAR(Fecha_HoraCita) AS VARCHAR(4))
+----select CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH,CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50),DATEPART(year,convert(date,Fecha_HoraCita ))) as fecha,
+----convert(varchar(50),SUM(Precio))
+----from Citas
+----where Fecha_HoraCita <= SYSDATETIME()
+----group by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH,CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50),DATEPART(year,convert(date,Fecha_HoraCita ))) order by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)) asc
 
---select sum(Precio) as Monto from Citas where Fecha_HoraCita <= SYSDATETIME()
---select count(Fecha_HoraCita) as TotalCitas from Citas where Fecha_HoraCita <= SYSDATETIME()
+----select CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2))+' '+ CAST(YEAR(Fecha_HoraCita) AS VARCHAR(4)) ,sum(Precio)
+----from Citas
+----group by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2))+' '+ CAST(YEAR(Fecha_HoraCita) AS VARCHAR(4))
+
+----select sum(Precio) as Monto from Citas where Fecha_HoraCita <= SYSDATETIME()
+----select count(Fecha_HoraCita) as TotalCitas from Citas where Fecha_HoraCita <= SYSDATETIME()
 
 

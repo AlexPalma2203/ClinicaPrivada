@@ -71,6 +71,8 @@
             this.pass2 = new FontAwesome.Sharp.IconPictureBox();
             this.pass3 = new FontAwesome.Sharp.IconPictureBox();
             this.pass4 = new FontAwesome.Sharp.IconPictureBox();
+            this.back = new FontAwesome.Sharp.IconPictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -96,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pass3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pass4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,7 +110,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1265, 372);
+            this.panel1.Size = new System.Drawing.Size(1266, 372);
             this.panel1.TabIndex = 0;
             // 
             // panel6
@@ -118,7 +121,7 @@
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Location = new System.Drawing.Point(1014, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(250, 369);
+            this.panel6.Size = new System.Drawing.Size(251, 369);
             this.panel6.TabIndex = 4;
             // 
             // lblReportes
@@ -128,9 +131,9 @@
             this.lblReportes.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblReportes.Location = new System.Drawing.Point(13, 194);
             this.lblReportes.Name = "lblReportes";
-            this.lblReportes.Size = new System.Drawing.Size(215, 16);
+            this.lblReportes.Size = new System.Drawing.Size(219, 16);
             this.lblReportes.TabIndex = 18;
-            this.lblReportes.Text = "Bienvendo A Nuestro Programa ";
+            this.lblReportes.Text = "Bienvenido A Nuestro Programa ";
             // 
             // pictureBox10
             // 
@@ -171,9 +174,9 @@
             this.lblCitas.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblCitas.Location = new System.Drawing.Point(17, 194);
             this.lblCitas.Name = "lblCitas";
-            this.lblCitas.Size = new System.Drawing.Size(215, 16);
+            this.lblCitas.Size = new System.Drawing.Size(219, 16);
             this.lblCitas.TabIndex = 17;
-            this.lblCitas.Text = "Bienvendo A Nuestro Programa ";
+            this.lblCitas.Text = "Bienvenido A Nuestro Programa ";
             // 
             // pictureBox9
             // 
@@ -215,9 +218,9 @@
             this.lblPaciente.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblPaciente.Location = new System.Drawing.Point(18, 194);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(215, 16);
+            this.lblPaciente.Size = new System.Drawing.Size(219, 16);
             this.lblPaciente.TabIndex = 16;
-            this.lblPaciente.Text = "Bienvendo A Nuestro Programa ";
+            this.lblPaciente.Text = "Bienvenido A Nuestro Programa ";
             // 
             // pictureBox8
             // 
@@ -268,9 +271,9 @@
             this.lblProgramadores.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblProgramadores.Location = new System.Drawing.Point(17, 194);
             this.lblProgramadores.Name = "lblProgramadores";
-            this.lblProgramadores.Size = new System.Drawing.Size(215, 16);
+            this.lblProgramadores.Size = new System.Drawing.Size(219, 16);
             this.lblProgramadores.TabIndex = 15;
-            this.lblProgramadores.Text = "Bienvendo A Nuestro Programa ";
+            this.lblProgramadores.Text = "Bienvenido A Nuestro Programa ";
             // 
             // pictureBox7
             // 
@@ -389,7 +392,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label13.Location = new System.Drawing.Point(10, 231);
+            this.label13.Location = new System.Drawing.Point(6, 231);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(83, 16);
             this.label13.TabIndex = 8;
@@ -400,18 +403,18 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(10, 215);
+            this.label12.Location = new System.Drawing.Point(6, 215);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(238, 16);
+            this.label12.Size = new System.Drawing.Size(247, 16);
             this.label12.TabIndex = 7;
-            this.label12.Text = "Asignados Los Roles Por Usurio, Los ";
+            this.label12.Text = "Asignados Los Roles Por Usuario, Los ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(10, 199);
+            this.label11.Location = new System.Drawing.Point(6, 199);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(223, 16);
             this.label11.TabIndex = 6;
@@ -422,7 +425,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(10, 183);
+            this.label10.Location = new System.Drawing.Point(6, 183);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(227, 16);
             this.label10.TabIndex = 5;
@@ -433,7 +436,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(10, 151);
+            this.label9.Location = new System.Drawing.Point(6, 151);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(235, 16);
             this.label9.TabIndex = 4;
@@ -444,7 +447,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label8.Location = new System.Drawing.Point(10, 167);
+            this.label8.Location = new System.Drawing.Point(6, 167);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(238, 16);
             this.label8.TabIndex = 3;
@@ -455,7 +458,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(10, 135);
+            this.label6.Location = new System.Drawing.Point(6, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(215, 16);
             this.label6.TabIndex = 2;
@@ -495,7 +498,8 @@
             this.next.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.next.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleRight;
             this.next.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.next.Location = new System.Drawing.Point(225, 379);
+            this.next.IconSize = 30;
+            this.next.Location = new System.Drawing.Point(224, 382);
             this.next.Name = "next";
             this.next.Size = new System.Drawing.Size(32, 32);
             this.next.TabIndex = 15;
@@ -572,12 +576,33 @@
             this.pass4.TabIndex = 20;
             this.pass4.TabStop = false;
             // 
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
+            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.back.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
+            this.back.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
+            this.back.IconSize = 30;
+            this.back.Location = new System.Drawing.Point(0, 382);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(32, 31);
+            this.back.TabIndex = 21;
+            this.back.TabStop = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(256, 407);
+            this.ClientSize = new System.Drawing.Size(255, 407);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.pass4);
             this.Controls.Add(this.pass3);
             this.Controls.Add(this.pass2);
@@ -621,6 +646,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pass2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pass3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pass4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,6 +694,8 @@
         private FontAwesome.Sharp.IconPictureBox pass2;
         private FontAwesome.Sharp.IconPictureBox pass3;
         private FontAwesome.Sharp.IconPictureBox pass4;
+        private FontAwesome.Sharp.IconPictureBox back;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
