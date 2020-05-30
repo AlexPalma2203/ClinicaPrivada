@@ -14,6 +14,7 @@ using GUI_Principal;
 using CapaComun;
 using CapaComun.Cache;
 using GUI_Principal.Formularios_Acciones;
+using FrmSlide;
 
 namespace PresentacionGUI
 {
@@ -48,14 +49,14 @@ namespace PresentacionGUI
             {
                 iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserNurse;
                 Reportes.Enabled = false;
-                Paciente.Enabled = false;
+                
                 Programadores.Enabled = false;
 
             }
             if (CacheDeUsuario.CargoUsuario == Cargos.Doctor)
             {
                 iconUsers.IconChar = FontAwesome.Sharp.IconChar.UserMd;
-                Reportes.Enabled = false;
+               
                 Programadores.Enabled = false;
             }
 
@@ -210,7 +211,11 @@ namespace PresentacionGUI
             }
             
         }
-        
+        private void cerrarGuia(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
 
         private void TituloFormularioHijo_Click(object sender, EventArgs e)
         {
@@ -264,6 +269,15 @@ namespace PresentacionGUI
         {
             AbrirFormularioHijo(new ActualizarUsuario());
             Reset();
+        }
+
+        private void Guia_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 menu = new Form1();
+            menu.Show();
+            menu.FormClosed += cerrarGuia;
+
         }
     }
 }

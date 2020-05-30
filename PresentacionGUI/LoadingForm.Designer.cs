@@ -179,7 +179,7 @@
             this.iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.iconoBienvenida.IconColor = System.Drawing.Color.MintCream;
             this.iconoBienvenida.IconSize = 122;
-            this.iconoBienvenida.Location = new System.Drawing.Point(357, 234);
+            this.iconoBienvenida.Location = new System.Drawing.Point(357, 250);
             this.iconoBienvenida.Name = "iconoBienvenida";
             this.iconoBienvenida.Size = new System.Drawing.Size(140, 122);
             this.iconoBienvenida.TabIndex = 22;

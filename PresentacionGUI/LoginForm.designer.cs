@@ -42,6 +42,9 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelregistro = new System.Windows.Forms.Panel();
+            this.iconEye = new FontAwesome.Sharp.IconPictureBox();
+            this.iconUser = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPass = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
             this.ErrorIcon = new FontAwesome.Sharp.IconPictureBox();
@@ -49,10 +52,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Error = new System.Windows.Forms.Label();
             this.Usuario = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelUsuario = new System.Windows.Forms.Panel();
             this.Contraseña = new System.Windows.Forms.TextBox();
             this.Acceder = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelContraseña = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
@@ -60,6 +63,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.logopic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelregistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
@@ -97,6 +103,7 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(800, 464);
             this.bunifuGradientPanel2.TabIndex = 15;
+            this.bunifuGradientPanel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel2_MouseMove);
             // 
             // info
             // 
@@ -209,6 +216,9 @@
             // panelregistro
             // 
             this.panelregistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
+            this.panelregistro.Controls.Add(this.iconEye);
+            this.panelregistro.Controls.Add(this.iconUser);
+            this.panelregistro.Controls.Add(this.iconPass);
             this.panelregistro.Controls.Add(this.panel4);
             this.panelregistro.Controls.Add(this.Minimizar);
             this.panelregistro.Controls.Add(this.ErrorIcon);
@@ -216,14 +226,56 @@
             this.panelregistro.Controls.Add(this.label1);
             this.panelregistro.Controls.Add(this.Error);
             this.panelregistro.Controls.Add(this.Usuario);
-            this.panelregistro.Controls.Add(this.panel2);
+            this.panelregistro.Controls.Add(this.panelUsuario);
             this.panelregistro.Controls.Add(this.Contraseña);
             this.panelregistro.Controls.Add(this.Acceder);
-            this.panelregistro.Controls.Add(this.panel3);
+            this.panelregistro.Controls.Add(this.panelContraseña);
             this.panelregistro.Location = new System.Drawing.Point(395, -2);
             this.panelregistro.Name = "panelregistro";
             this.panelregistro.Size = new System.Drawing.Size(400, 464);
             this.panelregistro.TabIndex = 13;
+            this.panelregistro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelregistro_MouseMove);
+            // 
+            // iconEye
+            // 
+            this.iconEye.BackColor = System.Drawing.Color.Transparent;
+            this.iconEye.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconEye.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.iconEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.iconEye.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.iconEye.IconSize = 30;
+            this.iconEye.Location = new System.Drawing.Point(337, 236);
+            this.iconEye.Name = "iconEye";
+            this.iconEye.Size = new System.Drawing.Size(30, 31);
+            this.iconEye.TabIndex = 27;
+            this.iconEye.TabStop = false;
+            this.iconEye.Click += new System.EventHandler(this.iconEye_Click);
+            // 
+            // iconUser
+            // 
+            this.iconUser.BackColor = System.Drawing.Color.Transparent;
+            this.iconUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.iconUser.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.iconUser.IconSize = 21;
+            this.iconUser.Location = new System.Drawing.Point(61, 147);
+            this.iconUser.Name = "iconUser";
+            this.iconUser.Size = new System.Drawing.Size(21, 22);
+            this.iconUser.TabIndex = 26;
+            this.iconUser.TabStop = false;
+            // 
+            // iconPass
+            // 
+            this.iconPass.BackColor = System.Drawing.Color.Transparent;
+            this.iconPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.iconPass.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.iconPass.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.iconPass.IconSize = 21;
+            this.iconPass.Location = new System.Drawing.Point(64, 238);
+            this.iconPass.Name = "iconPass";
+            this.iconPass.Size = new System.Drawing.Size(21, 22);
+            this.iconPass.TabIndex = 25;
+            this.iconPass.TabStop = false;
             // 
             // panel4
             // 
@@ -256,7 +308,7 @@
             this.ErrorIcon.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
             this.ErrorIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.ErrorIcon.IconSize = 23;
-            this.ErrorIcon.Location = new System.Drawing.Point(71, 280);
+            this.ErrorIcon.Location = new System.Drawing.Point(67, 280);
             this.ErrorIcon.Name = "ErrorIcon";
             this.ErrorIcon.Size = new System.Drawing.Size(27, 23);
             this.ErrorIcon.TabIndex = 23;
@@ -296,7 +348,7 @@
             this.Error.BackColor = System.Drawing.Color.Transparent;
             this.Error.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.Error.Location = new System.Drawing.Point(104, 284);
+            this.Error.Location = new System.Drawing.Point(100, 284);
             this.Error.Name = "Error";
             this.Error.Size = new System.Drawing.Size(41, 18);
             this.Error.TabIndex = 22;
@@ -309,22 +361,22 @@
             this.Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
-            this.Usuario.Location = new System.Drawing.Point(65, 149);
+            this.Usuario.Location = new System.Drawing.Point(91, 149);
             this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(270, 20);
+            this.Usuario.Size = new System.Drawing.Size(240, 20);
             this.Usuario.TabIndex = 15;
-            this.Usuario.Text = ".:.USUARIO.:.";
+            this.Usuario.Text = "Usuario";
             this.Usuario.Enter += new System.EventHandler(this.Usuario_Enter);
             this.Usuario.Leave += new System.EventHandler(this.Usuario_Leave);
             // 
-            // panel2
+            // panelUsuario
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
-            this.panel2.Enabled = false;
-            this.panel2.Location = new System.Drawing.Point(65, 175);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 2);
-            this.panel2.TabIndex = 17;
+            this.panelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.panelUsuario.Enabled = false;
+            this.panelUsuario.Location = new System.Drawing.Point(61, 175);
+            this.panelUsuario.Name = "panelUsuario";
+            this.panelUsuario.Size = new System.Drawing.Size(267, 2);
+            this.panelUsuario.TabIndex = 17;
             // 
             // Contraseña
             // 
@@ -332,11 +384,11 @@
             this.Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Contraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
-            this.Contraseña.Location = new System.Drawing.Point(65, 239);
+            this.Contraseña.Location = new System.Drawing.Point(91, 238);
             this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Size = new System.Drawing.Size(270, 20);
+            this.Contraseña.Size = new System.Drawing.Size(240, 20);
             this.Contraseña.TabIndex = 16;
-            this.Contraseña.Text = ".:.CONTRASEÑA.:.";
+            this.Contraseña.Text = "Contraseña";
             this.Contraseña.Enter += new System.EventHandler(this.Contraseña_Enter);
             this.Contraseña.Leave += new System.EventHandler(this.Contraseña_Leave);
             // 
@@ -359,14 +411,14 @@
             this.Acceder.UseVisualStyleBackColor = false;
             this.Acceder.Click += new System.EventHandler(this.Acceder_Click_1);
             // 
-            // panel3
+            // panelContraseña
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
-            this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(65, 265);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(267, 2);
-            this.panel3.TabIndex = 18;
+            this.panelContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(116)))), ((int)(((byte)(127)))));
+            this.panelContraseña.Enabled = false;
+            this.panelContraseña.Location = new System.Drawing.Point(61, 265);
+            this.panelContraseña.Name = "panelContraseña";
+            this.panelContraseña.Size = new System.Drawing.Size(267, 2);
+            this.panelContraseña.TabIndex = 18;
             // 
             // LoginForm
             // 
@@ -393,6 +445,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelregistro.ResumeLayout(false);
             this.panelregistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
@@ -415,9 +470,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Error;
         private System.Windows.Forms.TextBox Usuario;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelUsuario;
         private System.Windows.Forms.TextBox Contraseña;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelContraseña;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button iniciar;
@@ -425,6 +480,9 @@
         private FontAwesome.Sharp.IconPictureBox info;
         private System.Windows.Forms.PictureBox logopic;
         private System.Windows.Forms.Button Acceder;
+        private FontAwesome.Sharp.IconPictureBox iconPass;
+        private FontAwesome.Sharp.IconPictureBox iconUser;
+        private FontAwesome.Sharp.IconPictureBox iconEye;
     }
 }
 

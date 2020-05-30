@@ -141,5 +141,10 @@ namespace GUI_Principal.Formularios_Acciones
             Errorlbl.Visible = true;
             ErrorBusquedad.Visible = true;
         }
+
+        private void panelcentral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

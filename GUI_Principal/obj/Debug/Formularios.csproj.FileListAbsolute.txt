@@ -107,3 +107,4 @@ C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\Bunifu.UI.Wi
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Formularios_Acciones.DatosCitas.resources
 C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\GUI_Principal.Formularios_Acciones.DatosPaciente.resources
+C:\Users\Alex Palma\Desktop\ProyectoClinica\GUI_Principal\obj\Debug\FrmSlide.Form1.resources

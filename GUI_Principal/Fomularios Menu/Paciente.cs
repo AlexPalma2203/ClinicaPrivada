@@ -192,8 +192,23 @@ namespace GUI_Principal
         {
             registros = false;
 
-            
-            
+            //Permisos
+            if (CacheDeUsuario.CargoUsuario == Cargos.Admistrador)
+            {
+
+                NewConsulta.Enabled = false;
+            }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Enfermera)
+            {
+                NewConsulta.Enabled = false;
+                DeleteExpediente.Enabled = false;
+
+            }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Doctor)
+            {
+
+            }
+
 
         }
        

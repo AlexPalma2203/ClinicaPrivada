@@ -52,7 +52,18 @@ namespace GUI_Principal
             numExpe_newcita.Text = Convert.ToString( CacheExpediente.NumExpediente);
             lblFecha.Text =  fechaGet();
             cargarDiagnostico();
-           
+            if (CacheDeUsuario.CargoUsuario == Cargos.Admistrador)
+            {
+                BtnGuardar.Enabled = false;
+                
+            }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Enfermera)
+            {
+
+                BtnGuardar.Enabled = false;
+            }
+            
+
         }
         
         private void cargarDiagnostico()

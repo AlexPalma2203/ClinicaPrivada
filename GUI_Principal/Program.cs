@@ -1,4 +1,5 @@
-﻿using GUI_Principal.Formularios_Acciones;
+﻿using FrmSlide;
+using GUI_Principal.Formularios_Acciones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace GUI_Principal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Citas());
+            Application.Run(new Form1());
 
 
         }

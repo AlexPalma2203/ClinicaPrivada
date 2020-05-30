@@ -30,10 +30,13 @@ namespace PresentacionGUI
         
         private void Usuario_Enter(object sender, EventArgs e)
         {
-            if (Usuario.Text == ".:.USUARIO.:.")
+            if (Usuario.Text == "Usuario")
             {
                 Usuario.Text = "";
                 Usuario.ForeColor = Color.FromArgb(255, 44, 86);
+                panelUsuario.BackColor = Color.FromArgb(255, 44, 86);
+                iconUser.IconColor = Color.FromArgb(255, 44, 86);
+
             }
         }
 
@@ -41,17 +44,23 @@ namespace PresentacionGUI
         {
             if (Usuario.Text == "")
             {
-                Usuario.Text = ".:.USUARIO.:.";
+                Usuario.Text = "Usuario";
                 Usuario.ForeColor = Color.FromArgb(120, 116, 127);
+                panelUsuario.BackColor = Color.FromArgb(120, 116, 127);
+                iconUser.IconColor = Color.FromArgb(120, 116, 127);
+
+
             }
         }
 
         private void Contraseña_Enter(object sender, EventArgs e)
         {
-            if (Contraseña.Text == ".:.CONTRASEÑA.:.")
+            if (Contraseña.Text == "Contraseña")
             {
                 Contraseña.Text = "";
                 Contraseña.ForeColor = Color.FromArgb(255, 44, 86);
+                panelContraseña.BackColor = Color.FromArgb(255, 44, 86);
+                iconPass.IconColor = Color.FromArgb(255, 44, 86);
                 Contraseña.UseSystemPasswordChar = true;
             }
         }
@@ -60,8 +69,10 @@ namespace PresentacionGUI
         {
             if (Contraseña.Text == "")
             {
-                Contraseña.Text = ".:.CONTRASEÑA.:.";
+                Contraseña.Text = "Contraseña";
                 Contraseña.ForeColor = Color.FromArgb(120, 116, 127);
+                panelContraseña.BackColor = Color.FromArgb(120, 116, 127);
+                iconPass.IconColor = Color.FromArgb(120, 116, 127);
                 Contraseña.UseSystemPasswordChar = false;
             }
         }
@@ -105,36 +116,26 @@ namespace PresentacionGUI
 
         private void cerrarSesion(object sender ,FormClosedEventArgs e ) {
            
-            Contraseña.Text = ".:.CONTRASEÑA.:.";
+            Contraseña.Text = "Contraseña";
             Contraseña.ForeColor = Color.FromArgb(120, 116, 127);
             Contraseña.UseSystemPasswordChar = false;
-            Usuario.Text = ".:.USUARIO.:.";
+            Usuario.Text = "Usuario";
             Usuario.ForeColor = Color.FromArgb(120, 116, 127);
+            panelContraseña.BackColor = Color.FromArgb(120, 116, 127);
+            panelUsuario.BackColor = Color.FromArgb(120, 116, 127);
+            iconPass.IconColor = Color.FromArgb(120, 116, 127);
+            iconUser.IconColor = Color.FromArgb(120, 116, 127);
             Error.Visible = false;
             ErrorIcon.Visible = false;
             this.Show();
         }
 
-        /*
-                     
-       
-
-
-             */
-
-        private void OcultarBunifo_Click(object sender, EventArgs e)
-        {
-            
-
-
-
-        }
 
         private void Acceder_Click_1(object sender, EventArgs e)
         {
-            if (Usuario.Text != ".:.USUARIO.:.")
+            if (Usuario.Text != "Usuario")
             {
-                if (Contraseña.Text != ".:.CONTRASEÑA.:.")
+                if (Contraseña.Text != "Contraseña")
                 {
                     ModeloUsuario usuario = new ModeloUsuario();
                     var LoginValido = usuario.AccesoUsuario(Usuario.Text, Contraseña.Text);
@@ -154,7 +155,7 @@ namespace PresentacionGUI
                     {
 
                         msjError("Usuario o Contraseña Incorrecta \nPorfavor Intente de Nuevo.");
-                        Contraseña.Text = ".:.CONTRASEÑA.:.";
+                        Contraseña.Text = "Contraseña";
                         Contraseña.ForeColor = Color.FromArgb(120, 116, 127);
                         Contraseña.UseSystemPasswordChar = false;
                         Usuario.Focus();
@@ -216,6 +217,50 @@ namespace PresentacionGUI
             iniciar.Visible = true;
             userLogin.Visible = true;
             
+        }
+
+       
+        private void ActivarOjo()
+        {
+            if (iconEye.IconChar == FontAwesome.Sharp.IconChar.EyeSlash) {
+                if (Contraseña.Text != "Contraseña" && Contraseña.Text != "")
+                {
+                    iconEye.IconColor = Color.FromArgb(255, 44, 86);
+                    iconEye.IconChar = FontAwesome.Sharp.IconChar.Eye;
+                    Contraseña.UseSystemPasswordChar = false;
+
+                }
+            }
+            else
+            {
+                if (Contraseña.Text != "Contraseña"&& Contraseña.Text != "")
+                {
+                    iconEye.IconColor =  Color.FromArgb(120, 116, 127);
+                    iconEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+                    Contraseña.UseSystemPasswordChar = true;
+
+                }
+
+            }
+            
+
+        }
+
+        private void iconEye_Click(object sender, EventArgs e)
+        {
+            ActivarOjo();
+        }
+
+        private void panelregistro_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void bunifuGradientPanel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

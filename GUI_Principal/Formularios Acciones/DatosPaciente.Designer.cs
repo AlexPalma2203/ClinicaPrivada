@@ -66,6 +66,7 @@
             this.panelcentral.Name = "panelcentral";
             this.panelcentral.Size = new System.Drawing.Size(905, 448);
             this.panelcentral.TabIndex = 0;
+            this.panelcentral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelcentral_Paint);
             // 
             // lblVolver
             // 

@@ -48,6 +48,7 @@
             this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
             this.Close = new FontAwesome.Sharp.IconPictureBox();
             this.Formularios = new System.Windows.Forms.Panel();
+            this.Guia = new FontAwesome.Sharp.IconPictureBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -62,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             this.Formularios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Guia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -381,6 +383,7 @@
             // Formularios
             // 
             this.Formularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.Formularios.Controls.Add(this.Guia);
             this.Formularios.Controls.Add(this.lblFecha);
             this.Formularios.Controls.Add(this.lblHora);
             this.Formularios.Controls.Add(this.pictureBox1);
@@ -390,11 +393,26 @@
             this.Formularios.Size = new System.Drawing.Size(929, 481);
             this.Formularios.TabIndex = 2;
             // 
+            // Guia
+            // 
+            this.Guia.BackColor = System.Drawing.Color.Transparent;
+            this.Guia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Guia.ForeColor = System.Drawing.Color.DimGray;
+            this.Guia.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.Guia.IconColor = System.Drawing.Color.DimGray;
+            this.Guia.IconSize = 30;
+            this.Guia.Location = new System.Drawing.Point(894, 448);
+            this.Guia.Name = "Guia";
+            this.Guia.Size = new System.Drawing.Size(35, 30);
+            this.Guia.TabIndex = 6;
+            this.Guia.TabStop = false;
+            this.Guia.Click += new System.EventHandler(this.Guia_Click);
+            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFecha.ForeColor = System.Drawing.Color.Silver;
             this.lblFecha.Location = new System.Drawing.Point(204, 405);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(518, 44);
@@ -462,6 +480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             this.Formularios.ResumeLayout(false);
             this.Formularios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Guia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -492,6 +511,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private FontAwesome.Sharp.IconPictureBox Guia;
     }
 }
 
