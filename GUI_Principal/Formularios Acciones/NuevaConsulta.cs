@@ -79,7 +79,8 @@ namespace GUI_Principal
                 rtbRecomendaciones.Text = CacheDiagnostico.recomendaciones;
                 txtEstado.Text = CacheDiagnostico.estado;
                 RtbDetalles.Text = CacheDiagnostico.detalles;
-                BtnGuardar.Text = "Actualizar";
+                BtnGuardar.Visible = false;
+                button1.Text = "Volver";
                 Cache = true;
 
             }

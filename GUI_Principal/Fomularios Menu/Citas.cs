@@ -169,7 +169,9 @@ namespace GUI_Principal
             lblProx.Text = "";
             lblMotivo.Text = "";
             lblCreador.Text = "";
-            
+            acceso = false;
+
+
 
         }
         private void AbrirFormularioHijoCita(Form FormularioHijo)
