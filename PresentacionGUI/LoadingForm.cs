@@ -45,6 +45,7 @@ namespace PresentacionGUI
             if (CacheDeUsuario.CargoUsuario == Cargos.Doctor) { iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.UserMd; }
             if (CacheDeUsuario.CargoUsuario == Cargos.Enfermera) { iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.UserNurse; label2.Text = "BIENVENIDA"; }
             if (CacheDeUsuario.CargoUsuario == Cargos.Admistrador) { iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.UserShield; }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Ingeniera) { iconoBienvenida.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher; label2.Text = "BIENVENIDA"; }
             UsuarioBienvenida.Text = CacheDeUsuario.NonbreUsuario + " " + CacheDeUsuario.ApellidoUsuario;
             CargoBienvenida.Text = CacheDeUsuario.CargoUsuario;
             this.Opacity = 0.0;

@@ -60,9 +60,13 @@ namespace PresentacionGUI
                
                 Programadores.Enabled = false;
             }
+            if (CacheDeUsuario.CargoUsuario == Cargos.Ingeniera)
+            {
+                iconUsers.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            }
 
-            
-        }
+
+            }
         private void CargaDatosUsuario()
         {
             lblNombre.Text = CacheDeUsuario.NonbreUsuario +" "+CacheDeUsuario.ApellidoUsuario+".";

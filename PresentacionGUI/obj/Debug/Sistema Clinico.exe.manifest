@@ -410,7 +410,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1u59m70uvd/IEUEf43DTUXkki5xyob9Du85zaHJ1k3g=</dsig:DigestValue>
+        <dsig:DigestValue>8w0qT5AdXLaZhD/0gwHflr8mbjy5tsXAV0vyn9/pr+g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -463,14 +463,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema Clinico.exe" size="430592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sistema Clinico.exe" size="431104">
       <assemblyIdentity name="Sistema Clinico" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Sc36473Leoqebg8e4q+uGNFlXfhPdoj16Utk5nN9N5U=</dsig:DigestValue>
+        <dsig:DigestValue>QhK+Z5pFvBxe3kUuYZXC4AYLPbpJgCFruLSKNiaRYpQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
