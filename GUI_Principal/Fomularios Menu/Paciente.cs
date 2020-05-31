@@ -110,14 +110,21 @@ namespace GUI_Principal
 
         private void NewConsulta_Click(object sender, EventArgs e)
         {
-
-            ModeloCita usuario = new ModeloCita();
-            var resultado = usuario.BusquedadCitasEnPacientes(Convert.ToInt32(SearchExp.Text), FechaCitaBusquedad());
-            if(resultado == false)
+            try
             {
-                ModeloCita d1 = new ModeloCita("Cita Comun",FechaCitaInsertar(),CacheDeUsuario.NonbreUsuario,5,Convert.ToInt32( SearchExp.Text));
-                d1.Cita();
+                ModeloCita usuario = new ModeloCita();
+                var resultado = usuario.BusquedadCitasEnPacientes(Convert.ToInt32(SearchExp.Text), FechaCitaBusquedad());
+                if (resultado == false)
+                {
+                    ModeloCita d1 = new ModeloCita("Cita Comun", FechaCitaInsertar(), CacheDeUsuario.NonbreUsuario, 5, Convert.ToInt32(SearchExp.Text));
+                    d1.Cita();
+                }
+
             }
+            catch (Exception) {
+                msjError("Ingrese un Dui Correctamente");
+            }
+            
             
             if (SearchExp.Text == "Buscar" || acceso ==  false) 
             {
