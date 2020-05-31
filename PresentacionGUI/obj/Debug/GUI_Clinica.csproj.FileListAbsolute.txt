@@ -130,3 +130,6 @@ C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Sistema Cl
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\bin\Debug\Sistema Clinico.application
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\obj\Debug\Sistema Clinico.exe.manifest
 C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\obj\Debug\Sistema Clinico.application
+C:\Users\Alex Palma\Desktop\Utec\Ciclo 01-20\Cristian\Programacion I\Proyecto Programacion Ciclo 01-2020\ProyectoClinica\PresentacionGUI\obj\Debug\Sistema Clinico.exe
+C:\Users\Alex Palma\Desktop\Utec\Ciclo 01-20\Cristian\Programacion I\Proyecto Programacion Ciclo 01-2020\ProyectoClinica\PresentacionGUI\obj\Debug\Sistema Clinico.pdb
+C:\Users\Alex Palma\Desktop\ProyectoClinica\PresentacionGUI\obj\Debug\Sistema Clinico.TrustInfo.xml

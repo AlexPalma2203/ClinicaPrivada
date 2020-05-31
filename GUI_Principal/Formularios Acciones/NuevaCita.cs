@@ -67,5 +67,15 @@ namespace GUI_Principal.Formularios_Acciones
             
             }
         }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtAño.Clear();
+            txtDia.Clear();
+            txtHora.Clear();
+            txtMes.Clear();
+            txtPrecio.Clear();
+            rtbMotivo.Clear();
+        }
     }
 }

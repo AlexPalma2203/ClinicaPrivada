@@ -167,6 +167,8 @@ namespace GUI_Principal
             lblNombrePaciente.Text = "";
             lblApellidoPaciente.Text = "";
             lblProx.Text = "";
+            lblMotivo.Text = "";
+            lblCreador.Text = "";
             
 
         }
