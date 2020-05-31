@@ -13,6 +13,7 @@ namespace AccesoDatos
 {
     public class UsuarioD : ConexionSQL
     {
+
         public bool Acceso(string usuario, string contraseña)
         {
             using (var conexion = GetConnection())
@@ -93,7 +94,7 @@ namespace AccesoDatos
 
 
                     comando.Connection = conexion;
-                    //comando.CommandText = "select CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH,CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50),DATEPART(year,convert(date,Fecha_HoraCita ))) as fecha, convert(varchar(50), SUM(Precio)) from Citas where Fecha_HoraCita <= SYSDATETIME() group by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH, CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50), DATEPART(year, convert(date, Fecha_HoraCita))) order by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)) asc";
+                    //comando.CommandText = " select CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH, CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50), DATEPART(year, convert(date, Fecha_HoraCita))) as fecha, convert(varchar(50), SUM(Precio)) from Citas group by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH, CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50), DATEPART(year, convert(date, Fecha_HoraCita))) order by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)) asc ";
                     comando.CommandText = "select CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH,CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50),DATEPART(year,convert(date,Fecha_HoraCita ))) as fecha, convert(varchar(50), SUM(Precio)) from Citas where Fecha_HoraCita <= SYSDATETIME() group by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)),datename(MONTH, CONVERT(date, Fecha_HoraCita)) + ' ' + CONVERT(varchar(50), DATEPART(year, convert(date, Fecha_HoraCita))) order by CAST(MONTH(Fecha_HoraCita) AS VARCHAR(2)) asc";
                     comando.CommandType = CommandType.Text;
                     SqlDataReader lectura = comando.ExecuteReader();

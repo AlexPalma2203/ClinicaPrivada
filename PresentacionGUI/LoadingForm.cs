@@ -53,5 +53,10 @@ namespace PresentacionGUI
             circularProgressBar1.Maximum = 100;
             timer1.Start();
         }
+
+        private void bunifuGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

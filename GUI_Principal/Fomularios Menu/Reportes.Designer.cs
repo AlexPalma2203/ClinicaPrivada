@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.PanelPaciente = new System.Windows.Forms.Panel();
-            this.iconCitas = new FontAwesome.Sharp.IconPictureBox();
             this.ChartBar = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMonto = new System.Windows.Forms.Label();
@@ -43,13 +42,14 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.iconMonto = new FontAwesome.Sharp.IconPictureBox();
+            this.iconCitas = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.PanelPaciente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartBar)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMonto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCitas)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPaciente
@@ -68,19 +68,6 @@
             this.PanelPaciente.Name = "PanelPaciente";
             this.PanelPaciente.Size = new System.Drawing.Size(905, 448);
             this.PanelPaciente.TabIndex = 24;
-            // 
-            // iconCitas
-            // 
-            this.iconCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
-            this.iconCitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(121)))), ((int)(((byte)(230)))));
-            this.iconCitas.IconChar = FontAwesome.Sharp.IconChar.UserInjured;
-            this.iconCitas.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(121)))), ((int)(((byte)(230)))));
-            this.iconCitas.IconSize = 44;
-            this.iconCitas.Location = new System.Drawing.Point(70, 76);
-            this.iconCitas.Name = "iconCitas";
-            this.iconCitas.Size = new System.Drawing.Size(48, 44);
-            this.iconCitas.TabIndex = 28;
-            this.iconCitas.TabStop = false;
             // 
             // ChartBar
             // 
@@ -173,36 +160,36 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.IsLabelAutoFit = false;
-            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisY.IsLabelAutoFit = false;
-            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Silver;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(-1, -1);
             this.chart1.Name = "chart1";
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BorderWidth = 5;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(121)))), ((int)(((byte)(230)))));
-            series2.LabelBorderWidth = 5;
-            series2.Legend = "Legend1";
-            series2.MarkerSize = 6;
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series1.BorderWidth = 5;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(121)))), ((int)(((byte)(230)))));
+            series1.LabelBorderWidth = 5;
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 6;
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(747, 285);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -219,6 +206,19 @@
             this.iconMonto.Size = new System.Drawing.Size(63, 47);
             this.iconMonto.TabIndex = 29;
             this.iconMonto.TabStop = false;
+            // 
+            // iconCitas
+            // 
+            this.iconCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
+            this.iconCitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(121)))), ((int)(((byte)(230)))));
+            this.iconCitas.IconChar = FontAwesome.Sharp.IconChar.UserInjured;
+            this.iconCitas.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(121)))), ((int)(((byte)(230)))));
+            this.iconCitas.IconSize = 44;
+            this.iconCitas.Location = new System.Drawing.Point(70, 76);
+            this.iconCitas.Name = "iconCitas";
+            this.iconCitas.Size = new System.Drawing.Size(48, 44);
+            this.iconCitas.TabIndex = 28;
+            this.iconCitas.TabStop = false;
             // 
             // panel3
             // 
@@ -242,11 +242,11 @@
             this.Load += new System.EventHandler(this.Administrador_Load_1);
             this.PanelPaciente.ResumeLayout(false);
             this.PanelPaciente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCitas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartBar)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMonto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCitas)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -409,7 +409,7 @@ namespace AccesoDatos
                 using (var Comando = new SqlCommand())
                 {
                     Comando.Connection = Conexion;
-                    Comando.CommandText = "delete from Citas where dui = @dui;delete from Diagnostico where Num_Expediente = @numExpe ;delete from Expediente where dui = @dui ; delete from Paciente where Dui = @dui;";
+                    Comando.CommandText = "delete from Citas where dui = @dui ; delete from Diagnostico where Num_Expediente = @numExpe ;delete from Expediente where dui = @dui ; delete from Paciente where Dui = @dui;";
                     Comando.Parameters.AddWithValue("@dui", dui);
                     Comando.Parameters.AddWithValue("@numExpe", numExpe);
                     Comando.CommandType = CommandType.Text;

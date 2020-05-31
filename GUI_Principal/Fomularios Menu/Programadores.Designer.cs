@@ -39,6 +39,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelfondo1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -75,8 +76,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panelfondo5 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -90,7 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // timerR
@@ -175,6 +175,16 @@
             this.panel1.Size = new System.Drawing.Size(451, 102);
             this.panel1.TabIndex = 118;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(284, 36);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(168, 85);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 119;
+            this.pictureBox8.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -251,9 +261,9 @@
             this.label15.ForeColor = System.Drawing.Color.Gainsboro;
             this.label15.Location = new System.Drawing.Point(107, 69);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(151, 23);
+            this.label15.Size = new System.Drawing.Size(177, 23);
             this.label15.TabIndex = 125;
-            this.label15.Text = "Lic. En Sistemas";
+            this.label15.Text = "Lic. En Informatica";
             // 
             // pictureBox7
             // 
@@ -336,7 +346,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 23);
             this.label7.TabIndex = 108;
-            this.label7.Text = "25-0000-2019";
+            this.label7.Text = "25-3873-2018";
             // 
             // label8
             // 
@@ -398,7 +408,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 23);
             this.label4.TabIndex = 105;
-            this.label4.Text = "25-0000-2019";
+            this.label4.Text = "25-1130-2019";
             // 
             // label5
             // 
@@ -437,9 +447,9 @@
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
             this.label12.Location = new System.Drawing.Point(105, 68);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(228, 23);
+            this.label12.Size = new System.Drawing.Size(98, 23);
             this.label12.TabIndex = 121;
-            this.label12.Text = "Lic. En Comunicaciones";
+            this.label12.Text = "Ingeniera";
             // 
             // pictureBox3
             // 
@@ -469,9 +479,9 @@
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
             this.label11.Location = new System.Drawing.Point(102, 12);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(259, 23);
+            this.label11.Size = new System.Drawing.Size(254, 23);
             this.label11.TabIndex = 110;
-            this.label11.Text = "Jeremias Ezequiel Escobar ";
+            this.label11.Text = "Jeremias Ezequiel Escobar";
             // 
             // panelfondo3
             // 
@@ -522,7 +532,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(136, 23);
             this.label13.TabIndex = 114;
-            this.label13.Text = "25-0000-2019";
+            this.label13.Text = "25-0520-2019";
             // 
             // label14
             // 
@@ -542,16 +552,6 @@
             this.panelfondo5.Name = "panelfondo5";
             this.panelfondo5.Size = new System.Drawing.Size(414, 102);
             this.panelfondo5.TabIndex = 127;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(284, 36);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(168, 85);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 119;
-            this.pictureBox8.TabStop = false;
             // 
             // Programadores
             // 
@@ -580,6 +580,7 @@
             this.Load += new System.EventHandler(this.Programadores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -599,7 +600,6 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }

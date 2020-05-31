@@ -38,6 +38,7 @@ namespace PresentacionGUI
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            
             CargaDatosUsuario();
             //Permisos
             if (CacheDeUsuario.CargoUsuario == Cargos.Admistrador)

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FrmSlide
 {
     public partial class Form1 : Form
@@ -99,6 +100,7 @@ namespace FrmSlide
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             back.Visible = false;
             lblReportes.Text = "Podras Visualizar Cuanto Dinero\nHaz Ganado Por Mes, Hasta El Dia\nActual, Tambien Veras El Total De\nLas Citas Y El Total Del Dinero\nGanado Hasta El Presente Dia";
             lblProgramadores.Text = "Aqui Se Encontraran Las Personas\nQue Trabajaron En Este Proyecto\nDesde La Investigacion, Hasta\nLa Programacion y Creacion de\nla Base de Datos. ";

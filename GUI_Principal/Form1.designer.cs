@@ -583,7 +583,7 @@
             this.back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
             this.back.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
             this.back.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(44)))), ((int)(((byte)(86)))));
-            this.back.IconSize = 30;
+            this.back.IconSize = 31;
             this.back.Location = new System.Drawing.Point(0, 382);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(32, 31);
@@ -601,7 +601,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(255, 407);
+            this.ClientSize = new System.Drawing.Size(254, 407);
             this.Controls.Add(this.back);
             this.Controls.Add(this.pass4);
             this.Controls.Add(this.pass3);

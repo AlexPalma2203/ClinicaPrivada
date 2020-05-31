@@ -15,6 +15,7 @@ namespace CapaComun.Cache
         public static string CargoUsuario { get; set; }
         public static string Contraseña { get; set; }
     }
+   
 
     public static class CachePaciente
     {
