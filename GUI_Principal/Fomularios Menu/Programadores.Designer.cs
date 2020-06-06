@@ -447,9 +447,9 @@
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
             this.label12.Location = new System.Drawing.Point(105, 68);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 23);
+            this.label12.Size = new System.Drawing.Size(155, 23);
             this.label12.TabIndex = 121;
-            this.label12.Text = "Ingeniera";
+            this.label12.Text = "Ing. En Sistemas";
             // 
             // pictureBox3
             // 
@@ -512,6 +512,7 @@
             this.label9.Size = new System.Drawing.Size(155, 23);
             this.label9.TabIndex = 125;
             this.label9.Text = "Ing. En Sistemas";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // pictureBox4
             // 

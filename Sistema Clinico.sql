@@ -1,3 +1,4 @@
+
 create database SistemaClinico
 go
 use SistemaClinico
@@ -53,7 +54,15 @@ Motivo varchar(100),
 CreadoPor nvarchar(100),
 Precio float,
 dui int references Paciente(dui));
-
+go
+Create table Movimiento(
+Cod_Movimiento int primary key identity(1,1),
+Tipo_Movimiento varchar(20),
+Fecha_Movimiento datetime,
+Detalle varchar(150),
+Id_Usuario nvarchar (20) references Usuario(Id_Usuario),
+Num_Expediente int references Expediente(Num_Expediente)
+);
 Go
 Insert into Usuario
 values('admin','Alexander','Palma','Administrador','admin'),
@@ -64,7 +73,8 @@ values('admin','Alexander','Palma','Administrador','admin'),
 ('Jeremias','Jeremias','Escobar','Administrador','Jeremias6'),
 ('Josue','Josue','Flores','Administrador','Josue7'),
 ('Pablo','Pablo','Escobar','Doctor','Pablo8'),
-('Rubi','Rubi','Sanchez','Enfermera','Rubi9')
+('Rubi','Rubi','Sanchez','Enfermera','Rubi9'),
+('Veronica','Veronica','Rosa','Ingeniera','123')
 Go
 insert into Paciente values 
 (105698367,'Juan','Perez','M',22559678,'San Juan','Soltero','19990618'),
@@ -133,7 +143,7 @@ go
 --select * from Diagnostico
 --select * from Citas
 --select * from Movimientos
-drop database SistemaClinico
+
 ----go
 ----Paciente
 ----1
